@@ -17,7 +17,7 @@ const extractBaseSlug = (filePath: string): string => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONTENT_PATH = path.join(__dirname, "../content");
+const CONTENT_PATH = path.join(__dirname, "../../content");
 
 // Function to extract text between double brackets
 const bracketsExtractor = (content: string): string[] | null => {
@@ -77,12 +77,23 @@ const getDataForBacklinks = (fileNames: string[], filePath: string) => {
         version = versionMatch ? parseInt(versionMatch[1], 10) : 1;
       }
 
+      // Handle different content types with different fields
+      let finalAliases = aliases;
+      let finalGrowthStage = growthStage;
+
+      // Research content doesn't have growthStage or aliases, use defaults
+      if (filePath.includes("research")) {
+        finalAliases = [];
+        finalGrowthStage = data.status === "published" ? "evergreen" :
+                          data.status === "submitted" ? "budding" : "seedling";
+      }
+
       return {
         content,
         slug,
         title,
-        aliases,
-        growthStage,
+        aliases: finalAliases,
+        growthStage: finalGrowthStage,
         description,
         version,
         id: fileName,
@@ -122,6 +133,7 @@ const getAllPostData = () => {
   // Get all content files
   const essayFiles = getFilesFromDir(path.join(CONTENT_PATH, "essays"));
   const noteFiles = getFilesFromDir(path.join(CONTENT_PATH, "notes"));
+  const researchFiles = getFilesFromDir(path.join(CONTENT_PATH, "research"));
   // Temporarily disabled collections:
   // const patternFiles = getFilesFromDir(path.join(CONTENT_PATH, "patterns"));
   // const talkFiles = getFilesFromDir(path.join(CONTENT_PATH, "talks"));
@@ -134,6 +146,10 @@ const getAllPostData = () => {
     noteFiles,
     path.join(CONTENT_PATH, "notes"),
   );
+  const researchData = getDataForBacklinks(
+    researchFiles,
+    path.join(CONTENT_PATH, "research"),
+  );
   // Temporarily disabled:
   // const patternsData = getDataForBacklinks(
   //   patternFiles,
@@ -144,7 +160,7 @@ const getAllPostData = () => {
   //   path.join(CONTENT_PATH, "talks"),
   // );
 
-  return [...essaysData, ...notesData]; // ...patternsData, ...talksData];
+  return [...essaysData, ...notesData, ...researchData]; // ...patternsData, ...talksData];
 };
 
 // Main execution
@@ -237,7 +253,7 @@ const getAllPostData = () => {
 
   // Write to links.json
   fs.writeFileSync(
-    path.join(__dirname, "../links.json"),
+    path.join(__dirname, "../../links.json"),
     JSON.stringify(posts, null, 2),
   );
   console.log("✨ Generated links.json");

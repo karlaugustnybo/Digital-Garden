@@ -1,0 +1,135 @@
+---
+interface Props {
+  math: string;
+  display?: boolean;
+}
+
+const { math, display = false } = Astro.props;
+
+// Generate unique ID for each math element
+const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div
+  id={mathId}
+  class={`katex-math ${display ? 'katex-display' : 'katex-inline'}`}
+  data-math={math}
+  data-display={display}
+>
+  {math}
+</div>
+
+<script is:inline>
+  import 'katex/dist/katex.min.css';
+  import katex from 'katex';
+
+  // Function to render math elements
+  function renderMathElement(element) {
+    const math = element.dataset.math;
+    const display = element.dataset.display === 'true';
+
+    try {
+      katex.render(math, element, {
+        displayMode: display,
+        throwOnError: false,
+        strict: false,
+        trust: true,
+        macros: {
+          "\\RR": "\\mathbb{R}",
+          "\\NN": "\\mathbb{N}",
+          "\\ZZ": "\\mathbb{Z}",
+          "\\QQ": "\\mathbb{Q}",
+          "\\CC": "\\mathbb{C}"
+        }
+      });
+    } catch (error) {
+      console.error('KaTeX rendering error:', error);
+      element.innerHTML = `<span class="katex-error">${math}</span>`;
+    }
+  }
+
+  // Initialize KaTeX rendering
+  function initializeKatex() {
+    const mathElements = document.querySelectorAll('.katex-math');
+    mathElements.forEach(renderMathElement);
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeKatex);
+  } else {
+    initializeKatex();
+  }
+
+  // Re-initialize after Astro page transitions
+  document.addEventListener('astro:page-load', () => {
+    // Small delay to ensure DOM is ready
+    setTimeout(initializeKatex, 100);
+  });
+</script>
+
+<style>
+  .katex-display {
+    display: block;
+    text-align: center;
+    margin: var(--space-m) 0;
+    padding: var(--space-s);
+    background: var(--color-light-cream);
+    border-radius: var(--border-radius-base);
+    overflow-x: auto;
+  }
+
+  .katex-inline {
+    display: inline;
+  }
+
+  .katex-error {
+    color: var(--color-salmon);
+    font-style: italic;
+    background: var(--color-light-salmon);
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+
+  /* Style KaTeX output to match site theme */
+  :global(.katex) {
+    font-size: 1em;
+  }
+
+  :global(.katex-display .katex) {
+    font-size: 1.1em;
+  }
+
+  :global(.katex .base) {
+    color: var(--color-gray-800);
+  }
+
+  :global(.katex .strut) {
+    color: var(--color-gray-800);
+  }
+
+  :global(.katex .textit) {
+    font-style: italic;
+  }
+
+  :global(.katex .mathrm) {
+    font-family: var(--font-sans);
+  }
+
+  :global(.katex .mathbf) {
+    font-weight: bold;
+  }
+
+  :global(.katex .mathit) {
+    font-style: italic;
+  }
+
+  /* Make sure math doesn't break layout on mobile */
+  @media (max-width: 768px) {
+    .katex-display {
+      margin: var(--space-s) 0;
+      padding: var(--space-xs);
+      font-size: 0.9em;
+    }
+  }
+</style>

@@ -1,0 +1,126 @@
+---
+const {
+  variant = "primary",
+  size = "md",
+  children,
+  class: className = "",
+  ...props
+} = Astro.props;
+
+const variants = {
+  primary: {
+    background: "var(--color-primary-green-10)",
+    color: "var(--color-primary-green)",
+    border: "var(--color-primary-green-20)",
+  },
+  secondary: {
+    background: "var(--color-accent-brown-10)",
+    color: "var(--color-accent-brown)",
+    border: "var(--color-accent-brown-20)",
+  },
+  gray: {
+    background: "var(--color-gray-200)",
+    color: "var(--color-gray-600)",
+    border: "var(--color-gray-300)",
+  },
+  salmon: {
+    background: "var(--color-light-salmon)",
+    color: "var(--color-salmon)",
+    border: "var(--color-salmon)",
+  },
+};
+
+const sizes = {
+  sm: {
+    fontSize: "var(--font-size-xs)",
+    padding: "2px var(--space-2xs)",
+  },
+  md: {
+    fontSize: "var(--font-size-sm)",
+    padding: "4px var(--space-xs)",
+  },
+  lg: {
+    fontSize: "var(--font-size-base)",
+    padding: "6px var(--space-s)",
+  },
+};
+---
+
+<span
+  class={`badge badge-${variant} badge-${size} ${className}`}
+  {...props}
+>
+  {children}
+</span>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .badge-primary {
+    background: var(--color-primary-green-10);
+    color: var(--color-primary-green);
+    border-color: var(--color-primary-green-20);
+  }
+
+  .badge-primary:hover {
+    background: var(--color-primary-green-20);
+    border-color: var(--color-primary-green-30);
+  }
+
+  .badge-secondary {
+    background: var(--color-accent-brown-10);
+    color: var(--color-accent-brown);
+    border-color: var(--color-accent-brown-20);
+  }
+
+  .badge-secondary:hover {
+    background: var(--color-accent-brown-20);
+    border-color: var(--color-accent-brown-30);
+  }
+
+  .badge-gray {
+    background: var(--color-gray-200);
+    color: var(--color-gray-600);
+    border-color: var(--color-gray-300);
+  }
+
+  .badge-gray:hover {
+    background: var(--color-gray-300);
+    border-color: var(--color-gray-400);
+  }
+
+  .badge-salmon {
+    background: var(--color-light-salmon);
+    color: var(--color-salmon);
+    border-color: var(--color-salmon);
+  }
+
+  .badge-salmon:hover {
+    background: var(--color-salmon);
+    color: white;
+  }
+
+  .badge-sm {
+    font-size: var(--font-size-xs);
+    padding: 2px var(--space-2xs);
+  }
+
+  .badge-md {
+    font-size: var(--font-size-sm);
+    padding: 4px var(--space-xs);
+  }
+
+  .badge-lg {
+    font-size: var(--font-size-base);
+    padding: 6px var(--space-s);
+  }
+</style>

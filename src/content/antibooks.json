@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "title": "The Beginning of Infinity",
+    "subtitle": "Explanations That Transform the World",
+    "author": "David Deutsch",
+    "link": "https://www.goodreads.com/book/show/10807113-the-beginning-of-infinity",
+    "id": 1
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "subtitle": "The Two Modes of Thought That Shape Our Decisions",
+    "author": "Daniel Kahneman",
+    "link": "https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",
+    "id": 2
+  },
+  {
+    "title": "Gödel, Escher, Bach",
+    "subtitle": "An Eternal Golden Braid",
+    "author": "Douglas Hofstadter",
+    "link": "https://www.goodreads.com/book/show/24113.G_del_Escher_Bach",
+    "id": 3
+  }
+]

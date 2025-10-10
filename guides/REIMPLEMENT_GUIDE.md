@@ -189,7 +189,29 @@ Uncomment the type options (lines 69-71):
    <option value="podcast">Podcasts</option>
    ```
 
-### Step 9: Update Topic Utilities
+### Step 9: Update Footer
+
+Edit `src/components/layouts/Footer.astro`:
+
+Add the disabled content types back to the sitemap list:
+```astro
+{
+  [
+    { text: "The Garden", slug: "/garden" },
+    { text: "Essays", slug: "/essays" },
+    { text: "About", slug: "/about" },
+    { text: "Notes", slug: "/notes" },
+    { text: "Now", slug: "/now" },
+    { text: "Patterns", slug: "/patterns" },      // Add this back
+    { text: "Podcasts", slug: "/podcasts" },      // Add this back
+    { text: "Talks", slug: "/talks" },            // Add this back
+    { text: "Smidgeons", slug: "/smidgeons" },
+    { text: "Colophon", slug: "/colophon" },
+    { text: "Library", slug: "/library" },
+  ].map((link) => (
+```
+
+### Step 10: Update Topic Utilities
 
 Edit `src/utils/getTopics.ts`:
 
@@ -213,7 +235,7 @@ Edit `src/utils/getTopics.ts`:
    ];
    ```
 
-### Step 10: Test the Changes
+### Step 11: Test the Changes
 
 1. Run the development server:
    ```bash
@@ -224,6 +246,7 @@ Edit `src/utils/getTopics.ts`:
    - Navigation menu shows all three content types
    - Home page displays patterns section
    - Garden page filters include all types
+   - Footer includes all content type links
    - Individual pages work correctly
    - Search functionality includes all content types
 
@@ -265,15 +288,20 @@ To eliminate build warnings from disabled collections, the following files were 
 - `src/pages/drafts.astro`: Commented out patterns/talks collections and template sections
 - `src/pages/[...slug].astro`: Replaced patterns/talks collections with empty arrays
 
+#### Components Updated:
+- `src/components/layouts/Footer.astro`: Removed Patterns, Podcasts, and Talks from sitemap list
+
 #### Impact:
 - **Build warnings eliminated**: No more collection-related warnings during build
 - **Functionality preserved**: All active content types work normally
 - **Easy re-enabling**: Changes are commented out for easy restoration
+- **Footer updated**: Disabled content types no longer appear in site navigation
 
 When re-implementing content types, you'll need to:
 1. Uncomment the collections in `src/content/config.ts`
 2. Uncomment the relevant code sections in the files listed above
-3. Test that all functionality works as expected
+3. Add the content types back to the Footer.astro sitemap list (see Step 9)
+4. Test that all functionality works as expected
 
 ## Rollback
 

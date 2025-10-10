@@ -5,6 +5,8 @@ import react from "@astrojs/react";
 import icon from "astro-icon";
 import partytown from "@astrojs/partytown";
 import { remarkWikiLink } from "./src/plugins/remark-wiki-link";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +16,8 @@ export default defineConfig({
   },
   integrations: [
     mdx({
-      remarkPlugins: [remarkWikiLink],
+      remarkPlugins: [remarkMath, remarkWikiLink],
+      rehypePlugins: [rehypeKatex],
       shikiConfig: {
         theme: "night-owl",
         wrap: true,

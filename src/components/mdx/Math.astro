@@ -1,0 +1,13 @@
+---
+interface Props {
+  children?: string;
+  display?: boolean;
+}
+
+const { children = "", display = false } = Astro.props;
+
+// Clean up the math expression
+const math = children.trim();
+---
+
+<KatexRenderer math={math} display={display} />

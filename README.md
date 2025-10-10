@@ -18,12 +18,13 @@ I strongly encourage you to build your own garden!
 
 Built with Astro
 
-MDX  
-Backlinks  
-Tooltip hover previews with Tippy.js  
-Masonry grids with just CSS  
-Webmentions with Brid.gy and Webmention.io  
-Typed collections – essays, notes, patterns, talks, podcasts, smidgeons, library, antilibrary, and
+MDX with LaTeX support (KaTeX)
+Backlinks and wiki-style linking
+Research papers with academic features
+Tooltip hover previews with Tippy.js
+Masonry grids with just CSS
+Webmentions with Brid.gy and Webmention.io
+Typed collections – essays, notes, research, patterns, talks, podcasts, smidgeons, library, antilibrary, and
 now updates
 
 ## Notes to Myself
@@ -36,3 +37,14 @@ To deploy: `./deploy.sh`
 - Runs `vercel --prod`
 
 Building locally for speed and Astro's image caching.
+
+## Documentation
+
+Comprehensive guides are available in the [`guides/`](./guides/) directory:
+
+- **[📚 LaTeX Support Guide](./guides/LATEX_GUIDE.md)** - Mathematical notation implementation and usage
+- **[📖 Research Content Guide](./guides/RESEARCH_CONTENT_GUIDE.md)** - Research paper integration and features
+- **[🔧 Reimplementation Guide](./guides/REIMPLEMENT_GUIDE.md)** - Content type management and restoration
+- **[🌐 Site Guide](./guides/SITE_GUIDE.md)** - Site overview and general usage
+
+See the [guides index](./guides/README.md) for a complete overview of all available documentation.

@@ -113,18 +113,18 @@ const booksCollection = defineCollection({
     }),
 });
 
-// const antibooksCollection = defineCollection({
-//   loader: file("src/content/antibooks.json"),
-//   schema: ({ image }) =>
-//     z.object({
-//       title: z.string(),
-//       subtitle: z.string().optional(),
-//       author: z.string(),
-//       cover: image(),
-//       link: z.string().url(),
-//       id: z.number(),
-//     }),
-// });
+const antibooksCollection = defineCollection({
+  loader: file("src/content/antibooks.json"),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      subtitle: z.string().optional(),
+      author: z.string(),
+      cover: image().optional(),
+      link: z.string().url(),
+      id: z.number(),
+    }),
+});
 
 const nowCollection = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "./src/content/now" }),
@@ -166,6 +166,37 @@ const smidgeonsCollection = defineCollection({
     }),
 });
 
+const researchCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/research" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      abstract: z.string().optional(),
+      authors: z.array(z.string()),
+      venues: z.array(z.string()).optional(),
+      doi: z.string().optional(),
+      arxiv: z.string().optional(),
+      pdf: z.string().optional(),
+      published: z.coerce.date().optional(),
+      updated: z.coerce.date(),
+      type: z.enum(["paper", "preprint", "draft", "talk", "poster", "thesis", "technical-report"]),
+      researchArea: z.array(z.string()),
+      methodology: z.array(z.string()).optional(),
+      keywords: z.array(z.string()).optional(),
+      status: z.enum(["in-progress", "submitted", "under-review", "accepted", "published", "presented"]),
+      featured: z.boolean().optional(),
+      cover: image().optional(),
+      citations: z.array(z.string()).optional(),
+      code: z.string().url().optional(),
+      data: z.string().url().optional(),
+      slides: z.string().url().optional(),
+      video: z.string().url().optional(),
+      toc: z.boolean().optional(),
+      draft: z.boolean().optional(),
+    }),
+});
+
 const pagesCollection = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "./src/content/pages" }),
   schema: () =>
@@ -187,7 +218,8 @@ export const collections = {
   // talks: talksCollection,
   // podcasts: podcastsCollection,
   books: booksCollection,
-  // antibooks: antibooksCollection,
+  antibooks: antibooksCollection,
   smidgeons: smidgeonsCollection,
+  research: researchCollection,
   pages: pagesCollection,
 };

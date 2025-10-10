@@ -6,8 +6,7 @@ import BookCard from "../components/cards/BookCard.astro";
 import TitleWithCount from "../components/layouts/TitleWithCount.astro";
 import { getCollection } from "astro:content";
 
-// const antiBookData = await getCollection("antibooks");
-const antiBookData: any[] = []; // Empty array since collection is temporarily disabled
+const antiBookData = await getCollection("antibooks");
 ---
 
 <Layout title="Antilibrary of Karl August Krogh Nybo">

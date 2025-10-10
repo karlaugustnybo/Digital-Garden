@@ -164,8 +164,8 @@ export const GET: APIRoute = async function get({ props, request }) {
   const styles = {
     title: {
       fontSize: titleFontSize,
-      fontFamily: "Canela Deck",
-      fontWeight: "bold",
+      fontFamily: "DM Serif Display",
+      fontWeight: "normal",
       width: "100%",
       color: "#353534",
       lineHeight: "1.05",
@@ -173,7 +173,7 @@ export const GET: APIRoute = async function get({ props, request }) {
     },
     description: {
       fontSize: type === "essay" ? "30px" : "36px",
-      fontFamily: "Canela Text",
+      fontFamily: "DM Sans",
       fontWeight: "normal",
       width: "100%",
       color: "#4a4a46",
@@ -182,7 +182,7 @@ export const GET: APIRoute = async function get({ props, request }) {
     },
     eyebrow: {
       fontSize: "16px",
-      fontFamily: "Lato",
+      fontFamily: "DM Sans",
       textTransform: "uppercase",
       color: "#5a4032",
       letterSpacing: "0.05em",
@@ -199,14 +199,48 @@ export const GET: APIRoute = async function get({ props, request }) {
     },
   };
 
-  // Load the Canela font
-  const CanelaDeck = await fs.readFile("./public/fonts/CanelaDeck-Regular.woff");
-  const CanelaText = await fs.readFile("./public/fonts/CanelaText-Light.woff");
+  // Create a temporary directory for fonts if it doesn't exist
+  try {
+    await fs.mkdir("./temp-fonts", { recursive: true });
+  } catch (e) {
+    // Directory already exists
+  }
 
-  // Load Lato fonts by fetching the actual font files
-  const LatoRegular = await (
-    await fetch("https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk.ttf")
-  ).arrayBuffer();
+  // Download DM fonts if they don't exist locally
+  const dmSerifPath = "./temp-fonts/DMSerifDisplay.ttf";
+  const dmSansPath = "./temp-fonts/DMSans.ttf";
+
+  try {
+    await fs.access(dmSerifPath);
+  } catch (e) {
+    // Font doesn't exist, download it
+    const dmSerifResponse = await fetch("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap");
+    const cssText = await dmSerifResponse.text();
+    const fontUrl = cssText.match(/url\((https:\/\/fonts\.gstatic\.com\/s\/[^)]+)\)/)?.[1];
+    if (fontUrl) {
+      const fontResponse = await fetch(fontUrl);
+      const fontBuffer = await fontResponse.arrayBuffer();
+      await fs.writeFile(dmSerifPath, Buffer.from(fontBuffer));
+    }
+  }
+
+  try {
+    await fs.access(dmSansPath);
+  } catch (e) {
+    // Font doesn't exist, download it
+    const dmSansResponse = await fetch("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap");
+    const cssText = await dmSansResponse.text();
+    const fontUrl = cssText.match(/url\((https:\/\/fonts\.gstatic\.com\/s\/[^)]+)\)/)?.[1];
+    if (fontUrl) {
+      const fontResponse = await fetch(fontUrl);
+      const fontBuffer = await fontResponse.arrayBuffer();
+      await fs.writeFile(dmSansPath, Buffer.from(fontBuffer));
+    }
+  }
+
+  // Load the fonts from local files
+  const DMSerifDisplay = await fs.readFile(dmSerifPath);
+  const DMSans = await fs.readFile(dmSansPath);
 
   // Load the content
   const content = {
@@ -363,7 +397,7 @@ export const GET: APIRoute = async function get({ props, request }) {
                 type: "p",
                 props: {
                   style: {
-                    fontFamily: "Canela Text",
+                    fontFamily: "DM Sans",
                     fontSize: "20px",
                     color: "#4a4a46",
                   },
@@ -430,20 +464,14 @@ export const GET: APIRoute = async function get({ props, request }) {
     height: 630,
     fonts: [
       {
-        name: "Canela Deck",
-        data: CanelaDeck,
+        name: "DM Serif Display",
+        data: DMSerifDisplay,
         weight: 400,
         style: "normal",
       },
       {
-        name: "Canela Text",
-        data: CanelaText,
-        weight: 400,
-        style: "normal",
-      },
-      {
-        name: "Lato",
-        data: LatoRegular,
+        name: "DM Sans",
+        data: DMSans,
         weight: 400,
         style: "normal",
       },

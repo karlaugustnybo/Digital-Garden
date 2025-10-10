@@ -1,70 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-
-@font-face {
-  font-family: "Canela Deck";
-  src:
-    local("CanelaDeck-Regular"),
-    url("/fonts/CanelaDeck-Regular.woff2") format("woff2"),
-    url("/fonts/CanelaDeck-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Canela Deck";
-  src:
-    local("CanelaDeck-Bold"),
-    url("/fonts/CanelaDeck-Bold.woff2") format("woff2"),
-    url("/fonts/CanelaDeck-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Canela Deck";
-  src:
-    local("CanelaDeck-Light"),
-    url("/fonts/CanelaDeck-Light.woff2") format("woff2"),
-    url("/fonts/CanelaDeck-Light.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Canela Text";
-  src:
-    local("CanelaText-Medium"),
-    url("/fonts/CanelaText-Medium.woff2") format("woff2"),
-    url("/fonts/CanelaText-Medium.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Canela Text";
-  src:
-    local("CanelaText-Light"),
-    url("/fonts/CanelaText-Light.woff2") format("woff2"),
-    url("/fonts/CanelaText-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Canela Text";
-  src:
-    local("CanelaText-LightItalic"),
-    url("/fonts/CanelaText-LightItalic.woff2") format("woff2"),
-    url("/fonts/CanelaText-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:wght@300;400;700&display=swap");
 
 :root {
   /* Spacing */
@@ -117,9 +51,10 @@
   --color-accent-brown-50: color-mix(in srgb, var(--color-accent-brown) 50%, transparent);
 
   /* Fonts */
-  --font-serif: "Canela Deck", serif;
-  --font-body: "Canela Text", serif;
-  --font-sans: "Lato", sans-serif;
+  --font-serif: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-sans: "DM Sans", sans-serif;
 
   /* Leading */
   --leading-tighter: 110%;
@@ -476,11 +411,7 @@ code {
   border-radius: var(--border-radius-sm);
   font-size: var(--font-size-base);
   line-height: var(--leading-base);
-  font-family:
-    IBM Plex Mono,
-    Dank Mono,
-    SF Mono,
-    consolas;
+  font-family: var(--font-mono);
 }
 
 /* Add styles for code blocks */
@@ -491,11 +422,7 @@ pre {
   border-radius: 0.3em;
   font-size: calc(var(--font-size-sm) * 1.1);
   line-height: var(--leading-loose);
-  font-family:
-    IBM Plex Mono,
-    Dank Mono,
-    SF Mono,
-    consolas;
+  font-family: var(--font-mono);
   margin: 0 0 var(--space-m);
   tab-size: 3;
   -moz-tab-size: 3;
@@ -556,4 +483,17 @@ mark {
 
 .green {
   color: var(--color-secondary-green);
+}
+
+/* KaTeX text color styling */
+.katex-display {
+  color: var(--color-black) !important;
+}
+
+.katex {
+  color: var(--color-black) !important;
+}
+
+.katex .base {
+  color: var(--color-black) !important;
 }
