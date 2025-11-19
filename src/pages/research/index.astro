@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MasonryGrid from "../../components/layouts/MasonryGrid.astro";
+import ResearchCard from "../../components/cards/ResearchCard.astro";
+import PageWrapper from "../../components/layouts/PageWrapper.astro";
+import TitleWithCount from "../../components/layouts/TitleWithCount.astro";
+import Title2 from "../../components/mdx/typography/Title2.astro";
+import { getCollection } from "astro:content";
+
+const papers = await getCollection("research");
+
+const sortedPapers = papers.sort((a, b) => {
+    const dateA = a.data.published || a.data.updated || new Date(0);
+    const dateB = b.data.published || b.data.updated || new Date(0);
+    return dateB.valueOf() - dateA.valueOf();
+});
+---
+
+<Layout title="Research Lab">
+    <PageWrapper>
+        <header style="margin-bottom: var(--space-xl);">
+            <TitleWithCount posts={papers}>Research Lab</TitleWithCount>
+            <Title2>
+                A collection of technical notes, research papers, and mathematical explorations.
+            </Title2>
+        </header>
+
+        <MasonryGrid>
+            {
+                sortedPapers.map((paper) => (
+                    <div class="grid-item">
+                        <ResearchCard
+                            slug={paper.id}
+                            title={paper.data.title}
+                            description={paper.data.description}
+                            status={paper.data.status}
+                            date={paper.data.published || paper.data.updated}
+                            authors={paper.data.authors}
+                            type={paper.data.type}
+                        />
+                    </div>
+                ))
+            }
+        </MasonryGrid>
+    </PageWrapper>
+</Layout>

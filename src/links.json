@@ -11,31 +11,21 @@
   },
   {
     "ids": [
+      "Montuzzo"
+    ],
+    "slug": "montuzzo",
+    "growthStage": "evergreen",
+    "description": "A film montage focusing on cinematography and music, set in the abandoned ruined city of Montuzzo in northern Italy",
+    "outboundLinks": [],
+    "inboundLinks": []
+  },
+  {
+    "ids": [
       "Example Note: Introduction to Neural Networks"
     ],
     "slug": "example-note",
     "growthStage": "seedling",
     "description": "A template for taking notes on topics you're learning about",
-    "outboundLinks": [],
-    "inboundLinks": []
-  },
-  {
-    "ids": [
-      "A Survey of AI Alignment Methodologies"
-    ],
-    "slug": "ai-alignment-survey",
-    "growthStage": "budding",
-    "description": "Comprehensive overview of current approaches to AI alignment, focusing on technical challenges and proposed solutions.",
-    "outboundLinks": [],
-    "inboundLinks": []
-  },
-  {
-    "ids": [
-      "Neural Network Interpretability Through Activation Pattern Analysis"
-    ],
-    "slug": "neural-interpretability",
-    "growthStage": "evergreen",
-    "description": "Novel approach to understanding neural network decision-making through systematic activation pattern analysis and visualization.",
     "outboundLinks": [],
     "inboundLinks": []
   }

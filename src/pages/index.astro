@@ -39,8 +39,11 @@ const sortedNotes = notes.sort(
 				explores machine learning, AI safety, music, and design.
 			</Title1>
 			<SmallTitle2>
-				ML student interested in AI safety, music maker, shortfilm creator, and design enthusiast
-				<br /> Sometimes dabbles in coding and mathematics.
+				ML student interested in AI safety, music maker, shortfilm creator, and design
+				enthusiast
+				<br /> Sometimes dabbles in coding and mathematics. This is a WIP it's just a bunch of
+				examples and tests right now. I'm building on top of Maggie Appleton's digital garden,
+				and I'm in the process of making it more my own.
 			</SmallTitle2>
 		</header>
 
@@ -51,8 +54,8 @@ const sortedNotes = notes.sort(
 				<h2 class="garden-title">The Garden</h2>
 			</a>
 			<div class="subheader">
-				A digital garden is a collection of imperfect notes, essays, and ideas growing slowly over
-				time.{" "}
+				A digital garden is a collection of imperfect notes, essays, and ideas growing
+				slowly over time.{" "}
 				<a href="/garden-history" class="readmore-link">
 					Learn more
 					<Icon name="heroicons:arrow-right" size={18} />
@@ -103,7 +106,12 @@ const sortedNotes = notes.sort(
 								{note.data.growthStage && (
 									<div class="icon">
 										<GrowthIcon
-											growthStage={note.data.growthStage as "seedling" | "budding" | "evergreen"}
+											growthStage={
+												note.data.growthStage as
+													| "seedling"
+													| "budding"
+													| "evergreen"
+											}
 										/>
 									</div>
 								)}
@@ -144,7 +152,9 @@ const sortedNotes = notes.sort(
 						<Icon name="heroicons:arrow-right" size={18} />
 					</h3>
 				</a>
-				<div class="subheader">Books I've read and books I like the idea of having read.</div>
+				<div class="subheader">
+					Books I've read and books I like the idea of having read.
+				</div>
 				<div class="books-grid">
 					{
 						books

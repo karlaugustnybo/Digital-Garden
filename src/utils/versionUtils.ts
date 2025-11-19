@@ -1,6 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
-type VersionedContent = CollectionEntry<"essays"> | CollectionEntry<"notes"> | CollectionEntry<"patterns"> | CollectionEntry<"talks">;
+type VersionedContent = CollectionEntry<"essays"> | CollectionEntry<"notes"> | CollectionEntry<"patterns"> | CollectionEntry<"talks"> | CollectionEntry<"shortfilms">;
 
 export interface VersionInfo {
   baseSlug: string;
@@ -70,6 +70,9 @@ export function getAllVersionsForPost(baseSlug: string, allEntries: VersionedCon
  * Get the latest version of a set of versions
  */
 export function getLatestVersion(versions: VersionedContent[]): VersionedContent {
+  if (versions.length === 0) {
+    throw new Error('Cannot get latest version from empty array');
+  }
   return versions.reduce((latest, current) => {
     const currentVersion = getVersionFromEntry(current);
     const latestVersion = getVersionFromEntry(latest);
@@ -83,8 +86,19 @@ export function getLatestVersion(versions: VersionedContent[]): VersionedContent
 export function getVersionInfo(currentEntry: VersionedContent, allEntries: VersionedContent[]): VersionInfo {
   const baseSlug = extractBaseSlug(currentEntry.id);
   const allVersions = getAllVersionsForPost(baseSlug, allEntries);
+
+  // Handle case where no versions are found (shouldn't happen but defensive programming)
+  if (allVersions.length === 0) {
+    return {
+      baseSlug,
+      version: getVersionFromEntry(currentEntry),
+      isLatest: true,
+      allVersions: [currentEntry]
+    };
+  }
+
   const latestVersion = getLatestVersion(allVersions);
-  
+
   return {
     baseSlug,
     version: getVersionFromEntry(currentEntry),

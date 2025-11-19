@@ -319,26 +319,38 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 				{likesAndReposts.length > 0 && (
 					<div class="likes-images-container">
 						<div class="likes-container">
-							{likesWithoutDuplicates.slice(0, 20).map((like: WebMention, index: number) =>
-								like.author.photo ? (
-									<div class="single-image">
-										<img src={like.author.photo} alt={like.author.name} />
-									</div>
-								) : (
-									<div class="single-image">
-										<svg
-											width="42"
-											height="42"
-											viewBox="0 0 42 42"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-											class="placeholder-svg"
-										>
-											<circle cx="50%" cy="50%" r="21" fill="var(--color-primary-green)" />
-										</svg>
-									</div>
-								),
-							)}
+							{likesWithoutDuplicates
+								.slice(0, 20)
+								.map((like: WebMention, index: number) =>
+									like.author.photo ? (
+										<div class="single-image">
+											<img
+												src={like.author.photo}
+												alt={like.author.name}
+												loading="lazy"
+												decoding="async"
+											/>
+										</div>
+									) : (
+										<div class="single-image">
+											<svg
+												width="42"
+												height="42"
+												viewBox="0 0 42 42"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												class="placeholder-svg"
+											>
+												<circle
+													cx="50%"
+													cy="50%"
+													r="21"
+													fill="var(--color-primary-green)"
+												/>
+											</svg>
+										</div>
+									),
+								)}
 							<span>{likesAndReposts.length} Likes and Reposts</span>
 						</div>
 					</div>
@@ -353,7 +365,12 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 									return (
 										<div class:list={["reply", { hidden: index >= 4 }]}>
 											{mention.author.photo ? (
-												<img src={mention.author.photo} alt={mention.author.name} />
+												<img
+													src={mention.author.photo}
+													alt={mention.author.name}
+													loading="lazy"
+													decoding="async"
+												/>
 											) : (
 												<svg
 													width="42"
@@ -363,7 +380,12 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 													xmlns="http://www.w3.org/2000/svg"
 													class="placeholder-svg"
 												>
-													<circle cx="50%" cy="50%" r="21" fill="var(--color-primary-green)" />
+													<circle
+														cx="50%"
+														cy="50%"
+														r="21"
+														fill="var(--color-primary-green)"
+													/>
 												</svg>
 											)}
 
@@ -371,12 +393,19 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 												<div class="name-date">
 													<a href={mention.url}>
 														<span class="author">
-															{mention.author.name || getDomain(mention["wm-source"])}
+															{mention.author.name ||
+																getDomain(mention["wm-source"])}
 														</span>
 														{platform && (
-															<Icon name={platform.icon} size={16} class={platform.class} />
+															<Icon
+																name={platform.icon}
+																size={16}
+																class={platform.class}
+															/>
 														)}
-														<span class="mention-type">{mentionType(mention)}</span>
+														<span class="mention-type">
+															{mentionType(mention)}
+														</span>
 														{sourceType(mention) && (
 															<Icon
 																name={sourceType(mention)}
@@ -384,13 +413,21 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 																class={`${sourceType(mention)}-svg`}
 															/>
 														)}
-														{mention.name && <span class="post-name">in {mention.name}</span>}
+														{mention.name && (
+															<span class="post-name">
+																in {mention.name}
+															</span>
+														)}
 														<time datetime={mention.published}>
 															{formatDate(mention["wm-received"])}
 														</time>
 													</a>
 												</div>
-												{mention.content && <span>{formatContent(mention.content.text)}</span>}
+												{mention.content && (
+													<span>
+														{formatContent(mention.content.text)}
+													</span>
+												)}
 											</div>
 										</div>
 									);
@@ -400,7 +437,10 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 
 						<div class="button-container">
 							{filteredMentions.length > 4 && (
-								<button class="show-more" data-total-mentions={filteredMentions.length}>
+								<button
+									class="show-more"
+									data-total-mentions={filteredMentions.length}
+								>
 									Show {filteredMentions.length - 4} more
 								</button>
 							)}
@@ -449,7 +489,9 @@ const likesWithoutDuplicates = likesAndReposts.filter(
 						}
 					});
 					mentionsContainer.classList.remove("expanded");
-					const totalMentions = parseInt(newButton.getAttribute("data-total-mentions") || "0");
+					const totalMentions = parseInt(
+						newButton.getAttribute("data-total-mentions") || "0",
+					);
 					newButton.textContent = `Show ${totalMentions - 4} more`;
 				}
 

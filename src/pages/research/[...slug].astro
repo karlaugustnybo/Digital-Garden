@@ -1,0 +1,239 @@
+---
+import PostLayout from "../../layouts/PostLayout.astro";
+import ProseWrapper from "../../components/layouts/ProseWrapper.astro";
+import { getCollection, render } from "astro:content";
+import TableOfContents from "../../components/layouts/TableOfContents.astro";
+
+// Component imports
+import Title1 from "../../components/mdx/typography/Title1.astro";
+import Title2 from "../../components/mdx/typography/Title2.astro";
+import Title3 from "../../components/mdx/typography/Title3.astro";
+import Title4 from "../../components/mdx/typography/Title4.astro";
+import TooltipLink from "../../components/mdx/TooltipLink.astro";
+import InternalTooltipLink from "../../components/mdx/InternalTooltipLink.astro";
+import Footnote from "../../components/mdx/Footnote.astro";
+import IntroParagraph from "../../components/mdx/IntroParagraph.astro";
+import ResourceBook from "../../components/mdx/ResourceBook.astro";
+import RemoteImage from "../../components/mdx/RemoteImage.astro";
+import BasicImage from "../../components/mdx/BasicImage.astro";
+import Spacer from "../../components/mdx/Spacer.astro";
+import { Icon } from "astro-icon/components";
+
+export async function getStaticPaths() {
+    const papers = await getCollection("research");
+    return papers.map((paper) => ({
+        params: { slug: paper.id },
+        props: { paper },
+    }));
+}
+
+const { paper } = Astro.props;
+const { Content, headings } = await render(paper);
+
+const components = {
+    h1: Title1,
+    h2: Title2,
+    h3: Title3,
+    h4: Title4,
+    a: TooltipLink,
+    img: BasicImage,
+    InternalTooltipLink,
+    IntroParagraph,
+    Footnote,
+    BasicImage,
+    ResourceBook,
+    RemoteImage,
+    Spacer,
+};
+
+const generateAPA = (paper: any) => {
+    const authors = paper.data.authors.join(", ");
+    const year = new Date(paper.data.published || paper.data.updated || new Date()).getFullYear();
+    const title = paper.data.title;
+    const venue = paper.data.venues?.join(", ") || "Digital Garden Research Lab";
+    return `${authors} (${year}). ${title}. ${venue}.`;
+};
+
+const generateBibTeX = (paper: any) => {
+    const year = new Date(paper.data.published || paper.data.updated || new Date()).getFullYear();
+    const author = paper.data.authors.join(" and ");
+    const id = paper.id.replace(/\//g, "_").replace(/\.[^/.]+$/, "");
+    return `@article{${id}${year},
+  title={${paper.data.title}},
+  author={${author}},
+  journal={${paper.data.venues?.[0] || "Digital Garden Research Lab"}},
+  year={${year}}
+}`;
+};
+---
+
+<PostLayout frontmatter={paper.data} headings={headings} entry={paper}>
+    <ProseWrapper>
+        {headings.length > 0 && paper.data.toc && <TableOfContents headings={headings} />}
+
+        {
+            paper.data.abstract && (
+                <div class="abstract-section">
+                    <h3>Abstract</h3>
+                    <p>{paper.data.abstract}</p>
+                </div>
+            )
+        }
+
+        <Content components={components} />
+
+        <div class="research-footer">
+            {
+                (paper.data.pdf || paper.data.code || paper.data.arxiv || paper.data.data) && (
+                    <div class="resources-section">
+                        <h3>Resources</h3>
+                        <div class="resources-list">
+                            {paper.data.pdf && (
+                                <a href={paper.data.pdf} class="resource-link">
+                                    <Icon name="heroicons:document-text" size={16} />
+                                    PDF
+                                </a>
+                            )}
+                            {paper.data.arxiv && (
+                                <a href={paper.data.arxiv} class="resource-link">
+                                    <Icon name="heroicons:academic-cap" size={16} />
+                                    arXiv
+                                </a>
+                            )}
+                            {paper.data.code && (
+                                <a href={paper.data.code} class="resource-link">
+                                    <Icon name="heroicons:code-bracket" size={16} />
+                                    Code
+                                </a>
+                            )}
+                            {paper.data.data && (
+                                <a href={paper.data.data} class="resource-link">
+                                    <Icon name="heroicons:table-cells" size={16} />
+                                    Data
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                )
+            }
+
+            <div class="citation-section">
+                <h3>Cite this paper</h3>
+                <div class="citation-box">
+                    <p class="citation-text">{generateAPA(paper)}</p>
+                </div>
+                <details>
+                    <summary>BibTeX</summary>
+                    <pre class="citation-code">{generateBibTeX(paper)}</pre>
+                </details>
+            </div>
+        </div>
+    </ProseWrapper>
+</PostLayout>
+
+<style>
+    .abstract-section {
+        background-color: var(--color-gray-100);
+        padding: var(--space-m);
+        border-radius: var(--border-radius-m);
+        margin-bottom: var(--space-l);
+        font-style: italic;
+        border-left: 4px solid var(--color-primary-green);
+    }
+
+    .abstract-section h3 {
+        margin-top: 0;
+        font-size: var(--font-size-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-gray-600);
+        margin-bottom: var(--space-xs);
+    }
+
+    .abstract-section p {
+        margin: 0;
+        font-size: var(--font-size-base);
+        line-height: var(--leading-relaxed);
+    }
+
+    .research-footer {
+        margin-top: var(--space-2xl);
+        padding-top: var(--space-xl);
+        border-top: 1px solid var(--color-gray-200);
+    }
+
+    .resources-section,
+    .citation-section {
+        margin-bottom: var(--space-xl);
+    }
+
+    .resources-list {
+        display: flex;
+        gap: var(--space-m);
+        flex-wrap: wrap;
+    }
+
+    .resource-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--color-gray-600);
+        text-decoration: none;
+        font-size: var(--font-size-sm);
+        font-weight: 400;
+        padding: var(--space-2xs) var(--space-s);
+        background-color: transparent;
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--border-radius-full);
+        transition: all 0.2s ease;
+    }
+
+    .resource-link:hover {
+        color: var(--color-primary-green);
+        border-color: var(--color-primary-green);
+        background-color: var(--color-gray-50);
+        text-decoration: none;
+    }
+
+    .citation-box {
+        background: var(--color-gray-50);
+        padding: var(--space-s);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--border-radius-sm);
+        margin-bottom: var(--space-s);
+    }
+
+    .citation-text {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size: var(--font-size-sm);
+    }
+
+    .citation-code {
+        background: var(--color-gray-50);
+        padding: var(--space-s);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--border-radius-sm);
+        font-family: var(--font-mono);
+        font-size: var(--font-size-xs);
+        overflow-x: auto;
+        margin-top: var(--space-xs);
+    }
+
+    h3 {
+        font-size: var(--font-size-md);
+        font-weight: 600;
+        margin-bottom: var(--space-s);
+    }
+
+    details summary {
+        cursor: pointer;
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-600);
+        font-weight: 500;
+    }
+
+    details summary:hover {
+        color: var(--color-black);
+    }
+</style>

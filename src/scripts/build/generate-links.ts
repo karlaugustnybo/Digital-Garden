@@ -32,11 +32,11 @@ const getFilesFromDir = (dir: string): string[] => {
   try {
     const items = fs.readdirSync(dir);
     const files: string[] = [];
-    
+
     items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // It's a directory, look for .mdx files inside it
         const subFiles = fs.readdirSync(fullPath)
@@ -48,7 +48,7 @@ const getFilesFromDir = (dir: string): string[] => {
         files.push(item);
       }
     });
-    
+
     return files;
   } catch (e) {
     console.warn(`No directory found for ${dir}`);
@@ -81,12 +81,7 @@ const getDataForBacklinks = (fileNames: string[], filePath: string) => {
       let finalAliases = aliases;
       let finalGrowthStage = growthStage;
 
-      // Research content doesn't have growthStage or aliases, use defaults
-      if (filePath.includes("research")) {
-        finalAliases = [];
-        finalGrowthStage = data.status === "published" ? "evergreen" :
-                          data.status === "submitted" ? "budding" : "seedling";
-      }
+
 
       return {
         content,
@@ -103,7 +98,7 @@ const getDataForBacklinks = (fileNames: string[], filePath: string) => {
 
   // Group by base slug and return only latest versions for link mapping
   const groups = new Map<string, typeof allPosts>();
-  
+
   allPosts.forEach(post => {
     const baseSlug = extractBaseSlug(post.slug);
     if (!groups.has(baseSlug)) {
@@ -118,7 +113,7 @@ const getDataForBacklinks = (fileNames: string[], filePath: string) => {
     const latestVersion = versions.reduce((latest, current) => {
       return current.version > latest.version ? current : latest;
     });
-    
+
     // Update slug to be the canonical (base) slug
     latestVersions.push({
       ...latestVersion,
@@ -133,7 +128,7 @@ const getAllPostData = () => {
   // Get all content files
   const essayFiles = getFilesFromDir(path.join(CONTENT_PATH, "essays"));
   const noteFiles = getFilesFromDir(path.join(CONTENT_PATH, "notes"));
-  const researchFiles = getFilesFromDir(path.join(CONTENT_PATH, "research"));
+
   // Temporarily disabled collections:
   // const patternFiles = getFilesFromDir(path.join(CONTENT_PATH, "patterns"));
   // const talkFiles = getFilesFromDir(path.join(CONTENT_PATH, "talks"));
@@ -146,10 +141,7 @@ const getAllPostData = () => {
     noteFiles,
     path.join(CONTENT_PATH, "notes"),
   );
-  const researchData = getDataForBacklinks(
-    researchFiles,
-    path.join(CONTENT_PATH, "research"),
-  );
+
   // Temporarily disabled:
   // const patternsData = getDataForBacklinks(
   //   patternFiles,
@@ -160,7 +152,7 @@ const getAllPostData = () => {
   //   path.join(CONTENT_PATH, "talks"),
   // );
 
-  return [...essaysData, ...notesData, ...researchData]; // ...patternsData, ...talksData];
+  return [...essaysData, ...notesData]; // ...patternsData, ...talksData];
 };
 
 // Main execution

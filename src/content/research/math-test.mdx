@@ -1,0 +1,80 @@
+---
+title: "Mathematical Rendering Test"
+description: "A verification suite for the Research Lab's mathematical rendering capabilities."
+abstract: "This document serves as a verification suite for the Research Lab's mathematical rendering capabilities, utilizing KaTeX for high-performance static generation."
+authors: ["Research Lab Team"]
+type: "technical-report"
+status: "published"
+published: 2024-03-20
+keywords: ["math", "test", "latex"]
+math: true
+---
+
+## 1. Inline Mathematics
+
+Inline math should flow naturally with the text. For example, the mass-energy equivalence is described by $E=mc^2$. We can also discuss Euler's identity, $e^{i\pi} + 1 = 0$, which is often considered the most beautiful equation in mathematics.
+
+## 2. Display Mathematics
+
+Display math should be centered and have appropriate spacing.
+
+The Gaussian Integral:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+The solution to the quadratic equation $ax^2 + bx + c = 0$:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+## 3. Complex Environments
+
+We support various LaTeX environments for more complex structures.
+
+### Matrix
+
+$$
+A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}
+$$
+
+### Aligned Equations
+
+Maxwell's Equations in differential form:
+
+$$
+\begin{aligned}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &= \mu_0\mathbf{J} + \mu_0\varepsilon_0\frac{\partial \mathbf{E}}{\partial t}
+\end{aligned}
+$$
+
+### Cases
+
+The absolute value function:
+
+$$
+|x| = \begin{cases}
+x & \text{if } x \geq 0 \\
+-x & \text{if } x < 0
+\end{cases}
+$$
+
+## 4. Typography Check
+
+This section tests the interaction between standard typography and mathematical symbols.
+
+Let $f: \mathbb{R} \to \mathbb{R}$ be a continuous function. If $f(a) < 0$ and $f(b) > 0$ for some $a < b$, then by the Intermediate Value Theorem, there exists $c \in (a, b)$ such that $f(c) = 0$.
+
+> **Theorem**: There are infinitely many prime numbers.
+
+*Proof*. Suppose there are finitely many primes $p_1, \dots, p_n$. Let $N = p_1 \cdots p_n + 1$. Then $N$ is not divisible by any $p_i$, so it must have a prime factor not in the list, contradiction. $\square$

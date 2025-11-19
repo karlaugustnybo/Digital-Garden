@@ -42,63 +42,11 @@ const essaysCollection = defineCollection({
     }),
 });
 
-// const patternsCollection = defineCollection({
-//   loader: glob({ pattern: "**/*.mdx", base: "./src/content/patterns" }),
-//   schema: () =>
-//     z.object({
-//       title: z.string(),
-//       description: z.string(),
-//       updated: z.coerce.date(),
-//       startDate: z.coerce.date(),
-//       type: z.literal("pattern"),
-//       topics: z.array(z.string()).optional(),
-//       growthStage: z.string(),
-//       draft: z.boolean().optional(),
-//       toc: z.boolean().optional(),
-//       version: z.number().optional(),
-//       versionSummary: z.string().optional(),
-//     }),
-// });
 
-// const talksCollection = defineCollection({
-//   loader: glob({ pattern: "**/*.mdx", base: "./src/content/talks" }),
-//   schema: ({ image }) =>
-//     z.object({
-//       title: z.string(),
-//       description: z.string(),
-//       startDate: z.coerce.date(),
-//       updated: z.coerce.date(),
-//       type: z.literal("talk"),
-//       topics: z.array(z.string()),
-//       growthStage: z.string(),
-//       conferences: z.array(
-//         z.object({
-//           name: z.string(),
-//           date: z.string(),
-//           location: z.string(),
-//         }),
-//       ),
-//       cover: image().optional(),
-//       draft: z.boolean().optional(),
-//       version: z.number().optional(),
-//       versionSummary: z.string().optional(),
-//     }),
-// });
 
-// const podcastsCollection = defineCollection({
-//   loader: file("src/content/podcasts.json"),
-//   schema: ({ image }) =>
-//     z.object({
-//       podcastName: z.string(),
-//       episodeName: z.string(),
-//       updated: z.coerce.date(),
-//       url: z.string().url(),
-//       coverImage: image().optional(),
-//       topics: z.array(z.string()).optional(),
-//       id: z.number(),
-//       growthStage: z.string().default("evergreen"),
-//     }),
-// });
+
+
+
 
 const booksCollection = defineCollection({
   loader: file("src/content/books.json"),
@@ -166,34 +114,32 @@ const smidgeonsCollection = defineCollection({
     }),
 });
 
-const researchCollection = defineCollection({
-  loader: glob({ pattern: "**/*.mdx", base: "./src/content/research" }),
+
+
+const shortfilmsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/shortfilms" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
-      abstract: z.string().optional(),
-      authors: z.array(z.string()),
-      venues: z.array(z.string()).optional(),
-      doi: z.string().optional(),
-      arxiv: z.string().optional(),
-      pdf: z.string().optional(),
-      published: z.coerce.date().optional(),
+      startDate: z.coerce.date(),
       updated: z.coerce.date(),
-      type: z.enum(["paper", "preprint", "draft", "talk", "poster", "thesis", "technical-report"]),
-      researchArea: z.array(z.string()),
-      methodology: z.array(z.string()).optional(),
-      keywords: z.array(z.string()).optional(),
-      status: z.enum(["in-progress", "submitted", "under-review", "accepted", "published", "presented"]),
-      featured: z.boolean().optional(),
+      type: z.literal("shortfilm"),
       cover: image().optional(),
-      citations: z.array(z.string()).optional(),
-      code: z.string().url().optional(),
-      data: z.string().url().optional(),
-      slides: z.string().url().optional(),
-      video: z.string().url().optional(),
-      toc: z.boolean().optional(),
+      videoUrl: z.string().url(),
+      duration: z.string().optional(),
+      camera: z.string().optional(),
+      lens: z.string().optional(),
+      musicComposer: z.string().optional(),
+      locations: z.array(z.string()).optional(),
+      topics: z.array(z.string()).optional(),
+      growthStage: z.string(),
+      featured: z.boolean().optional(),
       draft: z.boolean().optional(),
+      toc: z.boolean().optional(),
+      aliases: z.array(z.string()).optional(),
+      version: z.number().optional(),
+      versionSummary: z.string().optional(),
     }),
 });
 
@@ -209,17 +155,48 @@ const pagesCollection = defineCollection({
     }),
 });
 
+
+const researchCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "src/content/research" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    abstract: z.string().optional(),
+    authors: z.array(z.string()),
+    type: z.enum(["paper", "preprint", "draft", "talk", "poster", "thesis", "technical-report"]).default("paper"),
+    status: z.enum(["published", "submitted", "in-review", "draft"]).default("draft"),
+    published: z.coerce.date().optional(),
+    updated: z.coerce.date().optional(),
+    researchArea: z.array(z.string()).optional(),
+    venues: z.array(z.string()).optional(),
+    arxiv: z.string().url().optional(),
+    doi: z.string().optional(),
+    pdf: z.string().url().optional(),
+    code: z.string().url().optional(),
+    data: z.string().url().optional(),
+    slides: z.string().url().optional(),
+    video: z.string().url().optional(),
+    methodology: z.array(z.string()).optional(),
+    keywords: z.array(z.string()).optional(),
+    featured: z.boolean().default(false),
+    toc: z.boolean().default(true),
+    draft: z.boolean().default(false),
+    math: z.boolean().default(true),
+  }),
+});
+
+
 // This key should match your collection directory name in "src/content"
 export const collections = {
   now: nowCollection,
   notes: notesCollection,
   essays: essaysCollection,
-  // patterns: patternsCollection,
-  // talks: talksCollection,
-  // podcasts: podcastsCollection,
+
   books: booksCollection,
   antibooks: antibooksCollection,
   smidgeons: smidgeonsCollection,
-  research: researchCollection,
+
+  shortfilms: shortfilmsCollection,
   pages: pagesCollection,
+  research: researchCollection,
 };

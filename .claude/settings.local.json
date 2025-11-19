@@ -6,7 +6,8 @@
       "Bash(pnpm run dev:*)",
       "Bash(pnpm run build)",
       "Bash(npx tsx:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

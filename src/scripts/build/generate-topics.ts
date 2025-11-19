@@ -8,7 +8,7 @@ async function generateTopics() {
   const contentDirs = [
     "src/content/essays",
     "src/content/notes",
-    "src/content/research",
+
     "src/content/smidgeons",
     // Temporarily disabled:
     // "src/content/patterns",

@@ -17,6 +17,7 @@
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.4.0",
     "@astrojs/rss": "^4.0.12",
+    "@astrojs/tailwind": "^6.0.2",
     "@iconify-json/heroicons": "^1.2.1",
     "@iconify-json/lucide": "^1.2.62",
     "@types/react": "^19.2.0",

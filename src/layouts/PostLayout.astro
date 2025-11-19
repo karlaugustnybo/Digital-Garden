@@ -21,14 +21,14 @@ type Props = {
 	frontmatter:
 		| CollectionEntry<"essays">["data"]
 		| CollectionEntry<"notes">["data"]
-		| CollectionEntry<"patterns">["data"]
-		| CollectionEntry<"talks">["data"];
+		| CollectionEntry<"shortfilms">["data"]
+		| CollectionEntry<"research">["data"];
 	headings: MarkdownHeading[];
 	entry?:
 		| CollectionEntry<"essays">
 		| CollectionEntry<"notes">
-		| CollectionEntry<"patterns">
-		| CollectionEntry<"talks">;
+		| CollectionEntry<"shortfilms">
+		| CollectionEntry<"research">;
 };
 
 const { frontmatter, entry } = Astro.props;
@@ -43,7 +43,12 @@ const canonicalURL = entry
 
 // Get canonical dates for versioned content (consistent across all versions)
 let canonicalDates = {
-	startDate: frontmatter.startDate,
+	startDate:
+		"startDate" in frontmatter
+			? frontmatter.startDate
+			: "published" in frontmatter
+				? frontmatter.published
+				: undefined,
 	updated: frontmatter.updated,
 };
 if (entry) {
@@ -56,11 +61,12 @@ if (entry) {
 		case "notes":
 			allEntries = (await getCollection("notes")) as (typeof entry)[];
 			break;
-		case "patterns":
-			allEntries = (await getCollection("patterns")) as (typeof entry)[];
+
+		case "shortfilms":
+			allEntries = (await getCollection("shortfilms")) as (typeof entry)[];
 			break;
-		case "talks":
-			allEntries = (await getCollection("talks")) as (typeof entry)[];
+		case "research":
+			allEntries = (await getCollection("research")) as (typeof entry)[];
 			break;
 	}
 	const versionedDates = getCanonicalDates(entry, allEntries);
@@ -76,9 +82,11 @@ const currentPost = linkMaps.find((post) => post.slug === currentSlug);
 // Get backlinks for the current post
 const backlinks = currentPost?.inboundLinks || [];
 
-// Only essays and talks have cover images
+// Only essays, talks, and shortfilms have cover images
 const coverImage =
-	frontmatter.type === "essay" || frontmatter.type === "talk" ? frontmatter.cover?.src : undefined;
+	frontmatter.type === "essay" || frontmatter.type === "shortfilm"
+		? frontmatter.cover?.src
+		: undefined;
 ---
 
 <Layout
@@ -91,18 +99,32 @@ const coverImage =
 	<header class="header-section">
 		<div class="above-title">
 			<div class="back-link">
-				<a href={`/${frontmatter.type}s`}>
+				<a href={entry?.collection === "research" ? "/research" : `/${frontmatter.type}s`}>
 					<Icon name="heroicons:arrow-left" size={16} />
 					<span>
-						{frontmatter.type.charAt(0).toUpperCase() + frontmatter.type.slice(1)}s
+						{
+							entry?.collection === "research"
+								? "Research Lab"
+								: frontmatter.type.charAt(0).toUpperCase() +
+									frontmatter.type.slice(1) +
+									"s"
+						}
 					</span>
 				</a>
 			</div>
-			<GrowthIcon
-				size="16"
-				growthStage={frontmatter.growthStage as "budding" | "evergreen" | "seedling"}
-			/>
-			<p>{frontmatter.growthStage}</p>
+			{
+				"growthStage" in frontmatter && frontmatter.growthStage && (
+					<>
+						<GrowthIcon
+							size="16"
+							growthStage={
+								frontmatter.growthStage as "budding" | "evergreen" | "seedling"
+							}
+						/>
+						<p>{frontmatter.growthStage}</p>
+					</>
+				)
+			}
 			{frontmatter.draft && <span class="draft-label">Draft</span>}
 		</div>
 		<div class="title-container">
@@ -111,13 +133,22 @@ const coverImage =
 		</div>
 		<div class="metadata">
 			<div class="metadata-left">
-				{frontmatter.topics && <Topics topics={frontmatter.topics} />}
+				{
+					"topics" in frontmatter && frontmatter.topics && (
+						<Topics topics={frontmatter.topics} />
+					)
+				}
+				{
+					"researchArea" in frontmatter && frontmatter.researchArea && (
+						<Topics topics={frontmatter.researchArea} />
+					)
+				}
 			</div>
 			<div class="metadata-right">
 				<Dates
 					startDate={canonicalDates.startDate instanceof Date
 						? canonicalDates.startDate.toISOString()
-						: canonicalDates.startDate}
+						: canonicalDates.startDate || ""}
 					updated={canonicalDates.updated
 						? canonicalDates.updated instanceof Date
 							? canonicalDates.updated.toISOString()
@@ -129,7 +160,6 @@ const coverImage =
 		</div>
 		{entry && <VersionWarning entry={entry} />}
 	</header>
-
 
 	<main class="styled-main">
 		<slot />

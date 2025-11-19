@@ -1,0 +1,116 @@
+---
+const { slug, title, status, date, description, authors, type } = Astro.props;
+import RelativeDate from "../layouts/RelativeDate.astro";
+import GrowthIcon from "../layouts/GrowthIcon.astro";
+
+// Map status to growth stage for icon
+const statusToGrowthStage = {
+    published: "evergreen",
+    submitted: "budding",
+    "in-review": "budding",
+    draft: "seedling",
+};
+
+const growthStage = statusToGrowthStage[status] || "seedling";
+---
+
+<a href={`/research/${slug}`}>
+    <div class="research-card">
+        <h3 transition:name={`title-${slug}`}>{title}</h3>
+        <p class="description">{description}</p>
+        <div class="metadata-container">
+            <span class="type-badge">{type || "Paper"}</span>
+            <GrowthIcon size="15" growthStage={growthStage} />
+            <span>
+                <RelativeDate postDate={date} />
+            </span>
+        </div>
+        {
+            authors && (
+                <div class="authors">
+                    {authors.slice(0, 2).join(", ")}
+                    {authors.length > 2 ? " et al." : ""}
+                </div>
+            )
+        }
+    </div>
+</a>
+
+<style>
+    .metadata-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        display: inline-block;
+        font-family: var(--font-sans);
+        font-size: var(--font-size-xs);
+        text-transform: capitalize;
+        color: var(--color-gray-500);
+        font-weight: 400;
+        margin-top: 6px;
+    }
+
+    .metadata-container :global(svg) {
+        margin: 0 var(--space-2xs);
+    }
+
+    .type-badge {
+        background: var(--color-gray-100);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-right: var(--space-2xs);
+    }
+
+    .description {
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-500);
+        font-family: var(--font-sans);
+        font-weight: 400;
+        margin-top: 4px;
+        line-height: 1.4;
+    }
+
+    .authors {
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-400);
+        font-family: var(--font-sans);
+        margin-top: var(--space-xs);
+        font-style: italic;
+    }
+
+    .research-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--color-tinted-cream);
+        padding: var(--space-s);
+        margin: 0 var(--space-2xs) var(--space-2xs) 0;
+        border-radius: var(--border-radius-base);
+        box-shadow: var(--box-shadow-sm);
+        background: var(--color-light-cream);
+        transition: all 0.3s ease-in-out;
+        will-change: transform, box-shadow;
+        color: var(--color-gray-800);
+        cursor: pointer;
+    }
+
+    .research-card h3 {
+        transition: all 0.3s ease-in-out;
+        font-family: var(--font-body);
+        font-size: var(--font-size-base);
+        font-weight: 400;
+        line-height: var(--leading-snug);
+        margin: var(--space-2xs) 0;
+    }
+
+    .research-card:hover {
+        box-shadow: var(--box-shadow-lg);
+        transform: scale3d(1.02, 1.02, 1.02);
+    }
+
+    .research-card:hover h3 {
+        color: var(--color-primary-green);
+    }
+</style>

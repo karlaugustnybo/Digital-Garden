@@ -58,7 +58,20 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 						<Icon name="heroicons:paper-clip" size={20} class="megamenu-icon" />
 						<div class="megamenu-text">
 							<h3 class="megamenu-title">Smidgeons</h3>
-							<p class="megamenu-description">Interesting links, papers, and tiny thoughts</p>
+							<p class="megamenu-description">
+								Interesting links, papers, and tiny thoughts
+							</p>
+						</div>
+					</div>
+				</a>
+				<a href="/research" role="listitem" class="megamenu-item">
+					<div class="megamenu-item-content">
+						<Icon name="heroicons:beaker" size={20} class="megamenu-icon" />
+						<div class="megamenu-text">
+							<h3 class="megamenu-title">Research Lab</h3>
+							<p class="megamenu-description">
+								Technical notes, papers, and mathematical explorations
+							</p>
 						</div>
 					</div>
 				</a>
@@ -103,14 +116,12 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 	</div>
 
 	<div class="outside-dropdown">
-		<UnderlineHoverLink href="/research">Research Lab</UnderlineHoverLink>
 		<UnderlineHoverLink href="/now">Now</UnderlineHoverLink>
 		<UnderlineHoverLink href="/about">About</UnderlineHoverLink>
 	</div>
 </div>
 
 <script>
-
 	function initializeDropdown() {
 		const button = document.querySelector(".popover-button") as HTMLButtonElement;
 		const megamenu = document.getElementById("garden-dropdown") as HTMLElement;
@@ -120,14 +131,14 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 		// Force close on initialization and reset styles
 		function closeMegamenu() {
 			if (!button || !megamenu) return;
-			
+
 			button.setAttribute("aria-expanded", "false");
-			
+
 			// Animate out first, then hide
 			megamenu.style.opacity = "0";
 			megamenu.style.transform = "rotateX(-15deg)";
 			megamenu.style.scale = "0.95";
-			
+
 			// Hide after animation completes
 			setTimeout(() => {
 				if (megamenu.style.opacity === "0") {
@@ -138,15 +149,15 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 
 		function openMegamenu() {
 			if (!megamenu || !button) return;
-			
+
 			button.setAttribute("aria-expanded", "true");
-			
+
 			// Show element first, then animate in
 			megamenu.classList.remove("hidden");
-			
+
 			// Force reflow before animating
 			megamenu.offsetHeight;
-			
+
 			// Animate in
 			requestAnimationFrame(() => {
 				megamenu.style.opacity = "1";
@@ -204,7 +215,7 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 			click: clickHandler,
 			keydown: keydownHandler,
 			focusout: focusoutHandler,
-			beforePrep: closeMegamenu
+			beforePrep: closeMegamenu,
 		};
 
 		// Add event listeners
@@ -350,7 +361,10 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 		opacity: 0;
 		transform: rotateX(90deg);
 		scale: 0.95;
-		transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), scale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+		transition:
+			opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+			transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+			scale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 
 	.megamenu.hidden {

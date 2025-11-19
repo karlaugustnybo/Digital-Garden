@@ -1,7 +1,7 @@
 ---
 import PostLayout from "../layouts/PostLayout.astro";
 import SmidgeonLayout from "../layouts/SmidgeonLayout.astro";
-import ResearchLayout from "../layouts/ResearchLayout.astro";
+
 import ProseWrapper from "../components/layouts/ProseWrapper.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import { render } from "astro:content";
@@ -21,8 +21,8 @@ import RemoteImage from "../components/mdx/RemoteImage.astro";
 import BasicImage from "../components/mdx/BasicImage.astro";
 import Spacer from "../components/mdx/Spacer.astro";
 
-type ContentType = "essay" | "note" | "pattern" | "talk" | "smidgeon" | "research";
-type Collections = "essays" | "notes" | "patterns" | "talks" | "smidgeons" | "research";
+type ContentType = "essay" | "note" | "smidgeon" | "shortfilm";
+type Collections = "essays" | "notes" | "smidgeons" | "shortfilms";
 
 // Add type definitions for different frontmatter types
 type BaseFrontmatter = {
@@ -44,7 +44,8 @@ interface Props {
 export async function getStaticPaths() {
 	const essays = await getCollection("essays");
 	const notes = await getCollection("notes");
-	const research = await getCollection("research", ({ data }) => !data.draft);
+
+	const shortfilms = await getCollection("shortfilms", ({ data }) => !data.draft);
 	// Temporarily disabled collections:
 	// const patterns = await getCollection("patterns");
 	// const talks = await getCollection("talks");
@@ -73,16 +74,18 @@ export async function getStaticPaths() {
 		props: { entry, type: "talk" } as const,
 	}));
 
+	const versionedShortfilmPaths = generateVersionedPaths(shortfilms).map(({ slug, entry }) => ({
+		params: { slug },
+		props: { entry, type: "shortfilm" } as const,
+	}));
+
 	return [
 		...versionedEssayPaths,
 		...versionedNotePaths,
 		...versionedPatternPaths,
 		...versionedTalkPaths,
-		// Research papers don't support versioning, so keep the original mapping
-		...research.map((entry) => ({
-			params: { slug: entry.id.replace(/\.mdx$/, "") },
-			props: { entry, type: "research" } as const,
-		})),
+		...versionedShortfilmPaths,
+
 		// Smidgeons don't support versioning, so keep the original mapping
 		...smidgeons.map((entry) => ({
 			params: { slug: entry.id },
@@ -120,11 +123,6 @@ function isSmidgeonFrontmatter(data: any): data is SmidgeonFrontmatter {
 	return data.type === "smidgeon";
 }
 
-// Type guard for checking if frontmatter is research
-function isResearchFrontmatter(data: any): data is CollectionEntry<"research">["data"] {
-	return data.type && ["paper", "preprint", "draft", "talk", "poster", "thesis", "technical-report"].includes(data.type);
-}
-
 // Prepare frontmatter data based on type
 const frontmatter = entry.data;
 ---
@@ -136,14 +134,6 @@ const frontmatter = entry.data;
 				<Content components={components} />
 			</ProseWrapper>
 		</SmidgeonLayout>
-	) : isResearchFrontmatter(frontmatter) ? (
-		<ResearchLayout
-			frontmatter={frontmatter}
-			headings={headings}
-			entry={entry as CollectionEntry<"research">}
-		>
-			<Content components={components} />
-		</ResearchLayout>
 	) : (
 		<PostLayout frontmatter={frontmatter} headings={headings} entry={entry}>
 			<ProseWrapper>

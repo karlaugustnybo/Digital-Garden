@@ -10,10 +10,11 @@ import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://karlaugust.dev",
+  site: "https://karlaugust.vercel.app",
   image: {
     domains: ["res.cloudinary.com"],
   },
+  prefetch: true,
   integrations: [
     mdx({
       remarkPlugins: [remarkMath, remarkWikiLink],
@@ -29,6 +30,8 @@ export default defineConfig({
       },
     }),
     react(),
-    icon(),
+    icon({
+      iconDir: "src/assets/icons",
+    }),
   ],
 });

@@ -9,7 +9,8 @@ type VersionedContent =
 	| CollectionEntry<"essays">
 	| CollectionEntry<"notes">
 	| CollectionEntry<"patterns">
-	| CollectionEntry<"talks">;
+	| CollectionEntry<"talks">
+	| CollectionEntry<"shortfilms">;
 
 interface Props {
 	entry: VersionedContent;
@@ -32,10 +33,43 @@ switch (entry.collection) {
 	case "talks":
 		allEntries = (await getCollection("talks")) as VersionedContent[];
 		break;
+	case "shortfilms":
+		allEntries = (await getCollection("shortfilms")) as VersionedContent[];
+		break;
+	default:
+		// Handle unknown collection types gracefully
+		allEntries = [];
 }
 
-const versionInfo = getVersionInfo(entry, allEntries);
-const multipleVersions = hasMultipleVersions(versionInfo.baseSlug, allEntries);
+// Only try to get version info if we have entries to work with
+let versionInfo;
+let multipleVersions = false;
+
+if (allEntries.length > 0) {
+	try {
+		versionInfo = getVersionInfo(entry, allEntries);
+		multipleVersions = hasMultipleVersions(versionInfo.baseSlug, allEntries);
+	} catch (error) {
+		console.warn('Error getting version info:', error);
+		// Set fallback values
+		versionInfo = {
+			baseSlug: entry.id.replace(/\.mdx$/, ''),
+			version: 1,
+			isLatest: true,
+			allVersions: [entry]
+		};
+		multipleVersions = false;
+	}
+} else {
+	// Fallback for content types without versioning support
+	versionInfo = {
+		baseSlug: entry.id.replace(/\.mdx$/, ''),
+		version: 1,
+		isLatest: true,
+		allVersions: [entry]
+	};
+	multipleVersions = false;
+}
 
 // Initialize variables for all cases
 const currentVersion = versionInfo.version;
