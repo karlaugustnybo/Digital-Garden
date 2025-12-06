@@ -1,0 +1,79 @@
+---
+
+---
+
+<div class="box-container">
+    <div class="animated-box"></div>
+</div>
+
+<script>
+    let currentObserver: IntersectionObserver | null = null;
+
+    function initializeObserver() {
+        // Clean up existing observer
+        if (currentObserver) {
+            currentObserver.disconnect();
+            currentObserver = null;
+        }
+
+        const boxes = document.querySelectorAll(".animated-box");
+        if (boxes.length === 0) return;
+
+        currentObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("slide-in");
+                    } else {
+                        entry.target.classList.remove("slide-in");
+                    }
+                });
+            },
+            {
+                threshold: 0.6,
+                rootMargin: "0px",
+            },
+        );
+
+        boxes.forEach((box) => currentObserver?.observe(box));
+    }
+
+    function cleanup() {
+        if (currentObserver) {
+            currentObserver.disconnect();
+            currentObserver = null;
+        }
+    }
+
+    // Initialize on first load
+    initializeObserver();
+
+    // Reinitialize after view transitions
+    document.addEventListener("astro:page-load", initializeObserver);
+
+    // Cleanup on page leave
+    document.addEventListener("astro:before-swap", cleanup);
+</script>
+
+<style>
+    .box-container {
+        margin: 2em;
+    }
+
+    .animated-box {
+        width: 120px;
+        height: 120px;
+        background: salmon;
+        border-radius: 4px;
+        transform: translateX(0);
+        opacity: 0;
+        transition:
+            transform 2s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+            opacity 0.5s ease-out;
+    }
+
+    .animated-box.slide-in {
+        transform: translateX(400px);
+        opacity: 1;
+    }
+</style>

@@ -1,0 +1,98 @@
+---
+interface Props {
+    conversation: {
+        speaker: string;
+        text: string;
+    }[];
+    speakers: Record<
+        string,
+        {
+            name: string;
+            avatar: string;
+        }
+    >;
+}
+
+const { conversation, speakers } = Astro.props;
+---
+
+<div style="margin: 1rem 0">
+    {
+        conversation.map((entry, index) => {
+            const speaker = speakers[entry.speaker];
+            const isEven = index % 2 === 0;
+            return (
+                <div class={isEven ? "speaker-1" : "speaker-2"}>
+                    <div class="picture-name">
+                        <img
+                            src={speaker.avatar}
+                            alt={speaker.name}
+                            style="border-radius: 50%; max-width: 56px; max-height: 56px"
+                        />
+                        <p>{speaker.name}</p>
+                    </div>
+                    <div class="chat-bubble">
+                        <p>{entry.text}</p>
+                    </div>
+                </div>
+            );
+        })
+    }
+</div>
+
+<style>
+    .speaker-1 {
+        display: flex;
+        grid-gap: 1.25rem;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .speaker-2 {
+        display: flex;
+        grid-gap: 1.25rem;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .chat-bubble {
+        padding: 1.5rem 1.75rem;
+        background-color: var(--color-cream, #f9f9f9); /* Fallback if var not defined */
+        border-radius: 8px;
+    }
+
+    .chat-bubble p {
+        font-size: 1.25rem;
+        font-family: var(--font-sans, sans-serif);
+        line-height: 2rem;
+    }
+
+    .chat-bubble p:last-child {
+        margin-bottom: 0;
+    }
+
+    .picture-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    .picture-name img {
+        border-radius: 50%;
+        max-width: 56px;
+        max-height: 56px;
+        object-fit: cover;
+    }
+
+    .picture-name p {
+        font-size: 0.85rem;
+        font-family: var(--font-sans, sans-serif);
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        color: var(--color-gray-600, #666);
+        margin-bottom: 0;
+    }
+</style>

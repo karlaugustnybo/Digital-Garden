@@ -1,12 +1,13 @@
 ---
 interface Props {
 	maxWidth?: string | number;
+	placement?: string;
 }
 
-const { maxWidth = 400 } = Astro.props;
+const { maxWidth = 400, placement = "top" } = Astro.props;
 ---
 
-<span class="tooltip-trigger" data-maxwidth={maxWidth}>
+<span class="tooltip-trigger" data-maxwidth={maxWidth} data-placement={placement}>
 	<slot />
 	<template class="tooltip-content">
 		<slot name="content" />
@@ -43,7 +44,7 @@ const { maxWidth = 400 } = Astro.props;
 </style>
 
 <script>
-	import tippy, { type Props } from "tippy.js";
+	import tippy, { type Props, type Placement } from "tippy.js";
 	import "tippy.js/dist/tippy.css";
 	import "tippy.js/animations/shift-away.css";
 
@@ -60,14 +61,17 @@ const { maxWidth = 400 } = Astro.props;
 		// Initialize tooltips
 		const tooltips = document.querySelectorAll(".tooltip-trigger");
 		tooltips.forEach((element) => {
-			const template = element.querySelector(
-				".tooltip-content",
-			) as HTMLTemplateElement;
+			const template = element.querySelector(".tooltip-content") as HTMLTemplateElement;
 			tippy(
 				element as Element,
 				{
 					content: template.content.cloneNode(true),
 					maxWidth: parseInt(element.getAttribute("data-maxwidth") || "320"),
+					placement: (element.getAttribute("data-placement") || "top") as Placement,
+					getReferenceClientRect: () => {
+						const rects = element.getClientRects();
+						return rects.length > 0 ? rects[0] : element.getBoundingClientRect();
+					},
 					duration: 500,
 					arrow: true,
 					interactive: true,

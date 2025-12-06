@@ -486,9 +486,14 @@ mark {
   color: var(--color-secondary-green);
 }
 
-/* KaTeX text color styling */
+/* KaTeX styling */
 .katex-display {
   color: var(--color-black) !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5em 0;
 }
 
 .katex {

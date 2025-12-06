@@ -1,0 +1,134 @@
+---
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Video from "./Video.astro";
+
+const { imgSrc, video } = Astro.props;
+
+// Use glob import to get all images
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/images/**/*");
+
+// If imgSrc is a string and starts with "/images", try to find it in the glob
+const imageSrc =
+    typeof imgSrc === "string" && imgSrc.startsWith("/images")
+        ? (await images["/src" + imgSrc]()).default
+        : imgSrc;
+
+// Check if the image is remote (starts with http/https)
+const isRemoteImage =
+    typeof imgSrc === "string" && (imgSrc.startsWith("http://") || imgSrc.startsWith("https://"));
+
+// Define widths for responsive images
+const widths = [440, 800, 1100, 1300, 1800];
+
+// Check if the image is a GIF
+const isGif =
+    typeof imageSrc === "string"
+        ? imageSrc.toLowerCase().endsWith(".gif")
+        : imageSrc.src?.toLowerCase().endsWith(".gif");
+---
+
+<div class="styled-slide">
+    {
+        !video && (
+            <>
+                {isRemoteImage ? (
+                    <img class="styled-basic-image" src={imgSrc} alt="" loading="lazy" />
+                ) : isGif ? (
+                    <img
+                        class="styled-basic-image"
+                        src={typeof imageSrc === "string" ? "/src" + imgSrc : imageSrc.src}
+                        alt=""
+                    />
+                ) : (
+                    <Picture
+                        src={imageSrc as ImageMetadata}
+                        alt=""
+                        widths={widths}
+                        formats={["avif", "webp", "jpg"]}
+                        class="styled-basic-image"
+                    />
+                )}
+            </>
+        )
+    }
+    {video && <Video class="styled-video" src={imgSrc} title="Slide video" />}
+    <div class="text-container">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .styled-slide {
+        max-width: 100%;
+        grid-column: 1 / 4 !important;
+        display: grid;
+        grid-gap: var(--space-l);
+        grid-template-columns: 5fr 4fr;
+        margin: var(--space-l) auto;
+        padding: 0 var(--space-xs);
+    }
+
+    @media (max-width: 1200px) {
+        .styled-slide {
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            grid-gap: var(--space-s);
+            margin: var(--space-m) auto;
+        }
+    }
+
+    .text-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .text-container :global(p) {
+        padding: 0 var(--space-m);
+        width: 100%;
+        margin: 0 auto;
+        font-size: var(--font-size-base);
+        line-height: var(--leading-looser);
+    }
+
+    @media (max-width: 1200px) {
+        .text-container :global(p) {
+            padding: 0;
+            max-width: 60ch;
+            width: 100%;
+        }
+    }
+
+    .text-container :global(p):not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .styled-basic-image {
+        border-radius: var(--border-radius-sm);
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1200px) {
+        .styled-basic-image {
+            max-width: 100%;
+            width: 900px;
+        }
+    }
+
+    .styled-video {
+        border-radius: var(--border-radius-sm);
+        grid-column: 1 !important;
+    }
+
+    @media (max-width: 1200px) {
+        .styled-video {
+            max-width: 100%;
+            width: 900px;
+        }
+    }
+</style>

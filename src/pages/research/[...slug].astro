@@ -236,4 +236,26 @@ const generateBibTeX = (paper: any) => {
     details summary:hover {
         color: var(--color-black);
     }
+
+    @media (max-width: 768px) {
+        .abstract-section {
+            padding: var(--space-s);
+            margin-bottom: var(--space-m);
+            border-left-width: 3px;
+        }
+
+        .research-footer {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-l);
+        }
+
+        .resources-list {
+            gap: var(--space-s);
+        }
+
+        .resource-link {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 </style>

@@ -1,21 +1,21 @@
 [
   {
     "ids": [
-      "Example Essay: Understanding AI Alignment"
-    ],
-    "slug": "example-essay",
-    "growthStage": "budding",
-    "description": "A template for writing in-depth essays about AI safety and alignment research",
-    "outboundLinks": [],
-    "inboundLinks": []
-  },
-  {
-    "ids": [
       "Montuzzo"
     ],
     "slug": "montuzzo",
     "growthStage": "evergreen",
     "description": "A film montage focusing on cinematography and music, set in the abandoned ruined city of Montuzzo in northern Italy",
+    "outboundLinks": [],
+    "inboundLinks": []
+  },
+  {
+    "ids": [
+      "Example Essay: Understanding AI Alignment"
+    ],
+    "slug": "example-essay",
+    "growthStage": "budding",
+    "description": "A template for writing in-depth essays about AI safety and alignment research",
     "outboundLinks": [],
     "inboundLinks": []
   },

@@ -1,0 +1,21 @@
+---
+interface Props {
+    src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<iframe {src} class="podcast-iframe"> </iframe>
+
+<style>
+    .podcast-iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        margin: var(--space-xs) auto var(--space-l);
+        border: none;
+        overflow: hidden;
+    }
+</style>

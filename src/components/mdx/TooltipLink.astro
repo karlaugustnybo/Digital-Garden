@@ -11,15 +11,11 @@ interface Props {
 const { href, noStyling, notes } = Astro.props;
 
 const isExternal = href.startsWith("http");
-const linkColor = isExternal
-	? "var(--color-primary-green)"
-	: "var(--color-secondary-green)";
-const hoverColor = isExternal
-	? "var(--color-tertiary-green)"
-	: "var(--color-accent-brown)";
+const linkColor = isExternal ? "var(--color-primary-green)" : "var(--color-secondary-green)";
+const hoverColor = isExternal ? "var(--color-tertiary-green)" : "var(--color-accent-brown)";
 ---
 
-<Tooltip>
+<Tooltip placement="top-start">
 	<a
 		class="link"
 		style={{

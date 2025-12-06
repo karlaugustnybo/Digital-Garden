@@ -6,7 +6,7 @@ dotenv.config();
 
 // Define Cache Location and API Endpoint
 const CACHE_DIR = "src/content/data";
-const TOKEN = process.env.WEBMENTION_API_KEY;
+const TOKEN = process.env.WEBMENTION_IO_API_KEY;
 
 interface Webmention {
   "wm-id": string;
@@ -28,7 +28,7 @@ async function fetchWebmentions(since?: string, perPage: number = 100): Promise<
   let hasMore = true;
 
   while (hasMore) {
-    let url = `https://webmention.io/api/mentions.jf2?domain=maggieappleton.com&token=${TOKEN}&per-page=${perPage}&page=${page}`;
+    let url = `https://webmention.io/api/mentions.jf2?domain=karlaugust.vercel.app&token=${TOKEN}&per-page=${perPage}&page=${page}`;
     if (since) {
       // Ensure we're not using a future date
       const sinceDate = new Date(since);

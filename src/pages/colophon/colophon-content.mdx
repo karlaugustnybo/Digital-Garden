@@ -10,15 +10,24 @@ import Alert from "../../components/mdx/Alert.astro";
 import Spacer from "../../components/mdx/Spacer.astro";
 import AddictionByDesign from "../../images/books/addiction.webp"
 
-I designed and built this site myself. Everything is open source and published on <TooltipLink href="https://github.com/karlaugustnybo/karlaugustnybo.com">Github</TooltipLink> if you'd like to poke around. The whole thing is frankly overengineered for a personal website, but playing with transient web technologies is an indulgent hobby I don't want to relinquish. I started building it in late 2021 and tinker on it regularly.
-
+Everything is open source and published on <TooltipLink href="https://github.com/HourGlassDk/Digital-Garden">Github</TooltipLink> if you'd like to poke around. Is this tech stack overkill for a personal website? Almost certainly. However, building bespoke tools for my own thoughts provides a level of agency and customization that off-the-shelf platforms cannot match. It is a living project that I enjoy tinkering with as much as I enjoy writing in.
 ### Technologies & Techniques
 
-<TooltipLink href="https://astro.build/">Astro</TooltipLink> does most of the heavy lifting – it's a static site builder designed for content-heavy websites. It does lots of useful things for me like typed collections, image optimisation, transition animations, and routing. It also minimises the amount of JavaScript shipped to the client using <TooltipLink href="https://docs.astro.build/en/concepts/islands/">islands architecture</TooltipLink>.
+<TooltipLink href="https://astro.build/">Astro 5</TooltipLink> does most of the heavy lifting – it's a modern static site generator with island architecture. It does lots of useful things for me like typed collections, image optimisation, transition animations, and routing. It also minimises the amount of TypeScipt shipped to the client using <TooltipLink href="https://docs.astro.build/en/concepts/islands/">islands architecture</TooltipLink>.
 
-I use plain HTML, CSS, and some JavaScript to build and design the interface. All the individual notes and essays are written in <TooltipLink href="https://github.com/mdx-js/mdx">MDX</TooltipLink> – a souped-up version of markdown that makes it easy to design and reuse custom components and interactive JavaScript elements. <TooltipLink href="https://vercel.com/">Vercel</TooltipLink> takes care of hosting. Animations are mostly CSS, with some more complex ones done in <TooltipLink href="https://motion.dev/">Motion</TooltipLink>.
+I use <TooltipLink href="https://www.typescriptlang.org/">TypeScript</TooltipLink> as my primary development language, with <TooltipLink href="https://reactjs.org/">React</TooltipLink> used sparingly for interactive components. All the individual notes, essays, and research papers are written in <TooltipLink href="https://mdxjs.com/">MDX</TooltipLink> – a souped-up version of markdown that makes it easy to design and reuse custom components and interactive TypeScript elements.
 
-Previous versions of this website were built in <TooltipLink href="https://github.com/karlaugustnybo/karlaugustnybo.com">Gatsby (v1)</TooltipLink> and <TooltipLink href="https://github.com/karlaugustnybo/karlaugustnybo.com-V2">Next.js (v2)</TooltipLink>, neither of which I would recommend. They're overkill for personal websites and introduce unnecessary complexity. I learned a lot building both, but if you're not making a dynamic web app with lots of user interaction, you don't need them. Static site generators like Astro, Eleventy, Hugo, and Jekyll are a better fit.
+Mathematical notation is supported via <TooltipLink href="https://katex.org/">KaTeX</TooltipLink>, allowing for beautiful rendering of complex equations.
+
+<TooltipLink href="https://vercel.com/">Vercel</TooltipLink> takes care of hosting. Animations are mostly CSS, with some more complex ones done in <TooltipLink href="https://motion.dev/">Motion</TooltipLink>.
+
+### Major Credit: Maggie Appleton
+
+This digital garden is based on the open-source codebase created by <TooltipLink href="https://maggieappleton.com">Maggie Appleton</TooltipLink>. Her implementation of wiki-style linking and content growth stages serves as the architectural foundation for this project.
+
+Although I have extended the code to support research papers, LaTeX, and other custom requirements, the core framework remains rooted in her approach to personal knowledge management.
+
+Full credit goes to Maggie for providing the original structure and resources that made this site possible.
 
 ### Writing and Editing Content
 
@@ -28,7 +37,7 @@ I know other people prefer setups where they can click one button and push conte
 
 ### Typography
 
-Headers are set in <TooltipLink href="https://commercialtype.com/catalog/canela/canela_deck">Canela Display</TooltipLink> and body copy is set in <TooltipLink href="https://commercialtype.com/catalog/canela/canela_text">Canela Text</TooltipLink>, both from <TooltipLink href="https://commercialtype.com/">Commercial Type</TooltipLink>. I love its semi-serifs and classical feel. Supporting sans-serif type is set in <TooltipLink href="https://fonts.google.com/specimen/Lato">Lato</TooltipLink>.
+Headers are set in <TooltipLink href="https://fonts.google.com/specimen/DM+Serif+Display">DM Serif Display</TooltipLink> and body copy is set in <TooltipLink href="https://fonts.google.com/specimen/DM+Sans">DM Sans</TooltipLink>. I love the clean, modern feel of these typefaces. Monospace text uses <TooltipLink href="https://fonts.google.com/specimen/DM+Mono">DM Mono</TooltipLink>.
 
 I use a <TooltipLink href="https://utopia.fyi/blog/designing-with-fluid-type-scales">fluid type scale</TooltipLink> developed by <TooltipLink href="https://utopia.fyi/">Utopia</TooltipLink>, which uses some wild CSS calculations to continuously adjust the font size relative to your browser's width.
 
