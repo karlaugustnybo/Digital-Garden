@@ -196,7 +196,7 @@ $\text{UMAP}$ instead of $UMAP$
 Always test your LaTeX expressions by running the development server:
 
 ```bash
-pnpm run dev
+bun run dev
 ```
 
 Check that equations render correctly and are properly formatted.
@@ -260,7 +260,7 @@ To add LaTeX support to other content types:
 To update the KaTeX version:
 
 1. Update the CDN link in `Layout.astro`
-2. Update the local package: `pnpm update katex`
+2. Update the local package: `bun update katex`
 3. Test all mathematical content for compatibility
 
 ### Adding New Mathematical Symbols

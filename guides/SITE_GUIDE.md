@@ -364,18 +364,18 @@ The following content types have been disabled but can be re-enabled using the `
 ### Development Commands
 
 ```bash
-pnpm run dev          # Start development server
-pnpm run build        # Production build
-pnpm run preview      # Preview production build
+bun run dev          # Start development server
+bun run build        # Production build
+bun run preview      # Preview production build
 ```
 
 ### Content Scripts
 
 ```bash
-pnpm run generate-links    # Process internal links and backlinks
-pnpm run fetch-webmentions # Fetch social interactions
-pnpm run smidgeon          # Create new smidgeon interactively
-pnpm run date             # Get current date for content
+bun run generate-links    # Process internal links and backlinks
+bun run fetch-webmentions # Fetch social interactions
+bun run smidgeon          # Create new smidgeon interactively
+bun run date             # Get current date for content
 ```
 
 ### Build Process Flow
@@ -443,7 +443,7 @@ Follow the note schema, focus on learning and exploration rather than opinion.
 #### 3. Smidgeons
 ```bash
 # Use interactive script
-pnpm run smidgeon
+bun run smidgeon
 # Or create manually
 touch src/content/smidgeons/2024/2024-01-my-smidgeon.mdx
 ```
@@ -673,24 +673,24 @@ WEBMENTION_API_KEY=your_webmention_token
 
 1. **Install dependencies**:
    ```bash
-   pnpm install
+   bun install
    ```
 
 2. **Start development server**:
    ```bash
-   pnpm run dev
+   bun run dev
    ```
 
 3. **Create content**:
    - Add essays to `src/content/essays/`
    - Add notes to `src/content/notes/`
-   - Use `pnpm run smidgeon` for quick thoughts
+   - Use `bun run smidgeon` for quick thoughts
 
 ### Production Deployment
 
 1. **Build site**:
    ```bash
-   pnpm run build
+   bun run build
    ```
 
 2. **Deploy**:
@@ -741,12 +741,12 @@ The build process automatically:
 ### Common Issues
 
 **Links not working?**
-- Run `pnpm run generate-links` to rebuild link database
+- Run `bun run generate-links` to rebuild link database
 - Check if target content is marked as draft
 - Verify spelling and aliases in link targets
 
 **Missing topics?**
-- Run `pnpm run generate-topics` to rebuild topic list
+- Run `bun run generate-topics` to rebuild topic list
 - Check frontmatter for proper topic array syntax
 - Ensure topics are strings, not objects
 
@@ -758,7 +758,7 @@ The build process automatically:
 **Webmentions not showing?**
 - Verify `WEBMENTION_API_KEY` is set in `.env`
 - Check webmention.io configuration
-- Run `pnpm run fetch-webmentions` to update cache
+- Run `bun run fetch-webmentions` to update cache
 
 ### Performance Issues
 

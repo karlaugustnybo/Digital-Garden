@@ -10,7 +10,7 @@ echo "Changes pushed to GitHub successfully."
 
 # Step 2: Build the site locally
 echo "Building the site locally from committed changes..."
-pnpm run build
+bun run build
 echo "Site built successfully."
 
 # Step 3: Deploy to Vercel

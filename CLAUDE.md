@@ -13,8 +13,9 @@ A personal website and digital garden built with Astro, featuring growing notes,
 ## Development
 
 ```bash
-pnpm run dev          # Start development server
-pnpm run build        # Production build
+- `bun run dev`: Start development server
+- `bun run build`: Production build
+- `bun run preview`: Preview production build
 ./deploy.sh          # Deploy to Vercel
 ```
 

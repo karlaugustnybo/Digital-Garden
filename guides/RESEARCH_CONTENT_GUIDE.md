@@ -296,10 +296,9 @@ We evaluated on $\mathbb{R}^{d}$ dimensional space...
 
 Run the development server and verify:
 
-```bash
-pnpm run dev
-```
-
+   ```bash
+   bun run dev
+   ```
 Check that:
 - Paper appears on research index page
 - Individual paper page renders correctly

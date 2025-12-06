@@ -239,7 +239,7 @@ Edit `src/utils/getTopics.ts`:
 
 1. Run the development server:
    ```bash
-   pnpm run dev
+   bun run dev
    ```
 
 2. Verify that:

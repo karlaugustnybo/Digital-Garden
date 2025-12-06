@@ -42,6 +42,7 @@ This is my digital garden — a space where ideas grow, evolve, and interconnect
 - **Smidgeons** - A stream of interesting links, papers, and tiny thoughts
 - **Now** - Current status and activities updates
 - **Library/Antilibrary** - Books I've read and books I want to read
+- **Shortfilms** - A collection of short films
 - **Pages** - Static content pages (about, hire me, etc.)
 
 ### Temporarily Disabled Collections 🚫 (moved to `src/content/disabled/`)
@@ -87,21 +88,21 @@ git clone https://github.com/HourGlassDk/Digital-Garden.git
 cd Digital-Garden
 
 # Install dependencies
-pnpm install
+bun install
 
 # Start development server
-pnpm run dev
+bun run dev
 ```
 
 ### Available Scripts
 ```bash
-pnpm run dev          # Start development server with content processing
-pnpm run build        # Production build with webmention fetching
-pnpm run preview      # Preview production build locally
-pnpm run generate-links  # Process wiki-style internal links
-pnpm run fetch-webmentions  # Update webmentions from API
-pnpm run smidgeon     # Create new smidgeon entry
-pnpm run date         # Get current date for content
+bun run dev          # Start development server with content processing
+bun run build        # Production build with webmention fetching
+bun run preview      # Preview production build locally
+bun run generate-links  # Process wiki-style internal links
+bun run fetch-webmentions  # Update webmentions from API
+bun run smidgeon     # Create new smidgeon entry
+bun run date         # Get current date for content
 ```
 
 ### Build Process
@@ -146,20 +147,31 @@ $$
 
 ```
 src/
-├── components/           # Reusable Astro/React components
+├── assets/              # Static assets and icons
+├── components/          # Reusable Astro/React components
+│   ├── animated-icons/  # Animated SVG icons
+│   ├── cards/           # Card layouts for different content types
+│   ├── layouts/         # Component-level layouts (navbar, footer, etc.)
 │   ├── mdx/             # MDX-specific components
-│   ├── cards/           # Card layouts
-│   └── layouts/         # Page layout components
+│   └── search/          # Search functionality components
 ├── content/             # Content collections
 │   ├── essays/          # Longform essays
 │   ├── notes/           # Knowledge notes
 │   ├── research/        # Academic papers
 │   ├── smidgeons/       # Micro-content
-│   └── data/            # Static data files
-├── layouts/             # Astro layout templates
-├── pages/               # Route pages
+│   ├── shortfilms/      # Short films collection
+│   ├── now/             # Now page updates
+│   ├── disabled/        # Archived collections
+│   ├── data/            # Static data files
+│   ├── books.json       # Library data
+│   └── antibooks.json   # Antilibrary data
+├── layouts/             # Page-level Astro layouts
+├── pages/               # Route pages and API endpoints
+├── plugins/             # Remark/Rehype plugins
 ├── scripts/             # Build and utility scripts
-└── styles/              # CSS and styling
+├── styles/              # Global styles
+├── types/               # TypeScript type definitions
+└── utils/               # Shared utility functions
 ```
 
 ## Deployment

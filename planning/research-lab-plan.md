@@ -141,6 +141,6 @@ Based on the guide, the lab will support standard LaTeX syntax within MDX files.
 ### Common Issues Resolution
 - **Parsing Errors**: Adopt the strict practice of checking for unescaped characters in MDX (like `_` outside of math mode).
 - **Performance**: Monitor bundle size; ensures KaTeX CSS is only loaded on pages where `math: true` in frontmatter.
-- **Updates**: Regular `pnpm update katex` cycles to ensure symbol support remains current.
+- **Updates**: Regular `bun update katex` cycles to ensure symbol support remains current.
 
 This simplified plan removes the complexity of external APIs and focuses on a high-fidelity, high-performance local writing environment that produces professional-grade academic output.
