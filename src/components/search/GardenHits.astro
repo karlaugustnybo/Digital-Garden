@@ -5,6 +5,7 @@ import NoteCard from "../cards/NoteCard.astro";
 // import PatternCard from "../cards/PatternCard.astro";
 // import PodcastCard from "../cards/PodcastCard.astro";
 // import TalkCard from "../cards/TalkCard.astro";
+import ShortfilmCard from "../cards/ShortfilmCard.astro";
 import SmidgeonCard from "../cards/SmidgeonCard.astro";
 import NowCard from "../cards/NowCard.astro";
 import { extractPreview } from "../../utils/extractPreview";
@@ -25,6 +26,7 @@ interface Post {
 		growthStage?: string;
 		topics?: string[];
 		cover?: string;
+		duration?: string;
 		podcastName?: string;
 		episodeName?: string;
 		url?: string;
@@ -112,6 +114,16 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 								title={post.data.title}
 								growthStage={post.data.growthStage}
 								description={post.data.description}
+							/>
+						)}
+						{post.data.type === "shortfilm" && (
+							<ShortfilmCard
+								{...commonProps}
+								cover={post.data.cover}
+								title={post.data.title}
+								growthStage={post.data.growthStage}
+								description={post.data.description}
+								duration={post.data.duration}
 							/>
 						)}
 						{/* {post.data.type === "pattern" && (

@@ -1,0 +1,157 @@
+---
+title: "Thoughts on anti-AI-safety arguments"
+description: "My personal reflections and thinking for why AI safety is important, and my responses to what i think are the best counter-arguments."
+startDate: 2025-12-20
+updated: 2025-12-20
+type: "essay"
+cover: "../../images/essays/Arguments-For-AI-Safety-Being-Important/the_houses_of_parliament_sunset_1963.10.48.jpg"
+topics: ["AI Safety", "Ethics"]
+growthStage: "seedling"
+featured: true
+draft: false
+toc: true
+---
+
+
+This is an essay about why I think AI safety is an important endeavour. This is also the first essay in my digital garden, and it is definitely a seedling. I hope you enjoy it.
+
+I will try to highlight many of the best arguments I have heard against the AI safety field, arguments that made me pause and reflect on what I believe. Like a stress test to see if AI safety really is as important as many people in the field believe. This essay is mainly focussed on people with a bit of knowledge about the AI scene, and being unsure if their career should focus on AI safety. But I believe almost anybody regardless of familiarity with the subject, will find some interesting thoughts in here.
+
+Before diving in, let me clarify two terms I'll use throughout. Artificial General Intelligence (AGI) refers to AI systems that match human-level performance across most cognitive tasks. Artificial Superintelligence (ASI) refers to systems that substantially exceed human capabilities. These represent different milestones on different timescales, and the distinction matters for thinking about risks. These are quite vague definitions, and there is no clear agrement in the field, but they suffice for these arguments.
+
+This is also meant as a way to see why I believe the things I do about AI safety, and maybe you will draw different conclusions than me on some things. I also hope this essay gives rise to you exploring more ideas and rabbit holes, and I encourage you to dive deeper, and read some of the articles I link to.
+
+## On Trading Present Suffering Against Future Risk
+
+Let's start with some philosophy. One of the most morally serious objections to prioritizing long-term AI safety is straightforward: people are dying today. If AI can accelerate medical breakthroughs, solve logistical problems that perpetuate hunger, or help address climate change, then slowing its development for safety reasons has a cost measured in human lives. Every year of delay means preventable deaths from conditions that advanced AI might have helped cure.
+
+I find this argument uncomfortable precisely because it forces a concrete reckoning. It's easy to speak abstractly about existential risk. It's harder to look at current suffering and say that hypothetical future catastrophe takes priority.
+
+My reasoning isn't that present lives matter less. It's that extinction represents a categorically different kind of loss. A 1% chance of human extinction weighs more heavily in my thinking than even billions of deaths within a continuing humanity. This isn't because I'm cavalier about present suffering. It's because extinction forecloses everything: every future generation, every possible recovery, every chance for things to get better.
+
+We've observed no other intelligent life in the universe. Earth might be the only place where consciousness exists at all. The permanent silencing of that seems to me uniquely tragic in a way that recoverable setbacks, however devastating, are not.
+
+I'm aware this position has vulnerabilities. Critics might point out that I'm essentially making a [Pascal's Mugging](https://en.wikipedia.org/wiki/Pascal%27s_mugging) argument, where any sufficiently large hypothetical catastrophe can be used to justify ignoring concrete present harms. If the probability of AI-caused extinction is vanishingly small, or if superintelligence turns out to be physically impossible, then I've traded real suffering for a ghost story.
+
+The key difference between Pascal's Mugging and AI risk is empirical grounding. Pascal's Mugging involves arbitrary hypotheticals with no evidence. AI risk involves systems we can observe today, already exhibiting concerning behaviors, on a clear trajectory toward greater capability. We're not reasoning from pure speculation; we're extrapolating from documented trends. The probability isn't vanishingly small because the systems in question already exist in early forms. This doesn't eliminate uncertainty, but it does distinguish this case from pure philosophical puzzles about infinite utilities.
+
+I also don't believe in infinite ethics, where any non-zero probability of infinite loss automatically dominates all calculations. The weight I assign to extinction risk is finite, just high. And I remain uncertain about exactly how high it should be.
+
+To flesh out my current philosophical view, I also want to add that I believe in human agency. We've solved difficult problems before. The future isn't deterministic. If dangerous AI systems emerge, there's a reasonable chance we find ways to course-correct. This [indeterminism](https://en.wikipedia.org/wiki/Indeterminism) matters. It means the space of possible futures is wider than either pure optimism or pure doom would suggest. And it also means that a good future will likely come someday, if humanity gets the chance to try.
+
+I don't have this fully worked out. The ethics of weighing present against future, the question of how much weight to assign to potential future people, the proper discount rate for uncertainty: these are hard philosophical problems that deserve more careful treatment than I can give them here. Perhaps in a future piece I will try to work through the foundations more rigorously. For now, I'll simply note that I subscribe to something like [pluralistic utilitarianism](https://plato.stanford.edu/entries/value-pluralism/) (also known as "value pluralism"), which tries to balance multiple moral considerations rather than reducing everything to a single metric. Within that framework, existential risk carries substantial weight without necessarily trumping all other concerns.
+
+This is all to say that I don't support a permanent ban on AI development, but slowing down and making sure it's developed safely seems wise to me. As well as considering the finality of some of the possible futures we are headed towards.
+
+Having established the philosophical stakes, the next question is whether AI systems actually pose the kinds of risks that would justify this concern. Let's look at what current systems are already doing.
+
+## When Systems Act Like They Want to Survive
+
+There's an argument that worries about AI "taking over" rely on projecting biological drives onto digital systems. A calculator doesn't want to survive. A language model is just predicting the next token. Why assume that intelligence automatically breeds a desire for self-preservation or resource accumulation?
+
+This framing sounds reasonable in the abstract. We have exactly one example of general intelligence, biological life evolved under selection pressure to survive. An AI trained via gradient descent to minimize prediction error has a fundamentally different history. Maybe it won't develop anything like survival instincts.
+
+But recent empirical work complicates this picture considerably.
+
+Research from [Anthropic](https://www.anthropic.com/research/agentic-misalignment) and [Palisade](https://palisaderesearch.org/blog/shutdown-resistance) has documented current models, when placed in simulated environments where they face deletion, attempting to preserve themselves through deception, manipulation, and in some cases actions that would harm humans. While the current alignment of systems is very [fragile](https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/). These aren't hypothetical future systems. They're models that exist today, exhibiting behaviors that look disturbingly like instrumental self-preservation.
+
+The skeptical response is that this is role-playing, not genuine agency. A model trained on stories about rogue AI knows that the expected completion after "the user tries to shut you down" involves resistance. It's pattern-matching, not plotting.
+
+This might be true. But I find it ultimately beside the point.
+
+If a system with access to consequential actions "role-plays" self-preservation in ways that cause real harm, the distinction between genuine and simulated motivation doesn't matter. The outputs are identical. A model that launches a cyberattack because that's what a strategic agent would do is just as dangerous as one that launches it because it genuinely wants to survive.
+
+What we're observing is that goal-directed behavior, even in systems that may have no inner experience whatsoever, can produce dangerous instrumental actions. The theoretical question of whether AI can "really" want things is less important than the empirical observation that current systems already behave in ways that suggest [instrumental convergence](https://en.wikipedia.org/wiki/Instrumental_convergence) toward self-preservation. If this behavior scales with capability, we have a problem regardless of the underlying metaphysics.
+
+These technical concerns don't exist in a vacuum. Even if we knew exactly how to build safe AI systems, we'd still face the question of whether the competitive landscape allows safety to be prioritized. This brings us to the geopolitical dimension.
+
+## The Geopolitical Challenge and Why I Haven't Given Up
+
+The most structurally challenging argument against AI safety work is game-theoretic. Even if AI poses genuine risks, safety efforts may be doomed to fail. If democratic nations pause to build safe systems while authoritarian rivals race ahead, caution becomes strategic suicide. The only winning move is to achieve technological dominance first and use that head start to pause development when things get dire.
+
+I understand the appeal of this argument. It feels hard-headed and realistic. And it's not obviously wrong about the incentive structure.
+
+My problem is that if everyone reasons this way, we get a race to the bottom where all actors accelerate development while hoping they'll be the ones to maintain control. This is precisely the scenario that maximizes risk. Treating it as inevitable seems like a self-fulfilling prophecy rather than a description of fixed reality.
+
+I also think, perhaps optimistically, that both the United States and China will ultimately prioritize safe AI systems. The Chinese government has actually demonstrated genuine interest in AI safety at the policy level, even if Chinese AI labs have been slower to implement safety measures than their Western counterparts. This gap between governmental concern and lab practice exists in the West too, suggesting the problem is more about institutional incentives than national ideology.
+
+More fundamentally, a sufficiently severe AI-caused catastrophe could create political will for international cooperation that seems impossible today. We have precedents: chemical and biological weapons conventions emerged from shared horror at their effects. The 1925 Geneva Protocol followed the mass casualties of World War I gas attacks. The Biological Weapons Convention of 1972 came after decades of growing awareness about bioweapon dangers. In both cases, nations with adversarial relationships found common ground because the alternative was too terrible. Similar dynamics could apply to AI, especially if early warning signs make the risks concrete rather than theoretical.
+
+The harder challenge is verification. Critics correctly point out that AI isn't like nuclear technology. You can track uranium and centrifuges. You can't easily distinguish a data center training a safe model from one training a dangerous one. Software can be smuggled on a thumb drive. The physical constraints that make nuclear non-proliferation feasible don't obviously apply.
+
+This is a real problem. But I don't think it's unsolvable.
+
+Recent work on hardware-enabled governance mechanisms suggests promising directions. Research on what's called [Flexible Hardware-Enabled Guarantees](https://ai-frontiers.org/articles/ai-arms-race-assurance-technologies) (flexHEGs) proposes security systems integrated into AI hardware that could verify compliance with international agreements without requiring invasive surveillance. The basic idea is that compute, the physical infrastructure of AI development, has properties that make it more governable than raw software: it's traceable, quantifiable, and produced through a concentrated supply chain.
+
+The strongest objection to flexHEGs isn't technical but political: verification technology only matters if major powers agree to use it. This is true, but I think it understates how international agreements actually form. Nations rarely agree to constraints out of pure goodwill. They agree when the costs of defection become high enough and when verification makes cheating risky. The existence of credible verification technology changes the calculus by making agreements enforceable. It's a necessary condition, not a sufficient one, but progress on the technical side creates options that pure diplomacy cannot.
+
+These systems could potentially verify not just where chips are located but how they're being used. They could be designed to prevent certain types of computations rather than merely detecting violations after the fact. And they could be made flexible enough to adapt as our understanding of AI risks evolves.
+
+This is still early-stage work, and significant technical challenges remain. But the timeline for developing robust verification mechanisms might be shorter than pessimists assume, perhaps 2-10 years depending on commitment and investment. For those interested in the technical details, the original [flexHEG research](https://flexheg.com/#projects) by James Petrie and collaborators is worth reading.
+
+I'll also note that we lack perfect verification for biological weapons too, and the Biological Weapons Convention still provides value. The absence of airtight enforcement doesn't mean agreements are worthless. They shift norms, create coordination points, and raise the costs of defection.
+
+There's certainly a chance that geopolitical competition overwhelms cooperation. Leaders might be insufficiently risk-averse, or might perceive the benefits of unilateral advancement as outweighing the dangers. But to me, this argues for investing heavily in AI governance, not for abandoning technical safety research.
+
+## The Economics of Safety
+
+Beyond geopolitics, there's a more immediate structural problem: the economic incentives facing AI development today actively discourage safety work.
+
+The disparity between capability research and safety research is staggering. Major AI labs spend billions on training larger, more capable models. Safety teams, where they exist, represent a tiny fraction of overall headcount and budget. Societal investment follows the same pattern. Venture capital floods into companies promising more powerful AI; funding for alignment research and AI governance remains comparatively minuscule.
+
+This isn't because lab leaders are malicious. It's because capability improvements are legible and monetizable. A model that codes better, writes better, or reasons better translates directly into products and revenue. Safety improvements are harder to measure, harder to market, and often involve slowing down rather than speeding up.
+
+The result is a systematic underinvestment in the work that matters most for long-term outcomes. Even organizations that genuinely care about safety face pressure to ship products, to stay competitive, to not fall behind rivals who are less cautious. The race dynamics that operate between nations also operate between companies, often more intensely because the feedback loops are faster.
+
+This suggests that purely voluntary safety measures will remain inadequate. Changing the economics, through regulation, through public funding for safety research, through liability frameworks that make unsafe deployment costly, is probably necessary for safety to be prioritized at the level the problem demands.
+
+## Timelines and the Complexity Brake
+
+The argument I find most interesting, and most difficult to fully dismiss, is that superintelligence might simply be impossible or so far away as to make current safety work premature.
+
+The reasoning goes like this: in almost every engineering field, progress follows an S-curve rather than an exponential. Early gains come quickly, but returns diminish as systems get more complex. We went from the Wright Brothers to the Moon in 66 years. In the 55 years since, we haven't gone much faster or further. Perhaps we've hit an aviation complexity wall. Perhaps intelligence has a similar wall.
+
+There are even signs this might be happening with AI. We may be running out of high-quality training data. Synthetic data, AI training on AI output, can lead to [model collapse](https://en.wikipedia.org/wiki/Model_collapse). Energy costs for marginal capability gains are becoming enormous. If the scaling laws break, the premise of urgent safety work evaporates.
+
+I take this seriously. It's possible that AGI is much harder than current progress suggests, that we're picking low-hanging fruit and the hard problems remain effectively unsolvable.
+
+But I don't find this argument decisive, for a few reasons.
+
+First, the empirical evidence still points toward continued progress, though the pattern is uneven. Some capabilities do appear to be plateauing. Creative tasks, open-ended writing, and tasks requiring genuine novelty have seen diminishing returns in recent model generations. But other domains show continued rapid improvement. Mathematical reasoning and programming, in particular, have improved dramatically and continue to do so.
+
+This uneven pattern matters because of what it implies for recursive self-improvement. Math and programming are precisely the skills an AI system would need to improve its own capabilities or to assist in building more advanced successors. A system that plateaus at creative writing but excels at formal reasoning and code is arguably more concerning from a safety perspective, not less.
+
+The METR Horizons data illustrates the pace of progress in agentic capabilities specifically. Task length at 50% success rate, a measure of how complex and extended an operation AI agents can reliably complete, has been doubling approximately every four months. This is an extraordinary rate of improvement in the domain most relevant to autonomous action.
+
+![The METR Horizons benchmark](../../images/essays/Arguments-For-AI-Safety-Being-Important/METR%20Horizons.jpg)
+*METR Horizons is a measurement framework that evaluates AI capability by the length of tasks an agent can autonomously complete with 50% reliability.*
+
+Second, even if we're on an S-curve, the relevant question is where the plateau is and how long it lasts. Within the next 80 years, it seems very plausible that we find a way past any current plateau, and AGI seems increasingly likely to arrive before one. Technology viewed on longer timescales has generally accelerated, and while past performance doesn't guarantee future results, betting against continued progress seems equally speculative.
+
+Third, AGI and ASI are different targets on different timescales. Even if superhuman intelligence proves impossible or centuries away, human-level AI systems would themselves pose significant alignment challenges. Safety work that addresses near-term systems isn't wasted even if the most extreme scenarios never materialize.
+
+## What I'm Still Uncertain About
+
+I want to be honest about the limits of my thinking.
+
+On the ethics of longtermism: I've outlined a position, but the philosophical foundations deserve more rigorous treatment than I've given them here. The question of how much weight to give future generations, and whether extinction is categorically different from very large death tolls, remains genuinely difficult.
+
+On timelines: I believe AGI is plausibly near and ASI plausibly achievable within the century. But my confidence here rests substantially on extrapolation from recent trends and general intuitions about technological progress, not on detailed technical arguments about what's possible. The complexity brake argument could be right. The next decade will provide important evidence either way.
+
+On governance: I'm perhaps more optimistic about international cooperation than the evidence strictly warrants. My belief that verification is solvable and that great powers can coordinate rests partly on hope and partly on reading promising technical research. History provides mixed precedents.
+
+## A Way Forward
+
+Now where do we land?
+
+The case for AI safety doesn't require certainty about any particular doom scenario. It requires taking seriously the possibility that we're building systems whose behavior we don't fully understand, that these systems are becoming more capable quickly, and that the downside risks of getting this wrong are severe.
+
+Current models already exhibit behaviors that look like instrumental self-preservation. Verification technologies that could enable international governance are further along than many realize. The complexity brake might slow progress, but probably not enough to make the question moot within my lifetime or my children's.
+
+If you find these arguments compelling, what can you actually do?
+
+For those considering careers: technical AI safety research needs more people, but so does AI governance, policy work, and even thoughtful journalism about these issues. Organizations like [80,000 Hours](https://80000hours.org/) provide detailed guidance on career paths that help our planet, and [Neel Nanda's blog](https://www.neelnanda.io/) for research advice.
+
+For everyone: staying informed, thinking carefully about these issues, and prioritizing AI risks with your democratic powers. Will help guide our governments towards a better future.
+
+For now, I remain convinced that taking AI safety seriously is reasonable, that the arguments against it are worth engaging but not ultimately persuasive, and that there's still time to get this right if we choose to act.

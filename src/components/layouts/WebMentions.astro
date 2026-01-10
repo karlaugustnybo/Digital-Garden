@@ -286,7 +286,7 @@ function platformType(mention: WebMention) {
 
 function formatDate(date: string | number | Date) {
 	const parsedDate = new Date(date);
-	return format(parsedDate, "MMMM dd, yyyy");
+	return format(parsedDate, "dd MMMM yyyy");
 }
 
 function getDomain(url: string) {

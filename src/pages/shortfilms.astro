@@ -14,12 +14,11 @@ const shortfilms = await getCollection("shortfilms", ({ data }) => !data.draft);
 
 // Sort shortfilms by date
 const sortedShortfilms = shortfilms.sort(
-	(a, b) =>
-		new Date(b.data.updated).getTime() - new Date(a.data.updated).getTime(),
+	(a, b) => new Date(b.data.updated).getTime() - new Date(a.data.updated).getTime(),
 );
 ---
 
-<Layout title="Short Films by Karl August Krogh Nybo">
+<Layout title="Short Films by Karl August Krogh Nybo" preconnectUrls={["https://makertube.net"]}>
 	<PageWrapper>
 		<header style="margin-bottom: var(--space-xl);">
 			<TitleWithCount posts={sortedShortfilms}>

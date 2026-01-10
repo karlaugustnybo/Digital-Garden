@@ -16,7 +16,7 @@ interface Props {
 const {
 	src,
 	alt = "",
-	width = 1100,
+	width = 2000,
 	margin,
 	showalt = false,
 	sourceUrl,
@@ -62,8 +62,9 @@ const isGif = typeof src === "string" && src.toLowerCase().endsWith(".gif");
 					sizes={sizes}
 					formats={["avif", "webp", "jpg"]}
 					width={typeof width === "number" ? width : parseInt(width)}
+					quality={95}
 					class="styled-image"
-					loading="eager"
+					loading="lazy"
 					decoding="async"
 				/>
 			)
@@ -83,10 +84,10 @@ const isGif = typeof src === "string" && src.toLowerCase().endsWith(".gif");
 
 <style>
 	.container {
-		grid-column: 1 / 4 !important;
+		grid-column: 2;
 		text-align: center;
 		margin: var(--space-s) auto var(--space-l);
-		max-width: inherit;
+		max-width: 100%;
 	}
 
 	.image-wrapper {
@@ -98,21 +99,27 @@ const isGif = typeof src === "string" && src.toLowerCase().endsWith(".gif");
 		height: auto;
 	}
 
+	/* Simple loading placeholder */
 	.image-wrapper::before {
 		content: "";
 		position: absolute;
 		inset: 0;
 		border-radius: var(--border-radius-sm);
-		animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+		background: linear-gradient(
+			135deg,
+			var(--color-light-cream, #f5f5f5) 0%,
+			var(--color-tinted-cream, #ebe8e4) 100%
+		);
+		animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 	}
 
 	@keyframes pulse {
 		0%,
 		100% {
-			opacity: 0.1;
+			opacity: 0.4;
 		}
 		50% {
-			opacity: 0.3;
+			opacity: 0.7;
 		}
 	}
 

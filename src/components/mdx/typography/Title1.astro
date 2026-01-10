@@ -1,4 +1,8 @@
-<h1 class="title1"><slot /></h1>
+---
+const { class: className } = Astro.props;
+---
+
+<h1 class:list={["title1", className]}><slot /></h1>
 
 <style>
 	.title1 {
@@ -7,13 +11,11 @@
 		line-height: var(--leading-tighter);
 		font-weight: normal;
 		margin-bottom: var(--space-s);
-		max-width: 1200px;
 	}
 
 	@media screen and (max-width: 768px) {
 		.title1 {
 			font-size: var(--font-size-2xl);
-			max-width: 100%;
 			margin-bottom: var(--space-xs);
 		}
 	}

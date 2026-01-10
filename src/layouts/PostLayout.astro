@@ -95,6 +95,7 @@ const coverImage =
 	type={frontmatter.type}
 	coverImage={coverImage}
 	canonicalURL={canonicalURL}
+	preconnectUrls={frontmatter.type === "shortfilm" ? ["https://makertube.net"] : []}
 >
 	<header class="header-section">
 		<div class="above-title">

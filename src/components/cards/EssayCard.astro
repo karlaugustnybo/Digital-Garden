@@ -13,9 +13,10 @@ import GrowthIcon from "../layouts/GrowthIcon.astro";
 					<Image
 						src={cover}
 						alt={title}
-						width={400}
-						height={400}
-						loading="eager"
+						width={1000}
+						height={1000}
+						quality={90}
+						loading="lazy"
 						decoding="async"
 					/>
 				</div>
@@ -39,6 +40,12 @@ import GrowthIcon from "../layouts/GrowthIcon.astro";
 		width: 100%;
 		aspect-ratio: 1 / 1;
 		overflow: hidden;
+		border-radius: var(--border-radius-sm);
+		background: linear-gradient(
+			135deg,
+			var(--color-light-cream, #f5f5f5) 0%,
+			var(--color-tinted-cream, #ebe8e4) 100%
+		);
 	}
 
 	.image-wrapper img {
@@ -46,8 +53,10 @@ import GrowthIcon from "../layouts/GrowthIcon.astro";
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
-		transition: transform 0.3s ease-in-out;
 		will-change: transform;
+		position: relative;
+		z-index: 1;
+		transition: transform 0.3s ease-in-out;
 	}
 
 	.metadata-container {

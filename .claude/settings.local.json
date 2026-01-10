@@ -3,9 +3,9 @@
     "allow": [
       "Bash(find:*)",
       "Bash(node:*)",
-      "Bash(pnpm run dev:*)",
-      "Bash(pnpm run build)",
-      "Bash(npx tsx:*)",
+      "Bash(bun run dev:*)",
+      "Bash(bun run build)",
+      "Bash(bunx tsx:*)",
       "Bash(curl:*)",
       "Bash(cat:*)"
     ],

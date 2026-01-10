@@ -11,9 +11,17 @@ export interface Props {
 	type?: string;
 	coverImage?: string;
 	canonicalURL?: string;
+	preconnectUrls?: string[];
 }
 
-const { title, desc, type, coverImage, canonicalURL: overrideCanonicalURL } = Astro.props;
+const {
+	title,
+	desc,
+	type,
+	coverImage,
+	canonicalURL: overrideCanonicalURL,
+	preconnectUrls = [],
+} = Astro.props;
 
 const canonicalURL = overrideCanonicalURL || new URL(Astro.url.pathname, Astro.site).toString();
 
@@ -52,8 +60,9 @@ declare global {
 		<link rel="preconnect" href="https://platform.twitter.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		{preconnectUrls.map((url) => <link rel="preconnect" href={url} />)}
 		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Mono:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:wght@300;400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap"
 			rel="stylesheet"
 		/>
 		<meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
@@ -71,7 +80,7 @@ declare global {
 		<link rel="webmention" href="https://webmention.io/karlaugust.vercel.app/webmention" />
 
 		<link rel="pingback" href="https://webmention.io/karlaugust.vercel.app/xmlrpc" />
-		<link rel="me" href="https://bsky.app/profile/karlaugust.bsky.social" />
+		<link rel="me" href="https://bsky.app/profile/karlaugustnybo.bsky.social" />
 		<link rel="canonical" href={canonicalURL} />
 		<link
 			rel="stylesheet"
@@ -115,7 +124,7 @@ declare global {
 				},
 			}}
 			twitter={{
-				creator: "@karlaugust",
+				creator: "@KarlNybo",
 				card: "summary_large_image",
 				image: ogImageURL.toString(),
 				imageAlt: title || "Karl August's digital garden",

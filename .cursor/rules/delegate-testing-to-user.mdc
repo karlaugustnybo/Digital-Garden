@@ -19,7 +19,7 @@ The user can:
 ## ✅ Good Testing Approach
 
 ### 1. Ask the user to test with specific instructions:
-*"Can you run `npm run dev` and test the NowCard component by navigating to [specific page]? Please check if [specific behavior] works and report back."*
+*"Can you run `bun run dev` and test the NowCard component by navigating to [specific page]? Please check if [specific behavior] works and report back."*
 
 ### 2. Be specific about what to test:
 - Which pages to visit

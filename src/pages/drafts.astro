@@ -102,7 +102,7 @@ const totalDrafts =
 						{smidgeons.map((smidgeon) => (
 							<li>
 								<a href={`/${smidgeon.id}`}>{smidgeon.data.title}</a>
-								<p>Started: {smidgeon.data.startDate.toLocaleDateString()}</p>
+								<p>Started: {smidgeon.data.startDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
 							</li>
 						))}
 					</ul>
@@ -118,7 +118,7 @@ const totalDrafts =
 						{now.map((nowPost) => (
 							<li>
 								<a href={`/now-${nowPost.id}`}>{nowPost.data.title}</a>
-								<p>Started: {nowPost.data.startDate.toLocaleDateString()}</p>
+								<p>Started: {nowPost.data.startDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
 							</li>
 						))}
 					</ul>

@@ -9,7 +9,7 @@
 const now: Date = new Date();
 
 console.log(
-	now.toLocaleDateString("en-US", {
+	now.toLocaleDateString("en-GB", {
 		year: "numeric",
 		month: "long",
 		day: "numeric",

@@ -1,23 +1,26 @@
 [
   {
-    "title": "Human Compatible",
-    "subtitle": "Artificial Intelligence and the Problem of Control",
-    "author": "Stuart Russell",
-    "link": "https://www.goodreads.com/book/show/44424399-human-compatible",
+    "title": "alfabet",
+    "author": "Inger Christensen",
+    "link": "https://www.goodreads.com/book/show/147924.alphabet",
     "id": 1
   },
   {
-    "title": "Superintelligence",
-    "subtitle": "Paths, Dangers, Strategies",
-    "author": "Nick Bostrom",
-    "link": "https://www.goodreads.com/book/show/18730279-superintelligence",
+    "title": "The Prophet",
+    "author": "Kahlil Gibran",
+    "link": "https://www.goodreads.com/book/show/2547.The_Prophet",
     "id": 2
   },
   {
-    "title": "The Alignment Problem",
-    "subtitle": "Machine Learning and Human Values",
-    "author": "Brian Christian",
-    "link": "https://www.goodreads.com/book/show/43694857-the-alignment-problem",
+    "title": "The Cosmere Series",
+    "author": "Brandon Sanderson",
+    "link": "https://www.goodreads.com/series/135117-the-cosmere",
     "id": 3
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "link": "https://www.goodreads.com/book/show/61439040-1984",
+    "id": 4
   }
 ]

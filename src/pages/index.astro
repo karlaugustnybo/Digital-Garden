@@ -35,15 +35,16 @@ const sortedNotes = notes.sort(
 	<PageWrapper>
 		<header class="page-header">
 			<Title1 class="main-title">
-				<b>Karl August </b>
-				explores machine learning, AI safety, music, and design.
+				<span class="name-text">Karl August </span>
+				<span class="intro-text"
+					>writes about AI safety and other things he finds interesting.</span
+				>
 			</Title1>
 			<SmallTitle2>
-				ML student interested in AI safety, music maker, shortfilm creator, and design
-				enthusiast
-				<br /> Sometimes dabbles in coding and mathematics. This is a WIP it's just a bunch of
-				examples and tests right now. I'm building on top of Maggie Appleton's digital garden,
-				and I'm in the process of making it more my own.
+				ML student interested in AI safety, amateur musician and cinematographer, and i hate
+				ugly things. This is a WIP it's just a bunch of examples and tests right now. I'm
+				building on top of Maggie Appleton's digital garden, and I'm in the process of
+				making it more my own.
 			</SmallTitle2>
 		</header>
 
@@ -238,7 +239,7 @@ const sortedNotes = notes.sort(
 		font-size: var(--font-size-2xl);
 		font-family: var(--font-serif);
 		color: var(--color-gray-800);
-		font-weight: 100;
+		font-weight: 300;
 		line-height: var(--leading-snug);
 		margin: var(--space-xs) 0 var(--space-2xs);
 		transition: all 0.3s ease-in-out;
@@ -310,10 +311,19 @@ const sortedNotes = notes.sort(
 		margin-top: var(--space-xl);
 	}
 
-	.main-title {
+	:global(.main-title) {
 		margin-top: var(--space-m);
 		margin-bottom: 0;
 		max-width: 1100px;
+		padding-right: var(--space-xl);
+	}
+
+	.name-text {
+		font-weight: 900;
+	}
+
+	.intro-text {
+		font-weight: 500;
 	}
 
 	.company-name {

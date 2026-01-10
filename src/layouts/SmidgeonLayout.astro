@@ -33,7 +33,7 @@ const currentSlug = Astro.url.pathname.replace(/^\/|\/$/g, "");
 			<div class="date-permalink">
 				<time datetime={frontmatter.startDate.toISOString()}>
 					{
-						frontmatter.startDate.toLocaleDateString("en-US", {
+						frontmatter.startDate.toLocaleDateString("en-GB", {
 							year: "numeric",
 							month: "long",
 							day: "numeric",
