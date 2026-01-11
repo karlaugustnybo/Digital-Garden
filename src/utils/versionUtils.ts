@@ -1,6 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
-export type VersionedContent = CollectionEntry<"essays"> | CollectionEntry<"notes"> | CollectionEntry<"shortfilms"> | CollectionEntry<"music"> | CollectionEntry<"research">;
+export type VersionedContent = CollectionEntry<"essays"> | CollectionEntry<"notes"> | CollectionEntry<"shortfilms"> | CollectionEntry<"music"> | CollectionEntry<"research"> | CollectionEntry<"notebooks">;
 
 export interface VersionInfo {
   baseSlug: string;

@@ -6,9 +6,7 @@ import PageWrapper from "../../components/layouts/PageWrapper.astro";
 import MasonryGrid from "../../components/layouts/MasonryGrid.astro";
 import EssayCard from "../../components/cards/EssayCard.astro";
 import NoteCard from "../../components/cards/NoteCard.astro";
-// import PatternCard from "../../components/cards/PatternCard.astro";
-// import TalkCard from "../../components/cards/TalkCard.astro";
-// import PodcastCard from "../../components/cards/PodcastCard.astro";
+import NotebookCard from "../../components/cards/NotebookCard.astro";
 import NowCard from "../../components/cards/NowCard.astro";
 import SmidgeonCard from "../../components/cards/SmidgeonCard.astro";
 import { getAllTopics, getPostsForTopic } from "../../utils/getTopics";
@@ -20,9 +18,7 @@ import { extractBaseSlug } from "../../utils/versionUtils";
 type Post =
 	| CollectionEntry<"essays">
 	| CollectionEntry<"notes">
-	// | CollectionEntry<"patterns">
-	// | CollectionEntry<"talks">
-	// | CollectionEntry<"podcasts">
+	| CollectionEntry<"notebooks">
 	| CollectionEntry<"now">
 	| CollectionEntry<"smidgeons">;
 
@@ -164,6 +160,20 @@ const sortedPosts = posts.sort((a, b) => {
 									preview={preview}
 									external={post.data.external}
 									citation={post.data.citation}
+								/>
+							</div>
+						);
+					}
+					if (post.collection === "notebooks") {
+						return (
+							<div class="grid-item">
+								<NotebookCard
+									slug={extractBaseSlug(post.id)}
+									title={post.data.title}
+									growthStage={post.data.growthStage}
+									date={post.data.updated}
+									description={post.data.description}
+									interactiveUrl={post.data.interactiveUrl}
 								/>
 							</div>
 						);

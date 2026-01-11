@@ -211,6 +211,26 @@ const researchCollection = defineCollection({
   }),
 });
 
+const notebooksCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/notebooks" }),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      type: z.literal("notebook"),
+      startDate: z.coerce.date(),
+      updated: z.coerce.date(),
+      topics: z.array(z.string()).optional(),
+      growthStage: z.string(),
+      draft: z.boolean().optional(),
+      toc: z.boolean().optional(),
+      sourceFile: z.string(),
+      interactiveUrl: z.string(),
+      molabUrl: z.string().url().optional(),
+      wasmCompatible: z.boolean().default(true),
+      aliases: z.array(z.string()).optional(),
+    }),
+});
 
 // This key should match your collection directory name in "src/content"
 export const collections = {
@@ -226,5 +246,6 @@ export const collections = {
   music: musicCollection,
   pages: pagesCollection,
   research: researchCollection,
+  notebooks: notebooksCollection,
 };
 

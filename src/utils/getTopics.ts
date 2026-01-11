@@ -4,6 +4,7 @@ import { slugifyTopic } from "./slugifyTopic";
 export async function getAllTopics() {
   const essays = await getCollection("essays", ({ data }) => !data.draft);
   const notes = await getCollection("notes", ({ data }) => !data.draft);
+  const notebooks = await getCollection("notebooks", ({ data }) => !data.draft);
   // const patterns = await getCollection("patterns", ({ data }) => !data.draft);
   // const talks = await getCollection("talks", ({ data }) => !data.draft);
   // const podcasts = await getCollection("podcasts");
@@ -14,6 +15,7 @@ export async function getAllTopics() {
   const allContent = [
     ...essays,
     ...notes,
+    ...notebooks,
     // ...patterns,
     // ...talks,
     // ...podcasts,
@@ -39,6 +41,7 @@ export async function getAllTopics() {
 export async function getPostsForTopic(topicSlug: string) {
   const essays = await getCollection("essays", ({ data }) => !data.draft);
   const notes = await getCollection("notes", ({ data }) => !data.draft);
+  const notebooks = await getCollection("notebooks", ({ data }) => !data.draft);
   // const patterns = await getCollection("patterns", ({ data }) => !data.draft);
   // const talks = await getCollection("talks", ({ data }) => !data.draft);
   // const podcasts = await getCollection("podcasts");
@@ -48,6 +51,7 @@ export async function getPostsForTopic(topicSlug: string) {
   const allContent = [
     ...essays,
     ...notes,
+    ...notebooks,
     // ...patterns,
     // ...talks,
     // ...podcasts,

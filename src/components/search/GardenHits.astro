@@ -2,6 +2,7 @@
 import MasonryGrid from "../layouts/MasonryGrid.astro";
 import EssayCard from "../cards/EssayCard.astro";
 import NoteCard from "../cards/NoteCard.astro";
+import NotebookCard from "../cards/NotebookCard.astro";
 // import PatternCard from "../cards/PatternCard.astro";
 // import PodcastCard from "../cards/PodcastCard.astro";
 // import TalkCard from "../cards/TalkCard.astro";
@@ -170,6 +171,14 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 								preview={post.preview}
 								external={post.data.external}
 								citation={post.data.citation}
+							/>
+						)}
+						{post.data.type === "notebook" && (
+							<NotebookCard
+								{...commonProps}
+								title={post.data.title}
+								growthStage={post.data.growthStage}
+								description={post.data.description}
 							/>
 						)}
 					</div>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+
+<!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+<link as="image" href="./assets/gradient-yHQUC_QB.png" rel="preload"/>
+<link as="image" href="./assets/noise-60BoTA8O.png" rel="preload"/>
+<!-- Preload the fonts -->
+<link as="font" crossorigin="anonymous" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" rel="preload"/>
+<link as="font" crossorigin="anonymous" href="./assets/PTSans-Regular-CxL0S8W7.ttf" rel="preload"/>
+<link as="font" crossorigin="anonymous" href="./assets/PTSans-Bold-D9fedIX3.ttf" rel="preload"/>
+<link as="font" crossorigin="anonymous" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" rel="preload"/>
+<link as="font" crossorigin="anonymous" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" rel="preload"/>
+<link as="font" crossorigin="anonymous" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" rel="preload"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#000000" name="theme-color"/>
+<meta content="a marimo app" name="description"/>
+
+<link href="./manifest.json" rel="manifest"/>
+<script data-marimo="true">
+      function __resizeIframe(obj) {
+        const scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          // Guard against race condition where iframe isn't ready
+          if (!obj.contentWindow?.document?.documentElement) {
+            return;
+          }
+          const element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          const hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          const newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((_entries) => {
+          setHeight();
+        });
+        // Only observe if iframe content is ready
+        if (obj.contentWindow?.document?.body) {
+          resizeObserver.observe(obj.contentWindow.document.body);
+        }
+      }
+    </script>
+<marimo-filename hidden="">notebook.py</marimo-filename>
+<!-- TODO(Trevor): Legacy, required by VS Code plugin. Remove when plugin is updated (see marimo/server/_templates/template.py) -->
+<marimo-version data-version="{{ version }}" hidden=""></marimo-version>
+<marimo-user-config data-config="{{ user_config }}" hidden=""></marimo-user-config>
+<marimo-server-token data-token="{{ server_token }}" hidden=""></marimo-server-token>
+<!-- /TODO -->
+<title>notebook</title>
+<script crossorigin="" src="./assets/index-CGjwCay2.js" type="module"></script>
+<link crossorigin="" href="./assets/preload-helper-BW0IMuFq.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/hotkeys-uKX61F1_.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/defaultLocale-BLUna9fQ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/precisionRound-Cl9k9ZmS.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/defaultLocale-DzliDDTm.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/vega-loader.browser-C8wT63Va.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_Uint8Array-BGESiCQL.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/tooltip-CrRUCOBw.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/clsx-D0MtrJOx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/cn-C1rgT0yh.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chunk-LvLJmgfZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/react-BGmjiNul.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/compiler-runtime-DeeZ7FnK.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/jsx-runtime-DN_bIXfG.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/badge-DAnNhy3O.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useEventListener-COkmyg1v.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/button-DuYGqRtX.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/react-dom-C9fstfnp.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/Combination-D1TsGrBC.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/menu-items-9PZrU2e0.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-CBrDuocE.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/createLucideIcon-CW2xpJ57.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/check-CrAQug3q.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/select-D0g5GnIs.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/tooltip-CvjcEpZC.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/use-toast-Bzf3rpev.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_getTag-BWqNuuwU.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_baseIsEqual-Cz9Tt_-E.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useEvent-DlWF5OMa.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/invariant-C6yE60hi.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_baseFor-Duhs3RiJ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/merge-BBX6ug-N.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/zod-Cg4WLWh2.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/utils-CJJIceVn.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/constants-Bkp4R3bQ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/Deferred-DzyBMRsy.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/config-babG4OBR.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/uuid-ClFZlR7U.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/DeferredRequestRegistry-B3BENoUa.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/requests-C0HaHO6a.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/isSymbol-BGkTcW3U.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/toString-DlRqgfqz.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_hasUnicode-zBEpxwYe.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useLifecycle-CmDXEyIC.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useNonce-EAuSVK-5.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useTheme-DfP1CWaW.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/once-CTiSlR1m.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/capabilities-BmAOeMOK.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/createReducer-DDa-hVe3.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-CAcX026F.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-DKNOF5xd.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-CI6_zMIl.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-BVf1IY4_.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-Cq_4nPfh.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-CVj-_Iiz.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-HGZzCB0y.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-RKnr9SNh.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-BuhT82Xx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/stex-0ac7Aukl.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/toDate-5JckKRQn.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/cjs-Bj40p_Np.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_arrayReduce-bZBYsK-u.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/type-BdyvjzTI.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_baseProperty-DuoFhI7N.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/now-6sUe0ZdD.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/debounce-BbFlGgjv.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/toInteger-CDcO32Gx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/database-zap-CaVvnK_o.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/main-CwSdzVhm.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/cells-D_SkyFDn.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/ErrorBoundary-Drf1manw.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/kbd-Czc5z_04.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useInstallPackage-RldLPyJs.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/alert-dialog-k5KxevGr.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dialog-DUEuLcT2.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useDebounce-em3gna-v.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/numbers-C9_R_vlY.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/SSRProvider-DD7JA3RM.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/context-BAYdLMF_.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useNumberFormatter-D8ks3oPN.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/usePress-C2LPFxyv.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/input-CaEtLL8p.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/ImperativeModal-q6QlC2aZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/cell-link-BoUpLV2S.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/multi-map-fjX9ImVF.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/alert-BEdExd6A.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chevron-right-CqEd11Di.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dropdown-menu-BP4_BZLr.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/links-DNmjkr65.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/datasource-CR_zEq5o.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/state-kFdt1US2.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/MarimoErrorOutput-Orp0blpZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/copy-DRhpWiOq.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/copy-gBVL4NN-.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/copy-icon-B69c-352.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/spinner-C1czjtp7.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/es-CEEVxHsX.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/focus-D18AHojc.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/LazyAnyLanguageCodeMirror-jpEDlD0M.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/katex-AwOI3EvM.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/marked.esm-CHnOtnr3.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chunk-OGVTOU66-CjNLT2C3.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/markdown-renderer-C_xfLXiO.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dist-DOFFh6Ii.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/command-Qt3ng7cb.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/popover-DtnzNVk-.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useRunCells-BZ_OFvV4.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/mode-BFwdGSZ7.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/purify.es-N-2faAGj.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/RenderHTML-BzGWfPTJ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/table--_20dwBZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/tabs-Ctk4D03n.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useAsyncData-BJJJOr9W.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useIframeCapabilities-CU-WWxnz.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/error-banner-DU5Qb8a8.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/formats-B9CrBoaO.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/en-US-DhMN8sxe.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/isValid-DhzaK-Y1.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/dates-CdsE1R40.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/download-CITws1-y.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/maps-s2pQkyf5.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/extends-B9D0JO9U.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/emotion-is-prop-valid.esm-lG8j6oqk.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useDateFormatter-CV0QXb5P.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/range-sshwVRcP.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/capitalize-DQeWKRGx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/table-BLx7B_us.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/JsonOutput-BLd1jTNA.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/file-BnFXtaZZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/play-BJDBXApx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chat-components-6dWNbFjV.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/isEmpty-DIxUV1UR.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/circle-check-big-OIMTUpe6.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chat-display-Cfg38gMM.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/ai-model-dropdown-DZ7evAGU.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/renderShortcut-D0Pei-OA.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useDeleteCell-GHwc6J4l.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/icons-D4lB4En9.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/process-output-4w8xDO0j.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/blob-Dg_vNTSs.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/objectWithoutPropertiesLoose-CboCOq4o.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/esm-B3JckBtM.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/add-cell-with-ai-Dx5UA23s.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/chart-no-axes-column-D42sFB6d.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/square-function-DxXFdbn8.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/spec-qp_XZeSS.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/column-preview-9nPwQyJZ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/switch-C9iBa4rX.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/toggle-G1t0cQyf.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/globals-D3SeIm1j.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/share-CXQVxivL.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/memoize-DN0TMY36.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/get-CyLJYAfP.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_baseSet-6FYvpjrm.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/react-resizable-panels.browser.esm-BqxQegSf.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/utilities.esm-FYD46c3d.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/floating-outline-p0aHdM2W.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useAddCell-CVfRv5mq.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/eye-off-D9zAYqG9.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/plus-CHesBJpY.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/readonly-python-code-DjP4vjBQ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/file-video-camera-CZUg-nFA.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/types-VzFAm7Cv.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/label-qwandMoh.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/textarea-D2hGxqGj.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/refresh-ccw-DbW1_PHb.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/trash-2-C-lF7BNB.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/form-DEraWoX5.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/field-DDKGFzpC.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useBoolean-5kuXz69O.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/useDeepCompareMemoize-gzLRYatP.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/types-B42u_5hF.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/prop-types-C638SUfx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/es-FiXEquL2.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/VisuallyHidden-BodIky8L.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/hasIn-DydgU7lx.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/_baseFlatten-CLPh0yMf.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/flatten-Buk63LQO.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/pick-DeQioq0G.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/code-xml-MBUyxNtK.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/download-DobaYJPt.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/globe-CY9im410.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/refresh-cw-Din9uFKE.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/settings-MTlHVxz3.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/square-leQTJTJJ.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/triangle-alert-CbD0f2J6.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/bundle.esm-B0Sy2M4C.js" rel="modulepreload"/>
+<link crossorigin="" href="./assets/cells-jmgGt1lS.css" rel="stylesheet"/>
+<link crossorigin="" href="./assets/markdown-renderer-DdDKmWlR.css" rel="stylesheet"/>
+<link crossorigin="" href="./assets/JsonOutput-B7vuddcd.css" rel="stylesheet"/>
+<link crossorigin="" href="./assets/index-nL7dJutx.css" rel="stylesheet"/>
+<marimo-wasm hidden=""></marimo-wasm>
+<script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+<style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+<marimo-code hidden="">%23%20%2F%2F%2F%20script%0A%23%20requires-python%20%3D%20%22%3E%3D3.12%22%0A%23%20dependencies%20%3D%20%5B%0A%23%20%20%20%20%20%22marimo%22%2C%0A%23%20%20%20%20%20%22matplotlib%3D%3D3.10.7%22%2C%0A%23%20%20%20%20%20%22numpy%3D%3D2.2.6%22%2C%0A%23%20%20%20%20%20%22polars%3D%3D1.35.2%22%2C%0A%23%20%5D%0A%23%20%2F%2F%2F%0A%0Aimport%20marimo%0A%0A__generated_with%20%3D%20%220.19.2%22%0Aapp%20%3D%20marimo.App(%0A%20%20%20%20width%3D%22medium%22%2C%0A%20%20%20%20css_file%3D%22%2Fusr%2Flocal%2F_marimo%2Fcustom.css%22%2C%0A%20%20%20%20auto_download%3D%5B%22html%22%5D%2C%0A)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%20Hello%2C%20Markdown!%0A%0A%20%20%20%20Use%20marimo's%20%22%60md%60%22%20function%20to%20write%20markdown.%20This%20function%20compiles%20Markdown%20into%20HTML%20that%20marimo%20can%20display.%0A%0A%20%20%20%20For%20example%2C%20here's%20the%20code%20that%20rendered%20the%20above%20title%20and%0A%20%20%20%20paragraph%3A%0A%0A%20%20%20%20%60%60%60python3%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20'''%0A%20%20%20%20%20%20%20%20%23%20Hello%2C%20Markdown!%0A%0A%20%20%20%20%20%20%20%20Use%20marimo's%20%22%60md%60%22%20function%20to%20embed%20rich%20text%20into%20your%20marimo%0A%20%20%20%20%20%20%20%20apps.%20This%20function%20compiles%20your%20Markdown%20into%20HTML%20that%20marimo%0A%20%20%20%20%20%20%20%20can%20display.%0A%20%20%20%20%20%20%20%20'''%0A%20%20%20%20)%0A%20%20%20%20%60%60%60%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20**Tip%3A%20toggling%20between%20the%20Markdown%20and%20Python%20editor**%0A%0A%20%20%20%20Although%20markdown%20is%20written%20with%20%60mo.md%60%2C%20marimo%20provides%20a%20markdown%20editor%0A%20%20%20%20that%20hides%20this%20boilerplate%20from%20you%2C%20for%20cells%20that%20only%20contain%20%60mo.md(...)%60.%0A%0A%20%20%20%20Toggle%20between%20the%20Markdown%20and%20Python%0A%20%20%20%20editors%20by%20clicking%20the%20blue%20icon%20in%20the%20top-right%20of%20the%20editor%2C%0A%20%20%20%20entering%20%60Ctrl%2FCmd%2BShift%2BM%60%2C%20or%20using%20the%20%22cell%20actions%20menu%22.%20You%20can%0A%20%20%20%20also%20**hide**%20the%20markdown%20editor%20through%20the%20cell%20actions%20menu.%0A%0A%20%20%20%20**Tip%3A**%20To%20interpolate%20Python%20values%20into%20markdown%20strings%2C%20you'll%20need%20to%20use%0A%20%20%20%20a%20Python%20f-string%3B%20do%20this%20by%20checking%20the%20%60f%60%20box%20in%20the%20bottom-right%20corner%20of%20the%0A%20%20%20%20markdown%20editor%2C%20or%20with%20%60mo.md(f%22...%22)%60%20in%20the%20Python%20view.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20LaTeX%0A%20%20%20%20You%20can%20embed%20LaTeX%20in%20Markdown.%0A%0A%20%20%20%20For%20example%2C%0A%0A%20%20%20%20%60%60%60python3%0A%20%20%20%20mo.md(r'%24f%20%3A%20%5Cmathbf%7BR%7D%20%5Cto%20%5Cmathbf%7BR%7D%24')%0A%20%20%20%20%60%60%60%0A%0A%20%20%20%20renders%20%24f%20%3A%20%5Cmathbf%7BR%7D%20%5Cto%20%5Cmathbf%7BR%7D%24%2C%20while%0A%0A%20%20%20%20%60%60%60python3%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20r'''%0A%20%20%20%20%20%20%20%20%5C%5B%0A%20%20%20%20%20%20%20%20f%3A%20%5Cmathbf%7BR%7D%20%5Cto%20%5Cmathbf%7BR%7D%0A%20%20%20%20%20%20%20%20%5C%5D%0A%20%20%20%20%20%20%20%20'''%0A%20%20%20%20)%0A%20%20%20%20%60%60%60%0A%0A%20%20%20%20renders%20the%20display%20math%0A%0A%20%20%20%20%5C%5B%0A%20%20%20%20f%3A%20%5Cmathbf%7BR%7D%20%5Cto%20%5Cmathbf%7BR%7D.%0A%20%20%20%20%5C%5D%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Tip%3A%20%60r''%60%20strings%22%3A%20mo.md(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22Use%20%60r''%60%20strings%20to%20remove%20the%20need%20to%20escape%20backslashes%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%20when%20writing%20LaTeX.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Note%3A%20KaTeX%22%3A%20mo.md(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20marimo%20actually%20uses%20KaTeX%2C%20a%20math%20typesetting%20library%20for%20the%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20web%20which%20supports%20a%20subset%20of%20LaTeX.%20For%20a%20list%20of%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(un)supported%20commands%2C%20visit%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20https%3A%2F%2Fkatex.org%2Fdocs%2Fsupport_table%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Interpolating%20Python%20values%0A%0A%20%20%20%20You%20can%20interpolate%20Python%20values%20into%20markdown%20using%0A%20%20%20%20%60f-strings%60%20and%20marimo's%20%60%20as_html%60%20function.%20This%20lets%20you%20create%0A%20%20%20%20markdown%20whose%20contents%20depend%20on%20data%20that%20changes%20at%20runtime.%0A%0A%20%20%20%20Here%20are%20some%20examples.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo%2C%20np%2C%20plt)%3A%0A%20%20%20%20def%20_sine_plot()%3A%0A%20%20%20%20%20%20%20%20_x%20%3D%20np.linspace(start%3D0%2C%20stop%3D2%20*%20np.pi)%0A%20%20%20%20%20%20%20%20plt.plot(_x%2C%20np.sin(_x))%0A%20%20%20%20%20%20%20%20return%20plt.gca()%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%23%23%23%20Plots%0A%20%20%20%20%20%20%20%20A%20matplotlib%20figure%3A%0A%0A%20%20%20%20%20%20%20%20%60%60%60python3%0A%20%20%20%20%20%20%20%20_x%20%3D%20np.linspace(start%3D0%2C%20stop%3D2*np.pi)%0A%20%20%20%20%20%20%20%20sine_plot%20%3D%20plt.plot(_x%2C%20np.sin(_x))%0A%20%20%20%20%20%20%20%20mo.md(f%22%7B%7Bmo.as_html(sine_plot)%7D%7D%22)%0A%20%20%20%20%20%20%20%20%60%60%60%0A%20%20%20%20%20%20%20%20yields%0A%0A%20%20%20%20%20%20%20%20%7Bmo.as_html(_sine_plot())%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20leaves%20%3D%20mo.ui.slider(1%2C%2032%2C%20label%3D%22%F0%9F%8D%83%3A%20%22)%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%23%23%23%20UI%20elements%0A%0A%20%20%20%20%20%20%20%20A%20%60marimo.ui%60%20object%3A%0A%0A%20%20%20%20%20%20%20%20%60%60%60python3%0A%20%20%20%20%20%20%20%20leaves%20%3D%20mo.ui.slider(1%2C%2016%2C%20label%3D%22%F0%9F%8D%83%3A%20%22)%0A%20%20%20%20%20%20%20%20mo.md(f%22%7B%7Bleaves%7D%7D%22)%0A%20%20%20%20%20%20%20%20%60%60%60%0A%0A%20%20%20%20%20%20%20%20yields%0A%0A%20%20%20%20%20%20%20%20%7Bleaves%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%20(leaves%2C)%0A%0A%0A%40app.cell%0Adef%20_(leaves%2C%20mo)%3A%0A%20%20%20%20mo.md(f%22%22%22%0A%20%20%20%20Your%20leaves%3A%20%7B'%F0%9F%8D%83'%20*%20leaves.value%7D%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Tip%3A%20UI%20elements%20can%20format%20themselves%22%3A%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20marimo%20objects%20know%20how%20to%20format%20themselves%2C%20so%20you%20can%20omit%20the%0A%20%20%20%20%20%20%20%20%20%20%20%20call%20to%20%60as_html%60.%0A%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo%2C%20np)%3A%0A%20%20%20%20import%20polars%20as%20pl%0A%0A%20%20%20%20def%20make_dataframe()%3A%0A%20%20%20%20%20%20%20%20x%20%3D%20np.linspace(0%2C%202%20*%20np.pi%2C%2010)%0A%20%20%20%20%20%20%20%20y%20%3D%20np.sin(x)%0A%20%20%20%20%20%20%20%20return%20pl.DataFrame(%7B%22x%22%3A%20x%2C%20%22y%22%3A%20y%7D)%0A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%23%23%23%20Other%20objects%0A%0A%20%20%20%20%20%20%20%20Use%20%60mo.as_html%60%20to%20convert%20objects%20to%20HTML.%20This%20function%0A%20%20%20%20%20%20%20%20generates%20rich%20HTML%20for%20many%20Python%20types%2C%20including%3A%0A%0A%20%20%20%20%20%20%20%20-%20lists%2C%20dicts%2C%20and%20tuples%2C%0A%20%20%20%20%20%20%20%20-%20%60pandas%60%20dataframes%20and%20series%2C%0A%20%20%20%20%20%20%20%20-%20%60seaborn%60%20figures%2C%0A%20%20%20%20%20%20%20%20-%20%60plotly%60%20figures%2C%20and%0A%20%20%20%20%20%20%20%20-%20%60altair%60%20figures.%0A%0A%20%20%20%20%20%20%20%20For%20example%2C%20here's%20a%20Polars%20dataframe%3A%0A%0A%20%20%20%20%20%20%20%20%7Bmo.as_html(make_dataframe())%7D%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.accordion(%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Tip%3A%20outputs%20are%20automatically%20converted%20to%20HTML%22%3A%20%22%22%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%60mo.as_html%60%20is%20only%20needed%20when%20interpolating%20objects%20into%0A%20%20%20%20%20%20%20%20%20%20%20%20markdown%3B%20the%20last%20expression%20of%20a%20cell%20(its%20output)%20is%0A%20%20%20%20%20%20%20%20%20%20%20%20converted%20to%20HTML%20automatically.%0A%20%20%20%20%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%0A%20%20%20%20%23%23%20Putting%20it%20all%20together%0A%0A%20%20%20%20Here's%20a%20more%20interesting%20example%20that%20puts%20together%0A%20%20%20%20everything%20we've%20learned%3A%20rendering%20markdown%20with%20LaTeX%20that%20depends%20on%0A%20%20%20%20the%20values%20of%20Python%20objects.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(math%2C%20mo)%3A%0A%20%20%20%20amplitude%20%3D%20mo.ui.slider(1%2C%202%2C%20step%3D0.1%2C%20label%3D%22amplitude%3A%20%22)%0A%20%20%20%20period%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20math.pi%20%2F%204%2C%0A%20%20%20%20%20%20%20%204%20*%20math.pi%2C%0A%20%20%20%20%20%20%20%20value%3D2%20*%20math.pi%2C%0A%20%20%20%20%20%20%20%20step%3Dmath.pi%20%2F%208%2C%0A%20%20%20%20%20%20%20%20label%3D%22period%3A%20%22%2C%0A%20%20%20%20)%0A%20%20%20%20return%20amplitude%2C%20period%0A%0A%0A%40app.cell%0Adef%20_(np%2C%20plt)%3A%0A%20%20%20%20def%20plotsin(amplitude%2C%20period)%3A%0A%20%20%20%20%20%20%20%20x%20%3D%20np.linspace(0%2C%202%20*%20np.pi%2C%20256)%0A%20%20%20%20%20%20%20%20plt.plot(x%2C%20amplitude%20*%20np.sin(2%20*%20np.pi%20%2F%20period%20*%20x))%0A%20%20%20%20%20%20%20%20plt.ylim(-2.2%2C%202.2)%0A%20%20%20%20%20%20%20%20return%20plt.gca()%0A%20%20%20%20return%20(plotsin%2C)%0A%0A%0A%40app.cell%0Adef%20_(amplitude%2C%20mo%2C%20period)%3A%0A%20%20%20%20mo.md(f%22%22%22%0A%20%20%20%20**A%20sin%20curve.**%0A%0A%20%20%20%20-%20%7Bamplitude%7D%0A%20%20%20%20-%20%7Bperiod%7D%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(amplitude%2C%20mo%2C%20period%2C%20plotsin)%3A%0A%20%20%20%20mo.md(rf%22%22%22%0A%20%20%20%20You're%20viewing%20the%20graph%20of%0A%0A%20%20%20%20%5C%5B%0A%20%20%20%20f(x)%20%3D%20%7Bamplitude.value%7D%5Csin((2%5Cpi%2F%7Bperiod.value%3A0.2f%7D)x)%2C%0A%20%20%20%20%5C%5D%0A%0A%20%20%20%20with%20%24x%24%20ranging%20from%20%240%24%20to%20%242%5Cpi%24.%0A%20%20%20%20%7Bmo.as_html(plotsin(amplitude.value%2C%20period.value))%7D%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20matplotlib.pyplot%20as%20plt%0A%20%20%20%20import%20numpy%20as%20np%0A%20%20%20%20return%20np%2C%20plt%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20math%0A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20return%20math%2C%20mo%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code><link href="/images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="/images/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/><link href="/images/favicon/favicon.ico" rel="icon"/><link href="/images/favicon/favicon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<div id="root"></div>
+<!-- This is a portal for the data editor to render in -->
+<div data-testid="glide-portal" id="portal" style="position: fixed; left: 0; top: 0; z-index: 9999"></div>
+<script data-marimo="true">
+      window.__MARIMO_MOUNT_CONFIG__ = {
+            "filename": "notebook.py",
+            "mode": "read",
+            "version": "0.19.2",
+            "serverToken": "unused",
+            "config": {"ai": {"models": {"custom_models": [], "displayed_models": []}}, "completion": {"activate_on_typing": true, "copilot": false, "signature_hint_on_typing": false}, "diagnostics": {"sql_linter": true}, "display": {"cell_output": "below", "code_editor_font_size": 14, "dataframes": "rich", "default_table_max_columns": 50, "default_table_page_size": 10, "default_width": "medium", "reference_highlighting": false, "theme": "light"}, "formatting": {"line_length": 79}, "keymap": {"overrides": {}, "preset": "default"}, "language_servers": {"pylsp": {"enable_flake8": false, "enable_mypy": true, "enable_pydocstyle": false, "enable_pyflakes": false, "enable_pylint": false, "enable_ruff": true, "enabled": false}}, "mcp": {"mcpServers": {}, "presets": []}, "package_management": {"manager": "uv"}, "runtime": {"auto_instantiate": false, "auto_reload": "off", "default_sql_output": "auto", "on_cell_change": "autorun", "output_max_bytes": 8000000, "reactive_tests": true, "std_stream_max_bytes": 1000000, "watcher_on_save": "lazy"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}},
+            "configOverrides": {},
+            "appConfig": {"auto_download": ["html"], "css_file": "/usr/local/_marimo/custom.css", "sql_output": "auto", "width": "medium"},
+            "view": {"showAppCode": false},
+            "notebook": null,
+            "session": null,
+            "runtimeConfig": null,
+        };
+    </script>
+</body>
+</html>

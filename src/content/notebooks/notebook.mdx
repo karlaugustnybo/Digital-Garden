@@ -1,0 +1,473 @@
+---
+title: Interactive Notebook
+description: A showcase of Marimo's interactive features
+type: notebook
+startDate: 2026-01-11
+updated: 2026-01-12
+topics: []
+growthStage: seedling
+draft: false
+toc: true
+sourceFile: notebooks/notebook.py
+interactiveUrl: /interactive/notebook/index.html
+wasmCompatible: true
+molabUrl: "https://marimo.io/p/@karlaugust/notebook"
+preloadAssets:
+  - assets/preload-helper-BW0IMuFq.js
+  - assets/hotkeys-uKX61F1_.js
+  - assets/defaultLocale-BLUna9fQ.js
+  - assets/precisionRound-Cl9k9ZmS.js
+  - assets/defaultLocale-DzliDDTm.js
+  - assets/vega-loader.browser-C8wT63Va.js
+  - assets/_Uint8Array-BGESiCQL.js
+  - assets/tooltip-CrRUCOBw.js
+  - assets/clsx-D0MtrJOx.js
+  - assets/cn-C1rgT0yh.js
+  - assets/chunk-LvLJmgfZ.js
+  - assets/react-BGmjiNul.js
+  - assets/compiler-runtime-DeeZ7FnK.js
+  - assets/jsx-runtime-DN_bIXfG.js
+  - assets/badge-DAnNhy3O.js
+  - assets/useEventListener-COkmyg1v.js
+  - assets/button-DuYGqRtX.js
+  - assets/react-dom-C9fstfnp.js
+  - assets/Combination-D1TsGrBC.js
+  - assets/menu-items-9PZrU2e0.js
+  - assets/dist-CBrDuocE.js
+  - assets/createLucideIcon-CW2xpJ57.js
+  - assets/check-CrAQug3q.js
+  - assets/select-D0g5GnIs.js
+  - assets/tooltip-CvjcEpZC.js
+  - assets/use-toast-Bzf3rpev.js
+  - assets/_getTag-BWqNuuwU.js
+  - assets/_baseIsEqual-Cz9Tt_-E.js
+  - assets/useEvent-DlWF5OMa.js
+  - assets/invariant-C6yE60hi.js
+  - assets/_baseFor-Duhs3RiJ.js
+  - assets/merge-BBX6ug-N.js
+  - assets/zod-Cg4WLWh2.js
+  - assets/utils-CJJIceVn.js
+  - assets/constants-Bkp4R3bQ.js
+  - assets/Deferred-DzyBMRsy.js
+  - assets/config-babG4OBR.js
+  - assets/uuid-ClFZlR7U.js
+  - assets/DeferredRequestRegistry-B3BENoUa.js
+  - assets/requests-C0HaHO6a.js
+  - assets/isSymbol-BGkTcW3U.js
+  - assets/toString-DlRqgfqz.js
+  - assets/_hasUnicode-zBEpxwYe.js
+  - assets/useLifecycle-CmDXEyIC.js
+  - assets/useNonce-EAuSVK-5.js
+  - assets/useTheme-DfP1CWaW.js
+  - assets/once-CTiSlR1m.js
+  - assets/capabilities-BmAOeMOK.js
+  - assets/createReducer-DDa-hVe3.js
+  - assets/dist-CAcX026F.js
+  - assets/dist-DKNOF5xd.js
+  - assets/dist-CI6_zMIl.js
+  - assets/dist-BVf1IY4_.js
+  - assets/dist-Cq_4nPfh.js
+  - assets/dist-CVj-_Iiz.js
+  - assets/dist-HGZzCB0y.js
+  - assets/dist-RKnr9SNh.js
+  - assets/dist-BuhT82Xx.js
+  - assets/stex-0ac7Aukl.js
+  - assets/toDate-5JckKRQn.js
+  - assets/cjs-Bj40p_Np.js
+  - assets/_arrayReduce-bZBYsK-u.js
+  - assets/type-BdyvjzTI.js
+  - assets/_baseProperty-DuoFhI7N.js
+  - assets/now-6sUe0ZdD.js
+  - assets/debounce-BbFlGgjv.js
+  - assets/toInteger-CDcO32Gx.js
+  - assets/database-zap-CaVvnK_o.js
+  - assets/main-CwSdzVhm.js
+  - assets/cells-D_SkyFDn.js
+  - assets/ErrorBoundary-Drf1manw.js
+  - assets/kbd-Czc5z_04.js
+  - assets/useInstallPackage-RldLPyJs.js
+  - assets/alert-dialog-k5KxevGr.js
+  - assets/dialog-DUEuLcT2.js
+  - assets/useDebounce-em3gna-v.js
+  - assets/numbers-C9_R_vlY.js
+  - assets/SSRProvider-DD7JA3RM.js
+  - assets/context-BAYdLMF_.js
+  - assets/useNumberFormatter-D8ks3oPN.js
+  - assets/usePress-C2LPFxyv.js
+  - assets/input-CaEtLL8p.js
+  - assets/ImperativeModal-q6QlC2aZ.js
+  - assets/cell-link-BoUpLV2S.js
+  - assets/multi-map-fjX9ImVF.js
+  - assets/alert-BEdExd6A.js
+  - assets/chevron-right-CqEd11Di.js
+  - assets/dropdown-menu-BP4_BZLr.js
+  - assets/links-DNmjkr65.js
+  - assets/datasource-CR_zEq5o.js
+  - assets/state-kFdt1US2.js
+  - assets/MarimoErrorOutput-Orp0blpZ.js
+  - assets/copy-DRhpWiOq.js
+  - assets/copy-gBVL4NN-.js
+  - assets/copy-icon-B69c-352.js
+  - assets/spinner-C1czjtp7.js
+  - assets/es-CEEVxHsX.js
+  - assets/focus-D18AHojc.js
+  - assets/LazyAnyLanguageCodeMirror-jpEDlD0M.js
+  - assets/katex-AwOI3EvM.js
+  - assets/marked.esm-CHnOtnr3.js
+  - assets/chunk-OGVTOU66-CjNLT2C3.js
+  - assets/markdown-renderer-C_xfLXiO.js
+  - assets/dist-DOFFh6Ii.js
+  - assets/command-Qt3ng7cb.js
+  - assets/popover-DtnzNVk-.js
+  - assets/useRunCells-BZ_OFvV4.js
+  - assets/mode-BFwdGSZ7.js
+  - assets/purify.es-N-2faAGj.js
+  - assets/RenderHTML-BzGWfPTJ.js
+  - assets/table--_20dwBZ.js
+  - assets/tabs-Ctk4D03n.js
+  - assets/useAsyncData-BJJJOr9W.js
+  - assets/useIframeCapabilities-CU-WWxnz.js
+  - assets/error-banner-DU5Qb8a8.js
+  - assets/formats-B9CrBoaO.js
+  - assets/en-US-DhMN8sxe.js
+  - assets/isValid-DhzaK-Y1.js
+  - assets/dates-CdsE1R40.js
+  - assets/download-CITws1-y.js
+  - assets/maps-s2pQkyf5.js
+  - assets/extends-B9D0JO9U.js
+  - assets/emotion-is-prop-valid.esm-lG8j6oqk.js
+  - assets/useDateFormatter-CV0QXb5P.js
+  - assets/range-sshwVRcP.js
+  - assets/capitalize-DQeWKRGx.js
+  - assets/table-BLx7B_us.js
+  - assets/JsonOutput-BLd1jTNA.js
+  - assets/file-BnFXtaZZ.js
+  - assets/play-BJDBXApx.js
+  - assets/chat-components-6dWNbFjV.js
+  - assets/isEmpty-DIxUV1UR.js
+  - assets/circle-check-big-OIMTUpe6.js
+  - assets/chat-display-Cfg38gMM.js
+  - assets/ai-model-dropdown-DZ7evAGU.js
+  - assets/renderShortcut-D0Pei-OA.js
+  - assets/useDeleteCell-GHwc6J4l.js
+  - assets/icons-D4lB4En9.js
+  - assets/process-output-4w8xDO0j.js
+  - assets/blob-Dg_vNTSs.js
+  - assets/objectWithoutPropertiesLoose-CboCOq4o.js
+  - assets/esm-B3JckBtM.js
+  - assets/add-cell-with-ai-Dx5UA23s.js
+  - assets/chart-no-axes-column-D42sFB6d.js
+  - assets/square-function-DxXFdbn8.js
+  - assets/spec-qp_XZeSS.js
+  - assets/column-preview-9nPwQyJZ.js
+  - assets/switch-C9iBa4rX.js
+  - assets/toggle-G1t0cQyf.js
+  - assets/globals-D3SeIm1j.js
+  - assets/share-CXQVxivL.js
+  - assets/memoize-DN0TMY36.js
+  - assets/get-CyLJYAfP.js
+  - assets/_baseSet-6FYvpjrm.js
+  - assets/react-resizable-panels.browser.esm-BqxQegSf.js
+  - assets/utilities.esm-FYD46c3d.js
+  - assets/floating-outline-p0aHdM2W.js
+  - assets/useAddCell-CVfRv5mq.js
+  - assets/eye-off-D9zAYqG9.js
+  - assets/plus-CHesBJpY.js
+  - assets/readonly-python-code-DjP4vjBQ.js
+  - assets/file-video-camera-CZUg-nFA.js
+  - assets/types-VzFAm7Cv.js
+  - assets/label-qwandMoh.js
+  - assets/textarea-D2hGxqGj.js
+  - assets/refresh-ccw-DbW1_PHb.js
+  - assets/trash-2-C-lF7BNB.js
+  - assets/form-DEraWoX5.js
+  - assets/field-DDKGFzpC.js
+  - assets/useBoolean-5kuXz69O.js
+  - assets/useDeepCompareMemoize-gzLRYatP.js
+  - assets/types-B42u_5hF.js
+  - assets/prop-types-C638SUfx.js
+  - assets/es-FiXEquL2.js
+  - assets/VisuallyHidden-BodIky8L.js
+  - assets/hasIn-DydgU7lx.js
+  - assets/_baseFlatten-CLPh0yMf.js
+  - assets/flatten-Buk63LQO.js
+  - assets/pick-DeQioq0G.js
+  - assets/code-xml-MBUyxNtK.js
+  - assets/download-DobaYJPt.js
+  - assets/globe-CY9im410.js
+  - assets/refresh-cw-Din9uFKE.js
+  - assets/settings-MTlHVxz3.js
+  - assets/square-leQTJTJJ.js
+  - assets/triangle-alert-CbD0f2J6.js
+  - assets/bundle.esm-B0Sy2M4C.js
+  - assets/index-CGjwCay2.js
+  - assets/cells-jmgGt1lS.css
+  - assets/markdown-renderer-DdDKmWlR.css
+  - assets/JsonOutput-B7vuddcd.css
+  - assets/index-nL7dJutx.css
+---
+
+import NotebookBanner from "../../components/notebooks/NotebookBanner.astro";
+
+<NotebookBanner interactiveUrl="/interactive/notebook/index.html" molabUrl={"https://marimo.io/p/@karlaugust/notebook"} preloadAssets={["assets/preload-helper-BW0IMuFq.js", "assets/hotkeys-uKX61F1_.js", "assets/defaultLocale-BLUna9fQ.js", "assets/precisionRound-Cl9k9ZmS.js", "assets/defaultLocale-DzliDDTm.js", "assets/vega-loader.browser-C8wT63Va.js", "assets/_Uint8Array-BGESiCQL.js", "assets/tooltip-CrRUCOBw.js", "assets/clsx-D0MtrJOx.js", "assets/cn-C1rgT0yh.js", "assets/chunk-LvLJmgfZ.js", "assets/react-BGmjiNul.js", "assets/compiler-runtime-DeeZ7FnK.js", "assets/jsx-runtime-DN_bIXfG.js", "assets/badge-DAnNhy3O.js", "assets/useEventListener-COkmyg1v.js", "assets/button-DuYGqRtX.js", "assets/react-dom-C9fstfnp.js", "assets/Combination-D1TsGrBC.js", "assets/menu-items-9PZrU2e0.js", "assets/dist-CBrDuocE.js", "assets/createLucideIcon-CW2xpJ57.js", "assets/check-CrAQug3q.js", "assets/select-D0g5GnIs.js", "assets/tooltip-CvjcEpZC.js", "assets/use-toast-Bzf3rpev.js", "assets/_getTag-BWqNuuwU.js", "assets/_baseIsEqual-Cz9Tt_-E.js", "assets/useEvent-DlWF5OMa.js", "assets/invariant-C6yE60hi.js", "assets/_baseFor-Duhs3RiJ.js", "assets/merge-BBX6ug-N.js", "assets/zod-Cg4WLWh2.js", "assets/utils-CJJIceVn.js", "assets/constants-Bkp4R3bQ.js", "assets/Deferred-DzyBMRsy.js", "assets/config-babG4OBR.js", "assets/uuid-ClFZlR7U.js", "assets/DeferredRequestRegistry-B3BENoUa.js", "assets/requests-C0HaHO6a.js", "assets/isSymbol-BGkTcW3U.js", "assets/toString-DlRqgfqz.js", "assets/_hasUnicode-zBEpxwYe.js", "assets/useLifecycle-CmDXEyIC.js", "assets/useNonce-EAuSVK-5.js", "assets/useTheme-DfP1CWaW.js", "assets/once-CTiSlR1m.js", "assets/capabilities-BmAOeMOK.js", "assets/createReducer-DDa-hVe3.js", "assets/dist-CAcX026F.js", "assets/dist-DKNOF5xd.js", "assets/dist-CI6_zMIl.js", "assets/dist-BVf1IY4_.js", "assets/dist-Cq_4nPfh.js", "assets/dist-CVj-_Iiz.js", "assets/dist-HGZzCB0y.js", "assets/dist-RKnr9SNh.js", "assets/dist-BuhT82Xx.js", "assets/stex-0ac7Aukl.js", "assets/toDate-5JckKRQn.js", "assets/cjs-Bj40p_Np.js", "assets/_arrayReduce-bZBYsK-u.js", "assets/type-BdyvjzTI.js", "assets/_baseProperty-DuoFhI7N.js", "assets/now-6sUe0ZdD.js", "assets/debounce-BbFlGgjv.js", "assets/toInteger-CDcO32Gx.js", "assets/database-zap-CaVvnK_o.js", "assets/main-CwSdzVhm.js", "assets/cells-D_SkyFDn.js", "assets/ErrorBoundary-Drf1manw.js", "assets/kbd-Czc5z_04.js", "assets/useInstallPackage-RldLPyJs.js", "assets/alert-dialog-k5KxevGr.js", "assets/dialog-DUEuLcT2.js", "assets/useDebounce-em3gna-v.js", "assets/numbers-C9_R_vlY.js", "assets/SSRProvider-DD7JA3RM.js", "assets/context-BAYdLMF_.js", "assets/useNumberFormatter-D8ks3oPN.js", "assets/usePress-C2LPFxyv.js", "assets/input-CaEtLL8p.js", "assets/ImperativeModal-q6QlC2aZ.js", "assets/cell-link-BoUpLV2S.js", "assets/multi-map-fjX9ImVF.js", "assets/alert-BEdExd6A.js", "assets/chevron-right-CqEd11Di.js", "assets/dropdown-menu-BP4_BZLr.js", "assets/links-DNmjkr65.js", "assets/datasource-CR_zEq5o.js", "assets/state-kFdt1US2.js", "assets/MarimoErrorOutput-Orp0blpZ.js", "assets/copy-DRhpWiOq.js", "assets/copy-gBVL4NN-.js", "assets/copy-icon-B69c-352.js", "assets/spinner-C1czjtp7.js", "assets/es-CEEVxHsX.js", "assets/focus-D18AHojc.js", "assets/LazyAnyLanguageCodeMirror-jpEDlD0M.js", "assets/katex-AwOI3EvM.js", "assets/marked.esm-CHnOtnr3.js", "assets/chunk-OGVTOU66-CjNLT2C3.js", "assets/markdown-renderer-C_xfLXiO.js", "assets/dist-DOFFh6Ii.js", "assets/command-Qt3ng7cb.js", "assets/popover-DtnzNVk-.js", "assets/useRunCells-BZ_OFvV4.js", "assets/mode-BFwdGSZ7.js", "assets/purify.es-N-2faAGj.js", "assets/RenderHTML-BzGWfPTJ.js", "assets/table--_20dwBZ.js", "assets/tabs-Ctk4D03n.js", "assets/useAsyncData-BJJJOr9W.js", "assets/useIframeCapabilities-CU-WWxnz.js", "assets/error-banner-DU5Qb8a8.js", "assets/formats-B9CrBoaO.js", "assets/en-US-DhMN8sxe.js", "assets/isValid-DhzaK-Y1.js", "assets/dates-CdsE1R40.js", "assets/download-CITws1-y.js", "assets/maps-s2pQkyf5.js", "assets/extends-B9D0JO9U.js", "assets/emotion-is-prop-valid.esm-lG8j6oqk.js", "assets/useDateFormatter-CV0QXb5P.js", "assets/range-sshwVRcP.js", "assets/capitalize-DQeWKRGx.js", "assets/table-BLx7B_us.js", "assets/JsonOutput-BLd1jTNA.js", "assets/file-BnFXtaZZ.js", "assets/play-BJDBXApx.js", "assets/chat-components-6dWNbFjV.js", "assets/isEmpty-DIxUV1UR.js", "assets/circle-check-big-OIMTUpe6.js", "assets/chat-display-Cfg38gMM.js", "assets/ai-model-dropdown-DZ7evAGU.js", "assets/renderShortcut-D0Pei-OA.js", "assets/useDeleteCell-GHwc6J4l.js", "assets/icons-D4lB4En9.js", "assets/process-output-4w8xDO0j.js", "assets/blob-Dg_vNTSs.js", "assets/objectWithoutPropertiesLoose-CboCOq4o.js", "assets/esm-B3JckBtM.js", "assets/add-cell-with-ai-Dx5UA23s.js", "assets/chart-no-axes-column-D42sFB6d.js", "assets/square-function-DxXFdbn8.js", "assets/spec-qp_XZeSS.js", "assets/column-preview-9nPwQyJZ.js", "assets/switch-C9iBa4rX.js", "assets/toggle-G1t0cQyf.js", "assets/globals-D3SeIm1j.js", "assets/share-CXQVxivL.js", "assets/memoize-DN0TMY36.js", "assets/get-CyLJYAfP.js", "assets/_baseSet-6FYvpjrm.js", "assets/react-resizable-panels.browser.esm-BqxQegSf.js", "assets/utilities.esm-FYD46c3d.js", "assets/floating-outline-p0aHdM2W.js", "assets/useAddCell-CVfRv5mq.js", "assets/eye-off-D9zAYqG9.js", "assets/plus-CHesBJpY.js", "assets/readonly-python-code-DjP4vjBQ.js", "assets/file-video-camera-CZUg-nFA.js", "assets/types-VzFAm7Cv.js", "assets/label-qwandMoh.js", "assets/textarea-D2hGxqGj.js", "assets/refresh-ccw-DbW1_PHb.js", "assets/trash-2-C-lF7BNB.js", "assets/form-DEraWoX5.js", "assets/field-DDKGFzpC.js", "assets/useBoolean-5kuXz69O.js", "assets/useDeepCompareMemoize-gzLRYatP.js", "assets/types-B42u_5hF.js", "assets/prop-types-C638SUfx.js", "assets/es-FiXEquL2.js", "assets/VisuallyHidden-BodIky8L.js", "assets/hasIn-DydgU7lx.js", "assets/_baseFlatten-CLPh0yMf.js", "assets/flatten-Buk63LQO.js", "assets/pick-DeQioq0G.js", "assets/code-xml-MBUyxNtK.js", "assets/download-DobaYJPt.js", "assets/globe-CY9im410.js", "assets/refresh-cw-Din9uFKE.js", "assets/settings-MTlHVxz3.js", "assets/square-leQTJTJJ.js", "assets/triangle-alert-CbD0f2J6.js", "assets/bundle.esm-B0Sy2M4C.js", "assets/index-CGjwCay2.js", "assets/cells-jmgGt1lS.css", "assets/markdown-renderer-DdDKmWlR.css", "assets/JsonOutput-B7vuddcd.css", "assets/index-nL7dJutx.css"]} />
+
+````python {.marimo hide_code="true"}
+mo.md("""
+# Hello, Markdown!
+
+Use marimo's "`md`" function to write markdown. This function compiles Markdown into HTML that marimo can display.
+
+For example, here's the code that rendered the above title and
+paragraph:
+
+```python3
+mo.md(
+    '''
+    # Hello, Markdown!
+
+    Use marimo's "`md`" function to embed rich text into your marimo
+    apps. This function compiles your Markdown into HTML that marimo
+    can display.
+    '''
+)
+```
+""")
+````
+
+**Tip: toggling between the Markdown and Python editor**
+
+Although markdown is written with `mo.md`, marimo provides a markdown editor
+that hides this boilerplate from you, for cells that only contain `mo.md(...)`.
+
+Toggle between the Markdown and Python
+editors by clicking the blue icon in the top-right of the editor,
+entering `Ctrl/Cmd+Shift+M`, or using the "cell actions menu". You can
+also **hide** the markdown editor through the cell actions menu.
+
+**Tip:** To interpolate Python values into markdown strings, you'll need to use
+a Python f-string; do this by checking the `f` box in the bottom-right corner of the
+markdown editor, or with `mo.md(f"...")` in the Python view.
+
+````python {.marimo}
+mo.md(r"""
+## LaTeX
+You can embed LaTeX in Markdown.
+
+For example,
+
+```python3
+mo.md(r'$f : \mathbf{R} \to \mathbf{R}$')
+```
+
+renders $f : \mathbf{R} \to \mathbf{R}$, while
+
+```python3
+mo.md(
+    r'''
+    \[
+    f: \mathbf{R} \to \mathbf{R}
+    \]
+    '''
+)
+```
+
+renders the display math
+
+\[
+f: \mathbf{R} \to \mathbf{R}.
+\]
+""")
+````
+
+```python {.marimo hide_code="true"}
+mo.accordion(
+    {
+        "Tip: `r''` strings": mo.md(
+            "Use `r''` strings to remove the need to escape backslashes"
+            " when writing LaTeX."
+        )
+    }
+)
+```
+
+```python {.marimo hide_code="true"}
+mo.accordion(
+    {
+        "Note: KaTeX": mo.md(
+            """
+            marimo actually uses KaTeX, a math typesetting library for the
+            web which supports a subset of LaTeX. For a list of
+            (un)supported commands, visit
+            https://katex.org/docs/support_table
+            """
+        )
+    }
+)
+```
+
+## Interpolating Python values
+
+You can interpolate Python values into markdown using
+`f-strings` and marimo's ` as_html` function. This lets you create
+markdown whose contents depend on data that changes at runtime.
+
+Here are some examples.
+
+````python {.marimo}
+def _sine_plot():
+    _x = np.linspace(start=0, stop=2 * np.pi)
+    plt.plot(_x, np.sin(_x))
+    return plt.gca()
+
+mo.md(
+    f"""
+    ### Plots
+    A matplotlib figure:
+
+    ```python3
+    _x = np.linspace(start=0, stop=2*np.pi)
+    sine_plot = plt.plot(_x, np.sin(_x))
+    mo.md(f"{{mo.as_html(sine_plot)}}")
+    ```
+    yields
+
+    {mo.as_html(_sine_plot())}
+    """
+)
+````
+
+````python {.marimo}
+leaves = mo.ui.slider(1, 32, label="🍃: ")
+
+mo.md(
+    f"""
+    ### UI elements
+
+    A `marimo.ui` object:
+
+    ```python3
+    leaves = mo.ui.slider(1, 16, label="🍃: ")
+    mo.md(f"{{leaves}}")
+    ```
+
+    yields
+
+    {leaves}
+    """
+)
+````
+
+```python {.marimo}
+mo.md(f"""
+Your leaves: {'🍃' * leaves.value}
+""")
+```
+
+```python {.marimo hide_code="true"}
+mo.accordion(
+    {
+        "Tip: UI elements can format themselves": """
+        marimo objects know how to format themselves, so you can omit the
+        call to `as_html`.
+        """
+    }
+)
+```
+
+```python {.marimo}
+import polars as pl
+
+def make_dataframe():
+    x = np.linspace(0, 2 * np.pi, 10)
+    y = np.sin(x)
+    return pl.DataFrame({"x": x, "y": y})
+
+mo.md(
+    f"""
+    ### Other objects
+
+    Use `mo.as_html` to convert objects to HTML. This function
+    generates rich HTML for many Python types, including:
+
+    - lists, dicts, and tuples,
+    - `pandas` dataframes and series,
+    - `seaborn` figures,
+    - `plotly` figures, and
+    - `altair` figures.
+
+    For example, here's a Polars dataframe:
+
+    {mo.as_html(make_dataframe())}
+    """
+)
+```
+
+```python {.marimo hide_code="true"}
+mo.accordion(
+    {
+        "Tip: outputs are automatically converted to HTML": """
+        `mo.as_html` is only needed when interpolating objects into
+        markdown; the last expression of a cell (its output) is
+        converted to HTML automatically.
+        """
+    }
+)
+```
+
+## Putting it all together
+
+Here's a more interesting example that puts together
+everything we've learned: rendering markdown with LaTeX that depends on
+the values of Python objects.
+
+```python {.marimo}
+amplitude = mo.ui.slider(1, 2, step=0.1, label="amplitude: ")
+period = mo.ui.slider(
+    math.pi / 4,
+    4 * math.pi,
+    value=2 * math.pi,
+    step=math.pi / 8,
+    label="period: ",
+)
+```
+
+```python {.marimo}
+def plotsin(amplitude, period):
+    x = np.linspace(0, 2 * np.pi, 256)
+    plt.plot(x, amplitude * np.sin(2 * np.pi / period * x))
+    plt.ylim(-2.2, 2.2)
+    return plt.gca()
+```
+
+```python {.marimo}
+mo.md(f"""
+**A sin curve.**
+
+- {amplitude}
+- {period}
+""")
+```
+
+```python {.marimo}
+mo.md(rf"""
+You're viewing the graph of
+
+\[
+f(x) = {amplitude.value}\sin((2\pi/{period.value:0.2f})x),
+\]
+
+with $x$ ranging from $0$ to $2\pi$.
+{mo.as_html(plotsin(amplitude.value, period.value))}
+""")
+```
+
+```python {.marimo}
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+```python {.marimo}
+import math
+
+import marimo as mo
+```

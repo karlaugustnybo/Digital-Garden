@@ -23,14 +23,16 @@ type Props = {
 		| CollectionEntry<"notes">["data"]
 		| CollectionEntry<"shortfilms">["data"]
 		| CollectionEntry<"music">["data"]
-		| CollectionEntry<"research">["data"];
+		| CollectionEntry<"research">["data"]
+		| CollectionEntry<"notebooks">["data"];
 	headings: MarkdownHeading[];
 	entry?:
 		| CollectionEntry<"essays">
 		| CollectionEntry<"notes">
 		| CollectionEntry<"shortfilms">
 		| CollectionEntry<"music">
-		| CollectionEntry<"research">;
+		| CollectionEntry<"research">
+		| CollectionEntry<"notebooks">;
 };
 
 const { frontmatter, entry } = Astro.props;
@@ -73,6 +75,9 @@ if (entry) {
 		case "research":
 			allEntries = (await getCollection("research")) as (typeof entry)[];
 			break;
+		case "notebooks":
+			allEntries = (await getCollection("notebooks")) as (typeof entry)[];
+			break;
 	}
 	const versionedDates = getCanonicalDates(entry, allEntries);
 	canonicalDates = {
@@ -114,7 +119,9 @@ const coverImage =
 						? "/research"
 						: entry?.collection === "music"
 							? "/music"
-							: `/${frontmatter.type}s`}
+							: entry?.collection === "notebooks"
+								? "/notebooks"
+								: `/${frontmatter.type}s`}
 				>
 					<Icon name="heroicons:arrow-left" size={16} />
 					<span>
@@ -123,9 +130,11 @@ const coverImage =
 								? "Research Lab"
 								: entry?.collection === "music"
 									? "Music"
-									: frontmatter.type.charAt(0).toUpperCase() +
-										frontmatter.type.slice(1) +
-										"s"
+									: entry?.collection === "notebooks"
+										? "Notebooks"
+										: frontmatter.type.charAt(0).toUpperCase() +
+											frontmatter.type.slice(1) +
+											"s"
 						}
 					</span>
 				</a>

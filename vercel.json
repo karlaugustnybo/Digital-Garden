@@ -2,5 +2,20 @@
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
   "installCommand": "bun install",
-  "framework": "astro"
+  "framework": "astro",
+  "headers": [
+    {
+      "source": "/interactive/(.*)",
+      "headers": [
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "require-corp"
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,76 @@
+---
+interface Props {
+    src: string;
+    height?: string;
+    title?: string;
+}
+
+const { src, height = "600px", title = "Interactive Marimo Notebook" } = Astro.props;
+---
+
+<div class="notebook-embed" style={`--embed-height: ${height}`}>
+    <div class="loading-indicator">
+        <div class="spinner"></div>
+        <span>Loading interactive notebook...</span>
+    </div>
+    <iframe
+        src={src}
+        title={title}
+        loading="lazy"
+        allow="cross-origin-isolated"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"></iframe>
+</div>
+
+<style>
+    .notebook-embed {
+        position: relative;
+        width: 100%;
+        height: var(--embed-height, 600px);
+        border: 1px solid var(--color-gray-200, #e0e0e0);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--color-cream, #fafaf5);
+        margin: var(--space-l, 1.5rem) 0;
+    }
+
+    .loading-indicator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-s, 0.5rem);
+        color: var(--color-gray-500, #888);
+        font-family: var(--font-sans, sans-serif);
+        font-size: var(--font-size-sm, 0.875rem);
+        z-index: 1;
+    }
+
+    .spinner {
+        width: 32px;
+        height: 32px;
+        border: 3px solid var(--color-gray-200, #e0e0e0);
+        border-top-color: var(--color-primary-green, #4caf50);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: white;
+        z-index: 2;
+    }
+</style>

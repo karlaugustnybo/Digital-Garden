@@ -1,0 +1,135 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    interactiveUrl: string;
+    molabUrl?: string | null;
+    preloadAssets?: string[];
+}
+
+const { interactiveUrl, molabUrl, preloadAssets = [] } = Astro.props;
+---
+
+{
+    preloadAssets.map((asset) => {
+        const basePath = interactiveUrl.substring(0, interactiveUrl.lastIndexOf("/"));
+        return <link rel="modulepreload" href={`${basePath}/${asset}`} />;
+    })
+}
+
+<div class="notebook-banner">
+    <link rel="prefetch" href={interactiveUrl} />
+    <a href={interactiveUrl} class="banner-link">
+        <div class="banner-content">
+            <Icon name="lucide:notebook-tabs" size={18} class="banner-icon" />
+            <div class="banner-text">
+                <span class="banner-title">Interactive notebook</span>
+                <span class="banner-action">Open in browser →</span>
+            </div>
+        </div>
+    </a>
+    {
+        molabUrl && (
+            <a href={molabUrl} class="banner-link banner-link-molab" target="_blank" rel="noopener">
+                <div class="banner-content">
+                    <Icon name="lucide:cloud" size={18} class="banner-icon" />
+                    <div class="banner-text">
+                        <span class="banner-title">Run in MoLab</span>
+                        <span class="banner-action">Cloud environment →</span>
+                    </div>
+                </div>
+            </a>
+        )
+    }
+</div>
+
+<style>
+    .notebook-banner {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+        margin-top: 0;
+        margin-bottom: var(--space-l);
+    }
+
+    .banner-link {
+        display: block;
+        text-decoration: none;
+        padding: var(--space-xs) var(--space-s);
+        border-radius: var(--border-radius-base);
+        border: 1px solid var(--color-tinted-cream);
+        background: var(--color-cream);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .banner-link:hover {
+        background: var(--color-light-cream);
+        border-color: var(--color-primary-green);
+        box-shadow:
+            0 0 16px rgba(76, 175, 80, 0.25),
+            0 0 6px rgba(76, 175, 80, 0.15);
+        transform: translateY(-1px);
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    .banner-icon {
+        color: var(--color-primary-green);
+        flex-shrink: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .banner-link:hover .banner-icon {
+        color: var(--color-accent-brown);
+        transform: scale(1.1);
+    }
+
+    .banner-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .banner-title {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+        color: var(--color-gray-800);
+        transition: color 0.3s ease-in-out;
+    }
+
+    .banner-link:hover .banner-title {
+        color: var(--color-accent-brown);
+    }
+
+    .banner-action {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-xs);
+        color: var(--color-gray-500);
+        transition: color 0.3s ease-in-out;
+    }
+
+    .banner-link:hover .banner-action {
+        color: var(--color-gray-700);
+    }
+
+    /* MoLab variant */
+    .banner-link-molab:hover {
+        border-color: #3b82f6; /* Blue-500 */
+        box-shadow:
+            0 0 16px rgba(59, 130, 246, 0.25),
+            0 0 6px rgba(59, 130, 246, 0.15);
+    }
+
+    .banner-link-molab .banner-icon {
+        color: #3b82f6; /* Blue-500 */
+    }
+
+    .banner-link-molab:hover .banner-icon {
+        color: #1d4ed8; /* Blue-700 */
+    }
+</style>

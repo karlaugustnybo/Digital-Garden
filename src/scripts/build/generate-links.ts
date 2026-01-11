@@ -128,6 +128,7 @@ const getAllPostData = () => {
   // Get all content files
   const essayFiles = getFilesFromDir(path.join(CONTENT_PATH, "essays"));
   const noteFiles = getFilesFromDir(path.join(CONTENT_PATH, "notes"));
+  const notebookFiles = getFilesFromDir(path.join(CONTENT_PATH, "notebooks"));
 
   // Temporarily disabled collections:
   // const patternFiles = getFilesFromDir(path.join(CONTENT_PATH, "patterns"));
@@ -141,6 +142,10 @@ const getAllPostData = () => {
     noteFiles,
     path.join(CONTENT_PATH, "notes"),
   );
+  const notebooksData = getDataForBacklinks(
+    notebookFiles,
+    path.join(CONTENT_PATH, "notebooks"),
+  );
 
   // Temporarily disabled:
   // const patternsData = getDataForBacklinks(
@@ -152,7 +157,7 @@ const getAllPostData = () => {
   //   path.join(CONTENT_PATH, "talks"),
   // );
 
-  return [...essaysData, ...notesData]; // ...patternsData, ...talksData];
+  return [...essaysData, ...notesData, ...notebooksData]; // ...patternsData, ...talksData];
 };
 
 // Main execution

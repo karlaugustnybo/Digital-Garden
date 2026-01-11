@@ -5,7 +5,7 @@
     viewBox="0 0 25 25">
     <style>
         .evergreen__cls-1 {
-            fill: var(--color-primary-green);
+            fill: currentColor;
         }
     </style>
     <path

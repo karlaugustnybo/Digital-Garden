@@ -21,8 +21,8 @@ import RemoteImage from "../components/mdx/RemoteImage.astro";
 import BasicImage from "../components/mdx/BasicImage.astro";
 import Spacer from "../components/mdx/Spacer.astro";
 
-type ContentType = "essay" | "note" | "smidgeon" | "shortfilm" | "music";
-type Collections = "essays" | "notes" | "smidgeons" | "shortfilms" | "music";
+type ContentType = "essay" | "note" | "smidgeon" | "shortfilm" | "music" | "notebook";
+type Collections = "essays" | "notes" | "smidgeons" | "shortfilms" | "music" | "notebooks";
 
 // Add type definitions for different frontmatter types
 type BaseFrontmatter = {
@@ -85,6 +85,12 @@ export async function getStaticPaths() {
 		props: { entry, type: "music" } as const,
 	}));
 
+	const notebooks = await getCollection("notebooks", ({ data }) => !data.draft);
+	const versionedNotebookPaths = generateVersionedPaths(notebooks).map(({ slug, entry }) => ({
+		params: { slug },
+		props: { entry, type: "notebook" } as const,
+	}));
+
 	return [
 		...versionedEssayPaths,
 		...versionedNotePaths,
@@ -92,6 +98,7 @@ export async function getStaticPaths() {
 		...versionedTalkPaths,
 		...versionedShortfilmPaths,
 		...versionedMusicPaths,
+		...versionedNotebookPaths,
 
 		// Smidgeons don't support versioning, so keep the original mapping
 		...smidgeons.map((entry) => ({
