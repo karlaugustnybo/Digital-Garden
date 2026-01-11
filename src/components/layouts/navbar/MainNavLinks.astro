@@ -146,9 +146,15 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 <script>
 	function initializeDropdown() {
 		const button = document.querySelector(".popover-button") as HTMLButtonElement;
+		const gardenLink = document.querySelector(".hover-link") as HTMLAnchorElement;
 		const megamenu = document.getElementById("garden-dropdown") as HTMLElement;
 
 		if (!button || !megamenu) return;
+
+		// Get all focusable items in the megamenu
+		function getMenuItems(): HTMLAnchorElement[] {
+			return Array.from(megamenu.querySelectorAll(".megamenu-item")) as HTMLAnchorElement[];
+		}
 
 		// Force close on initialization and reset styles
 		function closeMegamenu() {
@@ -169,7 +175,7 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 			}, 250);
 		}
 
-		function openMegamenu() {
+		function openMegamenu(focusFirst = false) {
 			if (!megamenu || !button) return;
 
 			button.setAttribute("aria-expanded", "true");
@@ -185,6 +191,14 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 				megamenu.style.opacity = "1";
 				megamenu.style.transform = "rotateX(0deg)";
 				megamenu.style.scale = "1";
+
+				// Focus first item if requested
+				if (focusFirst) {
+					const items = getMenuItems();
+					if (items.length > 0) {
+						items[0].focus();
+					}
+				}
 			});
 		}
 
@@ -199,12 +213,15 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 		const existingHandlers = (button as any)._megamenuHandlers;
 		if (existingHandlers) {
 			button.removeEventListener("click", existingHandlers.click);
-			document.removeEventListener("keydown", existingHandlers.keydown);
+			button.removeEventListener("keydown", existingHandlers.buttonKeydown);
+			megamenu.removeEventListener("keydown", existingHandlers.menuKeydown);
+			gardenLink?.removeEventListener("keydown", existingHandlers.gardenKeydown);
+			document.removeEventListener("keydown", existingHandlers.docKeydown);
 			document.removeEventListener("focusout", existingHandlers.focusout);
 			document.removeEventListener("astro:before-preparation", existingHandlers.beforePrep);
 		}
 
-		// Create handler functions
+		// Click handler for the button
 		const clickHandler = (e: Event) => {
 			e.stopPropagation();
 			if (megamenu.classList.contains("hidden")) {
@@ -214,35 +231,128 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 			}
 		};
 
-		const keydownHandler = (e: KeyboardEvent) => {
+		// Keyboard handler for the dropdown button
+		const buttonKeydownHandler = (e: KeyboardEvent) => {
+			const isOpen = !megamenu.classList.contains("hidden");
+
+			switch (e.key) {
+				case "Enter":
+				case " ":
+					e.preventDefault();
+					if (isOpen) {
+						closeMegamenu();
+					} else {
+						openMegamenu(true);
+					}
+					break;
+				case "ArrowDown":
+					e.preventDefault();
+					if (!isOpen) {
+						openMegamenu(true);
+					} else {
+						const items = getMenuItems();
+						if (items.length > 0) items[0].focus();
+					}
+					break;
+				case "ArrowUp":
+					e.preventDefault();
+					if (!isOpen) {
+						openMegamenu(true);
+					}
+					// Focus last item
+					const items = getMenuItems();
+					if (items.length > 0) items[items.length - 1].focus();
+					break;
+			}
+		};
+
+		// Keyboard handler for "The Garden" link
+		const gardenKeydownHandler = (e: KeyboardEvent) => {
+			if (e.key === "ArrowDown") {
+				e.preventDefault();
+				openMegamenu(true);
+			}
+		};
+
+		// Keyboard handler for megamenu items
+		const menuKeydownHandler = (e: KeyboardEvent) => {
+			const items = getMenuItems();
+			const currentIndex = items.indexOf(document.activeElement as HTMLAnchorElement);
+
+			switch (e.key) {
+				case "ArrowDown":
+					e.preventDefault();
+					if (currentIndex < items.length - 1) {
+						items[currentIndex + 1].focus();
+					} else {
+						// Wrap to first
+						items[0].focus();
+					}
+					break;
+				case "ArrowUp":
+					e.preventDefault();
+					if (currentIndex > 0) {
+						items[currentIndex - 1].focus();
+					} else {
+						// Wrap to last
+						items[items.length - 1].focus();
+					}
+					break;
+				case "Home":
+					e.preventDefault();
+					items[0].focus();
+					break;
+				case "End":
+					e.preventDefault();
+					items[items.length - 1].focus();
+					break;
+				case "Escape":
+					e.preventDefault();
+					closeMegamenu();
+					button.focus();
+					break;
+			}
+		};
+
+		// Document-level Escape handler
+		const docKeydownHandler = (e: KeyboardEvent) => {
 			if (e.key === "Escape" && !megamenu.classList.contains("hidden")) {
 				closeMegamenu();
 				button.focus();
 			}
 		};
 
+		// Focus out handler
 		const focusoutHandler = (e: FocusEvent) => {
 			const target = e.relatedTarget as Node;
-			// Don't close if clicking a link inside the megamenu
-			if (target && megamenu.contains(target)) {
+			// Don't close if focus is moving within the megamenu or to the button
+			if (target && (megamenu.contains(target) || button.contains(target))) {
 				return;
 			}
-			if (!megamenu.contains(target) && !button.contains(target)) {
-				closeMegamenu();
+			// Also check if moving to the garden link
+			if (target && gardenLink?.contains(target)) {
+				return;
 			}
+			closeMegamenu();
 		};
 
 		// Store handlers for cleanup
 		(button as any)._megamenuHandlers = {
 			click: clickHandler,
-			keydown: keydownHandler,
+			buttonKeydown: buttonKeydownHandler,
+			gardenKeydown: gardenKeydownHandler,
+			menuKeydown: menuKeydownHandler,
+			docKeydown: docKeydownHandler,
 			focusout: focusoutHandler,
 			beforePrep: closeMegamenu,
 		};
 
 		// Add event listeners
 		button.addEventListener("click", clickHandler);
-		document.addEventListener("keydown", keydownHandler);
+		button.addEventListener("keydown", buttonKeydownHandler);
+		gardenLink?.addEventListener("keydown", gardenKeydownHandler);
+		megamenu.addEventListener("keydown", menuKeydownHandler);
+		document.addEventListener("keydown", docKeydownHandler);
 		document.addEventListener("focusout", focusoutHandler);
 		document.addEventListener("astro:before-preparation", closeMegamenu);
 	}
@@ -285,7 +395,7 @@ import UnderlineHoverLink from "../../mdx/UnderlineHoverLink.astro";
 		color: var(--color-accent-brown);
 	}
 
-	.hover-link:focus {
+	.hover-link:focus-visible {
 		outline: 2px solid darkblue;
 		border-radius: 2px;
 	}

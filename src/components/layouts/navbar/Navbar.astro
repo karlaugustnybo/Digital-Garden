@@ -12,11 +12,7 @@ import { Icon } from "astro-icon/components";
 	</a>
 	<div class="right-hand-side">
 		<MainNavLinks />
-		<button
-			id="mobile-menu-toggle"
-			class="mobile-menu-toggle"
-			aria-label="Toggle mobile menu"
-		>
+		<button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
 			<Icon name="heroicons:bars-3" size={28} class="menu-icon" />
 			<Icon name="heroicons:x-mark" size={28} class="close-icon" />
 		</button>
@@ -94,14 +90,37 @@ import { Icon } from "astro-icon/components";
 		const newMenuToggle = menuToggle.cloneNode(true) as HTMLButtonElement;
 		menuToggle.parentNode?.replaceChild(newMenuToggle, menuToggle);
 
-		newMenuToggle.addEventListener("click", () => {
-			newMenuToggle.classList.toggle("open");
-			mobileMenu.classList.toggle("open");
+		function openMenu() {
+			newMenuToggle.classList.add("open");
+			mobileMenu!.classList.add("open");
+			document.body.style.overflow = "hidden";
 
-			if (mobileMenu.classList.contains("open")) {
-				document.body.style.overflow = "hidden";
+			// Focus first link for keyboard users
+			const firstLink = mobileMenu!.querySelector("a");
+			if (firstLink) {
+				setTimeout(() => firstLink.focus(), 100);
+			}
+		}
+
+		function closeMenu() {
+			newMenuToggle.classList.remove("open");
+			mobileMenu!.classList.remove("open");
+			document.body.style.overflow = "auto";
+		}
+
+		newMenuToggle.addEventListener("click", () => {
+			if (mobileMenu!.classList.contains("open")) {
+				closeMenu();
 			} else {
-				document.body.style.overflow = "auto";
+				openMenu();
+			}
+		});
+
+		// Escape key closes the menu
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape" && mobileMenu!.classList.contains("open")) {
+				closeMenu();
+				newMenuToggle.focus();
 			}
 		});
 	}
