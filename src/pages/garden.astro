@@ -11,6 +11,7 @@ import { extractPreview } from "../utils/extractPreview";
 const essays = await getCollection("essays", ({ data }) => !data.draft);
 const notes = await getCollection("notes", ({ data }) => !data.draft);
 const shortfilms = await getCollection("shortfilms", ({ data }) => !data.draft);
+const music = await getCollection("music", ({ data }) => !data.draft);
 // const patterns = await getCollection("patterns", ({ data }) => !data.draft);
 // const talks = await getCollection("talks", ({ data }) => !data.draft);
 // const podcasts = await getCollection("podcasts");
@@ -50,6 +51,7 @@ const allPosts = [
 	...essays,
 	...notes,
 	...shortfilms,
+	...music,
 	// ...patterns,
 	// ...talks,
 	// ...podcasts,

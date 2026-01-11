@@ -6,6 +6,7 @@ import NoteCard from "../cards/NoteCard.astro";
 // import PodcastCard from "../cards/PodcastCard.astro";
 // import TalkCard from "../cards/TalkCard.astro";
 import ShortfilmCard from "../cards/ShortfilmCard.astro";
+import MusicCard from "../cards/MusicCard.astro";
 import SmidgeonCard from "../cards/SmidgeonCard.astro";
 import NowCard from "../cards/NowCard.astro";
 import { extractPreview } from "../../utils/extractPreview";
@@ -74,7 +75,9 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 
 				// Use the correct date field for each content type
 				const dateField =
-					isPodcast || post.collection === "podcasts" ? post.data.updated : post.data.startDate;
+					isPodcast || post.collection === "podcasts"
+						? post.data.updated
+						: post.data.startDate;
 
 				const commonProps = {
 					key: i,
@@ -126,6 +129,16 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 								duration={post.data.duration}
 							/>
 						)}
+						{post.data.type === "music" && (
+							<MusicCard
+								{...commonProps}
+								cover={post.data.cover}
+								title={post.data.title}
+								growthStage={post.data.growthStage}
+								description={post.data.description}
+								duration={post.data.duration}
+							/>
+						)}
 						{/* {post.data.type === "pattern" && (
 							<PatternCard
 								{...commonProps}
@@ -144,7 +157,11 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 							/>
 						)} */}
 						{post.data.type === "now" && (
-							<NowCard {...commonProps} title={post.data.title} preview={post.preview} />
+							<NowCard
+								{...commonProps}
+								title={post.data.title}
+								preview={post.preview}
+							/>
 						)}
 						{post.data.type === "smidgeon" && post.data.title && (
 							<SmidgeonCard
@@ -212,7 +229,7 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 
 	// Listen for filter changes with debounce
 	let filterTimeout: number;
-	
+
 	function handleFilterChange(event: Event) {
 		const customEvent = event as CustomEvent;
 		clearTimeout(filterTimeout);

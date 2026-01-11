@@ -71,6 +71,7 @@ const initialTopicsCount = 6;
 				<!-- <option value="podcast">Podcasts</option> -->
 				<option value="now">Now Updates</option>
 				<option value="shortfilm">Short Films</option>
+				<option value="music">Music</option>
 				<option value="smidgeon">Smidgeons</option>
 			</select>
 			<Icon name="heroicons:chevron-down" size={16} />
@@ -324,7 +325,10 @@ const initialTopicsCount = 6;
 				// Update topic buttons to match
 				const topicButtons = document.querySelectorAll<HTMLButtonElement>(".topic-button");
 				topicButtons.forEach((btn) => {
-					btn.classList.toggle("selected", btn.getAttribute("data-topic") === select.value);
+					btn.classList.toggle(
+						"selected",
+						btn.getAttribute("data-topic") === select.value,
+					);
 				});
 				break;
 			case "growth-stages-select":

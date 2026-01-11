@@ -22,12 +22,14 @@ type Props = {
 		| CollectionEntry<"essays">["data"]
 		| CollectionEntry<"notes">["data"]
 		| CollectionEntry<"shortfilms">["data"]
+		| CollectionEntry<"music">["data"]
 		| CollectionEntry<"research">["data"];
 	headings: MarkdownHeading[];
 	entry?:
 		| CollectionEntry<"essays">
 		| CollectionEntry<"notes">
 		| CollectionEntry<"shortfilms">
+		| CollectionEntry<"music">
 		| CollectionEntry<"research">;
 };
 
@@ -65,6 +67,9 @@ if (entry) {
 		case "shortfilms":
 			allEntries = (await getCollection("shortfilms")) as (typeof entry)[];
 			break;
+		case "music":
+			allEntries = (await getCollection("music")) as (typeof entry)[];
+			break;
 		case "research":
 			allEntries = (await getCollection("research")) as (typeof entry)[];
 			break;
@@ -82,9 +87,9 @@ const currentPost = linkMaps.find((post) => post.slug === currentSlug);
 // Get backlinks for the current post
 const backlinks = currentPost?.inboundLinks || [];
 
-// Only essays, talks, and shortfilms have cover images
+// Only essays, talks, shortfilms, and music have cover images
 const coverImage =
-	frontmatter.type === "essay" || frontmatter.type === "shortfilm"
+	frontmatter.type === "essay" || frontmatter.type === "shortfilm" || frontmatter.type === "music"
 		? frontmatter.cover?.src
 		: undefined;
 ---
@@ -95,7 +100,11 @@ const coverImage =
 	type={frontmatter.type}
 	coverImage={coverImage}
 	canonicalURL={canonicalURL}
-	preconnectUrls={frontmatter.type === "shortfilm" ? ["https://makertube.net"] : []}
+	preconnectUrls={frontmatter.type === "shortfilm"
+		? ["https://makertube.net"]
+		: frontmatter.type === "music"
+			? ["https://bandcamp.com"]
+			: []}
 >
 	<header class="header-section">
 		<div class="above-title">
@@ -187,7 +196,8 @@ const coverImage =
 	.title-container p {
 		font-size: var(--font-size-md);
 		margin: var(--space-s) 0 0 0;
-		color: var(--color-gray-600);
+		color: var(--color-gray-800);
+		font-weight: 300;
 		line-height: var(--leading-base);
 	}
 
@@ -280,6 +290,7 @@ const coverImage =
 
 		.title-container p {
 			font-size: var(--font-size-base);
+			font-weight: 400;
 		}
 	}
 

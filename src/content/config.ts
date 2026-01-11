@@ -143,6 +143,32 @@ const shortfilmsCollection = defineCollection({
     }),
 });
 
+const musicCollection = defineCollection({
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/music" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      startDate: z.coerce.date(),
+      updated: z.coerce.date(),
+      type: z.literal("music"),
+      cover: image().optional(),
+      audioUrl: z.string().url().optional(),
+      videoUrl: z.string().url().optional(),
+      duration: z.string().optional(),
+      composer: z.string().optional(),
+      instruments: z.array(z.string()).optional(),
+      topics: z.array(z.string()).optional(),
+      growthStage: z.string(),
+      featured: z.boolean().optional(),
+      draft: z.boolean().optional(),
+      toc: z.boolean().optional(),
+      aliases: z.array(z.string()).optional(),
+      version: z.number().optional(),
+      versionSummary: z.string().optional(),
+    }),
+});
+
 const pagesCollection = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "./src/content/pages" }),
   schema: () =>
@@ -197,6 +223,8 @@ export const collections = {
   smidgeons: smidgeonsCollection,
 
   shortfilms: shortfilmsCollection,
+  music: musicCollection,
   pages: pagesCollection,
   research: researchCollection,
 };
+
