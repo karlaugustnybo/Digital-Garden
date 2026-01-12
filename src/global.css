@@ -52,7 +52,7 @@
 
   /* Fonts */
   --font-serif: "Noto Serif Display", serif;
-  --font-body: "Noto Sans", sans-serif;
+  --font-body: "Baskervville", serif;
   --font-mono: "JetBrains Mono", monospace;
   --font-sans: "Noto Sans", sans-serif;
 
@@ -164,8 +164,8 @@
   --f--1-max: 16.5;
   --font-size-sm: calc(((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) * var(--fluid-bp));
 
-  --f-0-min: 20;
-  --f-0-max: 22;
+  --f-0-min: 22;
+  --f-0-max: 24;
   --font-size-base: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) * var(--fluid-bp));
 
   --f-1-min: 25;
