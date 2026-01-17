@@ -17,9 +17,9 @@
 
   /* Colors */
   --color-light-cream: #fcfbf7;
-  --color-cream: #f6f5f1;
+  --color-cream: oklch(0.98 0.005 95);
   --color-tinted-cream: #e6e3e1;
-  --color-black: #353534;
+  --color-black: oklch(0.3 0.02 90);
   --color-gray-800: #4a4a46;
   --color-gray-600: #73706d;
   --color-gray-500: #8e8f94;
@@ -27,15 +27,17 @@
   --color-gray-300: #d3d3d1;
   --color-gray-200: #e3e3e0;
   --color-gray-100: #e9e9e7;
-  --color-primary-green: oklch(73.54% 0.115 142.95);
-  --color-secondary-green: oklch(89.21% 0.052 136.44);
+  --color-primary-green: oklch(0.75 0.09 130);
+  --color-secondary-green: oklch(0.88 0.03 125);
   --color-accent-brown: oklch(33.613% 0.02347 39.176);
   --color-light-brown: oklch(44.44% 0.03252 40.859);
-  --color-tertiary-green: oklch(63.54% 0.115 142.95);
+  --color-tertiary-green: oklch(0.5 0.05 125);
   --color-purple: oklch(73.54% 0.045 280);
-  --color-salmon: #fd8370;
-  --color-light-salmon: #ffd09c;
-  --color-dark-salmon: #e1624f;
+  --color-salmon: var(--color-primary-green);
+  --color-light-salmon: var(--color-secondary-green);
+  --color-dark-salmon: var(--color-tertiary-green);
+  --color-bright-crimson: var(--color-primary-green);
+  --color-dark-crimson: var(--color-tertiary-green);
 
   /* Opacity variants for colors */
   /* Green variants */
