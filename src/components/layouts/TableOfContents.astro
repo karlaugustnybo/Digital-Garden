@@ -72,8 +72,9 @@ const { headings } = Astro.props;
 	.desktop-container {
 		grid-column: 1;
 		height: 0;
-		max-width: 300px;
+		max-width: clamp(220px, 18vw, 300px);
 		margin-left: 6%;
+		margin-right: 2rem;
 		position: sticky;
 		top: 16px;
 		z-index: 10;
@@ -106,6 +107,12 @@ const { headings } = Astro.props;
 		opacity: 1;
 		overflow: hidden;
 		transition: all 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+	}
+
+	/* When sticky on the left sidebar, apply height constraint and scrolling */
+	.desktop-container.sticky-mode .toc {
+		max-height: 80vh;
+		overflow-y: auto;
 	}
 
 	.mobile-container {
@@ -275,11 +282,13 @@ const { headings } = Astro.props;
 				isCollapsed = false;
 				isAutoCollapsed = false;
 				desktopContainer.classList.remove("collapsed");
+				desktopContainer.classList.remove("sticky-mode");
 				arrowIcon?.classList.remove("collapsed");
 			} else if (!isAutoCollapsed && !isCollapsed) {
 				isAutoCollapsed = true;
 				isCollapsed = true;
 				desktopContainer.classList.add("collapsed");
+				desktopContainer.classList.add("sticky-mode");
 				arrowIcon?.classList.add("collapsed");
 			}
 		};
