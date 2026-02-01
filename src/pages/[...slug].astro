@@ -20,6 +20,7 @@ import ResourceBook from "../components/mdx/ResourceBook.astro";
 import RemoteImage from "../components/mdx/RemoteImage.astro";
 import BasicImage from "../components/mdx/BasicImage.astro";
 import Spacer from "../components/mdx/Spacer.astro";
+import Disclaimer from "../components/mdx/Disclaimer.astro";
 
 type ContentType = "essay" | "note" | "smidgeon" | "shortfilm" | "music" | "notebook";
 type Collections = "essays" | "notes" | "smidgeons" | "shortfilms" | "music" | "notebooks";
@@ -125,6 +126,7 @@ const components = {
 	ResourceBook,
 	RemoteImage,
 	Spacer,
+	Disclaimer,
 };
 
 // Type guard for checking if data has TOC

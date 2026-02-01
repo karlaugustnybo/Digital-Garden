@@ -1,0 +1,315 @@
+---
+title: |
+  Artificial Intelligence: Impact on the Individual and Legislation
+description: Artificial intelligence affects us all, from the algorithm in Facebook to AI systems that help discover new medicines. Recently, we've all heard about ChatGPT, and many are frightened by this rapid development. But what are the actual problems, and how do we solve them?
+updated: 2024-05-24
+startDate: 2024-05-24
+type: "essay"
+topics: ["AI Safety", "AI governance", "Societal impacts"]
+growthStage: "seedling"
+featured: false
+draft: false
+toc: true
+---
+
+<Disclaimer title="Epistemic Status">
+This is old, and some of my thoughts have changed since I wrote it. Also this is a translation from a project i originally wrote in Danish. 
+</Disclaimer>
+## One of the Greatest Questions of Our Time
+
+In this post, I'll attempt to answer how AI affects the individual in late modern society, and how we can protect the individual through legislation.
+
+These are big questions, so I've divided this into three sections:
+
+1. **First**, I'll explain what artificial intelligence is in its various forms, then introduce Giddens' theory of late modernity and Hartmut Rosa's theory of the high-speed society.
+
+2. **Second**, I'll examine what artificial intelligence will mean for the individual using Giddens' and Rosa's theories. I'll also explain and compare Professor Max Tegmark's and Professor Yann LeCun's views on the development of AGI and its consequences.
+
+3. **Third**, I'll discuss what role legislation should play in artificial intelligence, with ongoing references to the [EU AI Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138-FNL-COR01_EN.pdf) adopted by the European Parliament.
+
+---
+
+## An Intelligence in Many Forms
+
+### What is Artificial Intelligence?
+
+According to the [EU AI Act](https://www.europarl.europa.eu/doceo/document/TA-9-2024-0138-FNL-COR01_EN.pdf), Article 3 defines an AI system as:
+
+> "a machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments"
+
+This is a fairly broad definition, which is appropriate given the incredible variety of AI systems that exist. Another definition, proposed by MIT professor Max Tegmark in his book *Life 3.0*, is even broader: "Intelligence = ability to accomplish complex goals." Tegmark's physics background may explain his broad definition, which avoids limiting intelligence to the forms we know today.
+
+When categorizing different forms of artificial intelligence, it's important to look at whether it's a "narrow AI" or a "broad AI." A "narrow AI" is an AI system that can only do one or a few things, whereas a "broad AI" is an AI system that's good at many things.
+
+### Early AI: Chess and Go
+
+Some of the first AI systems developed were programs that could [play chess](https://denstoredanske.lex.dk/kunstig_intelligens). These were examples of "narrow AI" because they were only good at one thing: playing chess. It wasn't until 1997 that an AI system defeated a world champion in an official chess match. This AI system was Deep Blue, developed by IBM, and many professional chess players were so astonished they didn't even believe it: ["This was a show,"](https://www.nytimes.com/1997/05/12/nyregion/swift-and-slashing-computer-topples-kasparov.html) said Lev Alburt, a former United States champion who believed it was a fake game. But compared to today, it was a relatively simple AI system that only used [brute force](https://www.freecodecamp.org/news/brute-force-algorithms-explained/) - trying to calculate as many possibilities as possible with as much computing power as available.
+
+A more recent example involves the board game Go. In 2016, the AI system AlphaGo, developed by Google DeepMind, defeated Go master Lee Sedol.
+
+> ["The more complex programming of AlphaGo amazed viewers not only with the excellency of its play, but also with its creativity. The infamous 'move 37' in game two was described by Go player Fan Hui as 'So beautiful.'"](https://futureoflife.org/recent-news/deepminds-alphago-zero-becomes-go-champion-without-human-assistance/)
+
+Chess is a game with relatively simple rules but an enormous number of possible positions. Go takes this to extremes. Go is a very popular game in Asia with very simple rules. However, that doesn't mean it's easy for a computer to play. [John Tromp and Gunnar Farnebäck](https://tromp.github.io/go/gostate.pdf) tried to put a number on how many different Go positions exist, and they found that the number lies between (10^10)^48 and (10^10)^171 possible positions. To put this in perspective, there are approximately [10^80 atoms in our universe](https://www.universetoday.com/36302/atoms-in-the-universe/), which can be rewritten as approximately (10^10)^1.903.
+
+There are so incomprehensibly many positions in Go that it would practically be impossible to ever calculate them all. Therefore, the AI system needs to have some form of intuition.
+
+### The Transformer Revolution
+
+A year after AlphaGo defeated Lee Sedol, a team from Google invented the "transformative" AI architecture, the transformer, in their scientific paper: ["Attention Is All You Need."](https://www.quantamagazine.org/will-transformers-take-over-artificial-intelligence-20220310/) The "T" in ChatGPT stands for transformer, and it's this transformer architecture that, together with the diffusion architecture (used for image and video generation), has brought many of the biggest breakthroughs in AI in recent years.
+
+ChatGPT was one of these major breakthroughs. When the AI system was released to the world in December 2022, it took the world by storm and [reached an estimated user base of 100 million](https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/) after just 2 months.
+
+### Recent Breakthroughs
+
+The last few months have seen some very large breakthroughs. AI music generation with the new Suno v3 and Udio models has become so good that [Rolling Stone Magazine calls them "shockingly convincing songs"](https://www.rollingstone.com/music/music-features/suno-ai-chatgpt-for-music-1234982307/).
+
+Meanwhile, OpenAI released their new video generation model Sora:
+
+> ["Sora is absolutely capable of creating videos that could trick everyday folks,"](https://www.newscientist.com/article/2417639-realism-of-openais-sora-video-generator-raises-security-concerns/)
+> — Rachel Tobac, co-founder of SocialProof Security, a white-hat hacker organization focused on social engineering.
+
+Just a year earlier, AI video was described as: ["it's truly the stuff of nightmares — which perfectly demonstrates the current, struggling reality of AI video generators."](https://futurism.com/the-byte/horrific-ai-generated-video-shows-will-smith-eating-spaghetti) This shows just how quickly this technology is developing.
+
+Many of these AI systems are still examples of "narrow AI," but recently it has become very popular to create what's called "Multi-modal AI." A good example is OpenAI's new AI model, GPT-4o, released on May 13, 2024, which can [write a short story, code an entire website, analyze large amounts of data, and solve mathematical problems with great success](https://www.euronews.com/next/2024/05/17/from-coding-to-video-gaming-10-best-uses-people-have-found-for-chatgpts-latest-model-gpt4o). But it can now also speak to you with a voice that sounds like it has emotions, as well as analyze your emotions based on your voice or [facial expression](https://www.nytimes.com/2024/05/14/technology/ai-chatgpt-her-movie.html). It can see the world and understand what you're saying.
+
+GPT-4o is an example of "broad AI" and what the EU AI Act calls GPAI (General Purpose Artificial Intelligence).
+
+Many of the big AI companies' goal is to build the ultimate form of general intelligence: AGI (Artificial General Intelligence). There are many different definitions, but [OpenAI defines it as](https://openai.com/charter/): "highly autonomous systems that outperform humans at most economically valuable work."
+
+---
+
+## Late Modernity and the High-Speed Society
+
+### Giddens' Theory of Late Modernity
+
+English sociologist Anthony Giddens' theory of late modernity is, in short, about how late modern humans must make more and more choices while experiencing de-traditionalization. The concepts most important for my analysis are:
+
+- **De-traditionalization**: When norms and traditions disappear
+- **Event communities**: Communities that are temporary or context-dependent
+- **Disembedding mechanisms**: When we, instead of seeking help in our close and local area, outsource it to
+- **Expert systems**: Going to experts who can advise us within their respective areas
+- **Reflexivity**: When we make choices based on our own reflection rather than traditions. It's through this reflexivity that we define self-identity, and it contributes to self-determination and freedom, but can also lead to ontological insecurity
+
+> "The late modern society is, according to Giddens, under constant change and is thus characterized by a dynamic character that moves far faster and more intensively than previously seen in traditional and industrial forms of society."
+
+He also believes this is the reason the above concepts occur.
+
+### Rosa's Theory of the High-Speed Society
+
+German sociologist Hartmut Rosa believes that this faster and more intensive society is a major problem, resulting in us being "stressed, pressured, and afraid of being left behind."
+
+Rosa believes this societal acceleration can be divided into 3 spheres:
+
+1. **Technological acceleration**
+2. **Acceleration of social change**
+3. **Acceleration of life tempo**
+
+These 3 spheres are connected by a kind of positive feedback loop, where each one reinforces the others.
+
+**Technological acceleration** should be understood as increased speed processes, from technological development, or as a general acceleration of societal development. For example, how quickly we communicate and increased tempo in production and transport.
+
+**Acceleration of social change** is about the acceleration of society itself. Here it means that you cannot rely on your own experiences and expectations because everything changes so quickly.
+
+In the **acceleration of life tempo**, acceleration enters the close or personal sphere. One does more things that one doesn't actually want to do, which Rosa believes can lead to alienation. The busy life can also intrude on the family and affect children. However, this fast life is seen as "the good life," and one is afraid of missing career opportunities or experiences - what's also called FOMO (fear of missing out).
+
+---
+
+## Democracy, Deepfakes, Freedom, and AGI
+
+By connecting Anthony Giddens' and Hartmut Rosa's theories to artificial intelligence, we can get a clearer picture of some of the things we can expect from the development of AI systems.
+
+### AI and De-traditionalization
+
+It's Giddens' de-traditionalization that is especially important when I connect to artificial intelligence. For example, previously fixed communities such as professional fields and work are challenged by AI systems' ability to take over jobs. These communities become event communities that are temporary, which can lead to both freedom and reflexivity, but also insecurity.
+
+Another thing that can lead to de-traditionalization is disembedding mechanisms and expert systems. Artificial intelligence, for example in the form of LLMs (Large Language Models) like ChatGPT, can be a replacement or improvement of the expert systems we see in late modern society. LLMs can help you understand quantum physics, as well as provide psychological help and tips for holding the perfect wedding. Because an LLM is trained on extremely large amounts of data, they have expert knowledge even on narrow subjects like [identification of cell types](https://www.publichealth.columbia.edu/news/gpt-4-ai-outperforms-experts-identification-cell-types).
+
+We get easier access to large amounts of knowledge, but we also need a great deal of trust. A new study from the Center for Social Media, Tech and Democracy shows that [two-thirds of the population are "concerned about mis- and disinformation and whether algorithms give us a skewed picture of current events."](https://www.weekendavisen.dk/content/item/59691) This is a strong sign of ontological insecurity in our society.
+
+### AI and the High-Speed Society
+
+Hartmut Rosa's theory of the high-speed society can also be connected to the development of artificial intelligence. The most obvious example is technological acceleration. Artificial intelligence can in many ways increase speed processes in our society. There are already [experts and studies pointing to AI systems replacing or making more efficient many of our jobs](https://www.dr.dk/nyheder/viden/teknologi/chatgpt-stjaeler-allerede-job-fra-mennesker-viser-undersoegelse). This happens because AI systems can already today [significantly increase our productivity](https://www.danskindustri.dk/vi-radgiver-dig/personale/nyhedsarkiver---personaleforhold/nyheder-om-arbejdsmiljo/2024/1/di-sadan-bliver-vi-klar-til-at-arbejde-med-generativ-ai/).
+
+But what will this mean for the individual?
+
+Rosa believes it can mean that we become more "stressed, pressured, and afraid of being left behind." Because technological acceleration is also connected to social change and our life tempo, this increased pace can also lead to alienation.
+
+### Expert Perspectives: Tegmark vs. LeCun
+
+If you follow the major AI debates, there are often two names that appear: Professor Max Tegmark from MIT and [FLI (Future of Life Institute)](https://futureoflife.org/our-work/), and Yann LeCun, who is a professor at NYU and Chief AI Scientist at Meta (Facebook).
+
+These two experts often end up in discussions about whether AGI will be a risk to humanity. LeCun's view is that firstly, it's not something that's just around the corner, but something further away in the future. He also believes that AGI won't be an event, but an iterative development, and that a large part of the development will be about designing safety guardrails, because a safer and more controllable product is a better product.
+
+> ["then turn on a machine and then we have AGI, that's just not going to happen. It's not going to be an event."](https://www.youtube.com/watch?v=5t1vTLU7s40) (...) "Do you need specific provisions to make AI safe? No, you need to make better AI systems, and they will be safe because they are designed to be more useful and more controllable."
+> — Yann LeCun on the Lex Fridman Podcast
+
+Tegmark, however, is not as convinced that the big AI companies will invest enough time and money in the development of AGI safety. He's afraid there will be a race to the bottom where safety isn't prioritized, and everyone loses.
+
+> ["you've (Lex Fridman) interviewed a lot of these people who lead these labs (...) They're doing this first and foremost because they believe that AI has a huge potential to help humanity. But at the same time they are trapped in this horrible race to the bottom."](https://www.youtube.com/watch?v=VcVfceTsD0A)
+> — Max Tegmark on the Lex Fridman Podcast
+
+A somewhat alarming example of this is that the two leaders of OpenAI's (the leading AI company) Superalignment team recently resigned. The Superalignment initiative's goal was to solve the major technical challenges in the form of alignment that can come from developing artificial intelligence smarter than us, but [reports say the team is now completely dissolved](https://www.wired.com/story/openai-superalignment-team-disbanded/).
+
+[Jan Leike](https://x.com/janleike/status/1791498174659715494), one of the leaders from the Superalignment team, wrote on X (Twitter):
+
+> "I have been disagreeing with OpenAI leadership about the company's core priorities for quite some time, until we finally reached a breaking point. I believe much more of our bandwidth should be spent getting ready for the next generations of models, on security, monitoring, preparedness, safety, adversarial robustness, (super)alignment, confidentiality, societal impact, and related topics. These problems are quite hard to get right, and I am concerned we aren't on a trajectory to get there."
+
+### Short-Term Risks: Misinformation and Deepfakes
+
+In the short term, the biggest risks are things like misinformation and deepfakes, both of which can harm democracy. A current example is the [recent election in Slovakia](https://www.wired.com/story/slovakias-election-deepfakes-show-ai-is-a-danger-to-democracy/). Two days before voting, an audio clip was posted on Facebook where you could hear the leader of Progresívne Slovensko discussing how to manipulate the election and buy votes. Party leader Michal Šimečka said the audio clip was fake, which was later confirmed, but since the recording was released within the 48-hour press silence before the election, it was difficult to convince the population. It was a very close race, but Progresívne Slovensko ended up losing.
+
+This is a problem that Max Tegmark warns about; his organization FLI has a [campaign to ban deepfakes](https://www.youtube.com/watch?v=yMWrLdkg9o0). But it's also a point where he might be more in agreement with Yann LeCun, who is also [working on solving this problem](https://www.nyas.org/ideas-insights/blog/yann-lecun-emphasizes-the-promise-ai/) with his team at Meta.
+
+Giddens' reflexivity can perhaps help us understand what negative consequences this can have for the individual. Before the late modern society, we made more choices based on traditions; for example, we voted more like our parents and close community. Giddens believes this has changed, and we now draw on secondary knowledge, for example from social media. This can create ontological insecurity - uncertainty about how reality actually is. With the deepfake example during Slovakia's election campaign, one can imagine that ontological insecurity has increased.
+
+### Existential Risk?
+
+Tegmark also believes that AI should be considered an existential risk. This view is shared by the three leading AI companies' CEOs and many other experts, who have all signed [this statement](https://www.safe.ai/work/statement-on-ai-risk):
+
+> "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war."
+
+This is, however, a point where Yann LeCun strongly disagrees. On the Lex Fridman podcast, he was asked if he could explain the "AI doomers" perspective and why he thinks they're wrong:
+
+> "AI doomers imagine all kinds of catastrophe scenarios of how AI could escape or control and basically kill us all, and that relies on a whole bunch of assumptions that are mostly false."
+
+LeCun then highlights an argument that AI doomers sometimes make: that if AI systems are more intelligent than us, they will exterminate us, if not through design, then just because they're indifferent to us, as we've seen through nature's evolution. However, he offers the counterargument:
+
+> "They're not going to have the desire to dominate because the desire to dominate is something that has to be hardwired into an intelligent system. It is hardwired in humans."
+
+Max Tegmark, on the other hand, remains agnostic. He's fairly certain that we will achieve AGI at some point, but uncertain about when, how quickly it will happen, whether there will be one or more achieving it around the same time, or whether humans will control the AI or whether it will break free on its own. As he writes in *Life 3.0*: "I know at least one well-respected AI researcher who views it as a real possibility."
+
+### Two Scenarios
+
+The future is uncertain, especially when experts disagree. Therefore, I'll present two scenarios: the best and the absolute worst case.
+
+**Best case**: AGI is under full human control and is only used for purposes that are neutral or improve the world. This could be development of medicine or combating forest fires and climate change, but also peace-seeking initiatives like more effective peace negotiations between countries. This could mean greater security and prosperity for the individual than we have today. This prosperity comes because our technological development will go much faster when we've created a computer smarter than ourselves. If it's better than us at AI research and software development, for example, it could lead to exponential self-improvement, something called "recursive self-improvement" or an intelligence explosion.
+
+> "The first ultraintelligent machine is the last invention that man need ever make, provided that the machine is docile enough to tell us how to keep it under control."
+> — Irving J. Good, 1965
+
+**Worst case**: Humanity is exterminated by the AGI system, and as we've seen, many experts believe this should be taken seriously.
+
+### When Will AGI Actually Be Developed?
+
+OpenAI's CEO Sam Altman said in [an interview](https://time.com/6342827/ceo-of-the-year-2023-sam-altman/) last year that AGI could be achieved sometime within 4-5 years.
+
+However, experts disagree with him. AI Impacts, an AI safety project at the nonprofit organization Machine Intelligence Research Institute, [surveyed 2,778 experts](https://time.com/6556168/when-ai-outsmart-humans/) in fall 2023, all of whom had published peer-reviewed research in prestigious AI journals and conferences within the past year. The experts gave it a 50% chance that we would have AGI by 2047 and a 10% chance by 2027.
+
+When looking at this longer timescale, the question of what AGI's consequences will be becomes more and more uncertain, and the question becomes more: What do we think should happen? Because we have influence on it, for example through legislation, which I'll discuss in the next section. We will have influence on AI's future through our choices. An increased reflexivity, one could say, which can lead to greater self-determination and freedom for the individual, but also ontological insecurity.
+
+---
+
+## Legislation of Deepfakes
+
+The European Union has recently passed a law they've been working on for a long time. The Commission came with their original proposal in April 2021. Then followed a lot of negotiations, and almost 4 years after the original proposal, the [EU AI Act was voted through in parliament](https://www.euronews.com/my-europe/2024/03/13/lawmakers-approve-ai-act-with-overwhelming-majority) with a large majority. On May 21, 2024, the [Council gave final green light](https://www.consilium.europa.eu/en/press/press-releases/2024/05/21/artificial-intelligence-ai-act-council-gives-final-green-light-to-the-first-worldwide-rules-on-ai/) for the AI Act.
+
+### Risk Categories
+
+The [AI Act](https://artificialintelligenceact.eu/high-level-summary/) divides AI systems into four risk categories:
+
+- **Unacceptable risk**: Prohibited (e.g., social scoring systems and manipulative AI)
+- **High risk**: Significant regulation (e.g., AI in critical infrastructure and law enforcement)
+- **Limited risk**: AI systems that can pose a risk, but limited. Deepfakes fall under this category
+- **Minimal risk**: Most AI systems with no legislation (e.g., AI in video games and spam filters)
+
+### Defining Deepfakes
+
+Before I get into deepfakes, I'll define them according to the EU AI Act:
+
+> "'deep fake' means AI-generated or manipulated image, audio or video content that resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful"
+> — [AI Act, Article 3, Definition 60](https://www.europarl.europa.eu/RegData/seance_pleniere/textes_adoptes/definitif/2024/03-13/0138/P9_TA(2024)0138(COR01)_EN.pdf)
+
+### The Threat to Information Integrity
+
+[Mikkel Flyverbom](https://politiken.dk/danmark/art9781327/F%C3%B8rst-taler-ekspert-som-Ellemann-snart-som-Mette-Frederiksen-og-til-sidst-som-Hitler), chairman of the Danish government's tech expert group and professor at CBS, highlights information credibility as one of the biggest challenges:
+
+> "All information can potentially be untrustworthy when we encounter it in digital form. This includes images, text, audio, and videos, where it can already be nearly impossible to decode the authenticity value. This has consequences for the completely fundamental trust in our society: Which information can you trust, and who can you trust?"
+
+IT security expert Keld Norman puts it bluntly:
+
+> "If someone wants to do us harm, they create these deepfakes, after which authorities can run around trying to convince everyone that they're not real images."
+
+When asked whether he himself is worried about the development, he answers: "Yes, I'm worried about democracy."
+
+### Ban or Mark?
+
+Deepfakes are clearly a problem, but what should we do about it? When there are major societal problems, the answer is often legislation. The question is just how the legislation should be structured.
+
+The advantages of banning deepfakes are that it's much easier to enforce. The problem with marking AI-generated content is that you can [remove the marking](https://www.technologyreview.com/2023/08/09/1077516/watermarking-ai-trust-online/). Often you can actually do this [using other AI systems](https://fortune.com/2024/01/23/samsung-galaxy-ai-watermark-removal-deepfakes-ai-scams/). Therefore, I believe the more sustainable solution is to ban deceptive AI-generated content.
+
+But you can't just ban everything. What about artistic, creative, satirical, fictional, or similar AI-generated content? I would say that legislation should not cover this, as it would violate our fundamental rights, as stated in the [EU Charter of Fundamental Rights, Article 11](https://fra.europa.eu/da/eu-charter/article/11-ytrings-og-informationsfrihed). So it should only be AI-generated content that falsely represents itself as real persons, entities, events, etc., and which is not for artistic, creative, satirical, fictional, or similar use, that should be banned. It's difficult to say exactly what constitutes artistic, creative, satirical, fictional, or similar use, and it should therefore be up to the courts to judge, just as it is current practice in cases of freedom of expression.
+
+### The Four Links in the Deepfake Chain
+
+The spread of deepfakes has four links:
+
+1. **Developers**: Those who develop the AI system that can create deepfakes
+2. **Distributors**: Those who distribute the AI system (e.g., downstream providers)
+3. **Creators**: Those who actually generate a deepfake
+4. **Platforms**: Those who distribute a deepfake (e.g., Facebook)
+
+I believe all four links should be addressed to make the legislation as effective as possible.
+
+**For developers**: According to the EU AI Act, Article 5 "Prohibited AI practices," developers may not place AI systems on the market that use:
+
+> "deliberately manipulative or deceptive techniques with the objective or the effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably likely to cause that person, another person or a group of persons significant harm"
+
+This stops developers from deliberately creating deepfake AI systems that cause harm and gives no administrative burdens for smaller developers of AI-generating models used for benign purposes.
+
+**For platforms and deployers**: The same law also applies to deployers, and additionally, the EU AI Act has more specific legislation:
+
+> "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated."
+> — AI Act, Article 50, Transparency obligations
+
+### Sanctions
+
+What should the sanctions be for non-compliance?
+
+In the AI Act, fines for prohibited AI practices are "up to EUR 35,000,000 or, if the offender is an undertaking, up to 7% of its total worldwide annual turnover for the preceding financial year, whichever is higher." For transparency obligations, the system is the same but with a fine of EUR 15,000,000 or 3% of total worldwide annual turnover.
+
+I believe this is an appropriate amount, as it takes a lot to scare the big tech companies. There are special rules for SMEs (small to medium enterprises) where the same rates apply, but they must instead pay the smallest amount rather than the largest of the two options.
+
+### The Third Link: Individual Creators
+
+The AI Act doesn't have legislation covering the third link - the person who generates a deepfake and posts it on, for example, Facebook. I believe we need to be very careful with legislation at this link, as freedom of expression comes into play. There are already some exceptions to freedom of expression that may criminalize the spread of deepfakes, but I'll again emphasize that artistic, creative, satirical, fictional, or similar AI-generated content should not be made illegal, as this would significantly violate freedom of expression.
+
+> "As the exercise of these freedoms carries with it duties and responsibilities, it may be subject to such formalities, conditions, restrictions or penalties as are prescribed by law and are necessary in a democratic society, in the interests of public safety, for the prevention of disorder (...), for the protection of the reputation or rights of others"
+> — [EU Charter of Fundamental Rights, Article 11](https://fra.europa.eu/da/eu-charter/article/11-ytrings-og-informationsfrihed)
+
+### The Fourth Link: Platforms
+
+I believe the fourth link could be an obvious place to strengthen legislation. An example of legislation could be that digital platforms must remove all deepfakes. The problem with this is that it's almost impossible for even the big companies to guarantee there are no deepfakes on their platforms - not to mention how difficult it would be for small startups to compete with the big tech giants if they first have to get through legislative hurdles, something called [barriers to entry](https://www.investopedia.com/terms/b/barrierstoentry.asp).
+
+A better solution is therefore instead to develop some standards for systems that can remove deepfakes from platforms, which different companies can implement. This is exactly one of the tasks for the [EU Commission's new AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office), which develops "tools, methodologies and benchmarks for evaluating capabilities and reach of general-purpose AI models."
+
+---
+
+## Conclusion
+
+In attempting to answer my overarching question - how does AI affect the individual in late modern society, and how can we protect the individual through legislation? - I found the following:
+
+**On AI's Development:**
+- AI systems have changed dramatically throughout history, and development is only accelerating
+- We have primarily developed narrow AI (systems good at only one thing), but many major AI companies aim to develop AGI, a very broad form of AI
+
+**On AI's Impact on the Individual (using Giddens and Rosa):**
+- AI can lead to more event communities, which can lead to more freedom and reflexivity, but also insecurity
+- AI can replace current expert systems, but simultaneously people are more afraid of misinformation - a sign of greater ontological insecurity in our society
+- AI will likely promote technological acceleration, which according to Rosa's theory will increase individual stress levels, fear of being left behind, and can lead to alienation
+
+**On AGI:**
+- Through comparative and qualitative analysis, experts strongly disagree about when AGI will be fully developed, but it's probably not in the very near future
+
+**On Deepfakes and Legislation:**
+- Deepfakes can become a major problem for democracy and the individual in the shorter term
+- The best solution is through legislation of all four links in the deepfake chain: developers, AI system distributors, individuals, and deepfake distributors
+- There is already sufficient legislation about individual freedom of expression
+- It can be a good strategy to be inspired by the EU AI Act
+
+---
+
+## Looking Ahead
+
+There are some things I chose not to include that could be exciting and relevant. I chose to exclude incorporating the risk society, which Ulrich Beck and Anthony Giddens have written about. It would have been relevant and exciting to investigate, but wouldn't have helped answer the question of what AI will mean for the individual, since the risk society is more a diagnosis of society as a whole rather than just the individual.
+
+Rather than writing about how AI affects us today, I chose to focus more on the future. Here I limited myself to the near future, but it would certainly be exciting to look at AGI's role even further in the future, where one can imagine all sorts of exciting and frightening scenarios.

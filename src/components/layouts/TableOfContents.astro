@@ -11,8 +11,8 @@ const { headings } = Astro.props;
 
 <div class="desktop-container">
 	<div class="title" id="desktop-toc-header">
-		<svg width="8" height="8">
-			<circle r="4" cx="4" cy="4" fill="var(--color-primary-green)"></circle>
+		<svg width="10" height="10" viewBox="0 0 10 10">
+			<circle r="4" cx="5" cy="5" fill="var(--color-primary-green)"></circle>
 		</svg>
 		<h4>Table of Contents</h4>
 		<Icon name="heroicons:chevron-up" size={18} class="arrow-icon" />
@@ -102,7 +102,7 @@ const { headings } = Astro.props;
 	}
 
 	.toc {
-		max-height: 80vh;
+		max-height: 2000px;
 		opacity: 1;
 		overflow: hidden;
 		transition: all 0.3s cubic-bezier(0.2, 1, 0.8, 1);
