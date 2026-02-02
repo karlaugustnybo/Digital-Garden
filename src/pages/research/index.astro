@@ -7,7 +7,7 @@ import TitleWithCount from "../../components/layouts/TitleWithCount.astro";
 import Title2 from "../../components/mdx/typography/Title2.astro";
 import { getCollection } from "astro:content";
 
-const papers = await getCollection("research");
+const papers = await getCollection("research", ({ data }) => !data.draft);
 
 const sortedPapers = papers.sort((a, b) => {
     const dateA = a.data.published || a.data.updated || new Date(0);

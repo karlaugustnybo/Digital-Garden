@@ -11,6 +11,7 @@ if (import.meta.env.PROD) {
 
 const essays = await getCollection("essays", ({ data }) => data.draft === true);
 const notes = await getCollection("notes", ({ data }) => data.draft === true);
+const research = await getCollection("research", ({ data }) => data.draft === true);
 // Temporarily disabled collections:
 // const patterns = await getCollection("patterns", ({ data }) => data.draft === true);
 // const talks = await getCollection("talks", ({ data }) => data.draft === true);
@@ -19,8 +20,7 @@ const talks: any[] = []; // Empty array since collection is temporarily disabled
 const smidgeons = await getCollection("smidgeons", ({ data }) => data.draft === true);
 const now = await getCollection("now", ({ data }) => data.draft === true);
 
-const totalDrafts =
-	essays.length + notes.length + smidgeons.length + now.length; // + patterns.length + talks.length;
+const totalDrafts = essays.length + notes.length + research.length + smidgeons.length + now.length; // + patterns.length + talks.length;
 ---
 
 <Layout>
@@ -62,19 +62,35 @@ const totalDrafts =
 		}
 
 		{
-			/* patterns.length > 0 && (
+			research.length > 0 && (
 				<section>
-					<h2>Patterns ({patterns.length})</h2>
+					<h2>Research ({research.length})</h2>
 					<ul>
-						{patterns.map((pattern) => (
+						{research.map((paper) => (
 							<li>
-								<a href={`/${pattern.id}`}>{pattern.data.title}</a>
-								<p>{pattern.data.description}</p>
+								<a href={`/research/${paper.id}`}>{paper.data.title}</a>
+								<p>{paper.data.description}</p>
 							</li>
 						))}
 					</ul>
 				</section>
-			) */
+			)
+		}
+
+		{
+			/* patterns.length > 0 && (
+			<section>
+				<h2>Patterns ({patterns.length})</h2>
+				<ul>
+					{patterns.map((pattern) => (
+						<li>
+							<a href={`/${pattern.id}`}>{pattern.data.title}</a>
+							<p>{pattern.data.description}</p>
+						</li>
+					))}
+				</ul>
+			</section>
+		) */
 		}
 
 		{
@@ -102,7 +118,14 @@ const totalDrafts =
 						{smidgeons.map((smidgeon) => (
 							<li>
 								<a href={`/${smidgeon.id}`}>{smidgeon.data.title}</a>
-								<p>Started: {smidgeon.data.startDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
+								<p>
+									Started:{" "}
+									{smidgeon.data.startDate.toLocaleDateString("en-GB", {
+										year: "numeric",
+										month: "long",
+										day: "numeric",
+									})}
+								</p>
 							</li>
 						))}
 					</ul>
@@ -118,7 +141,14 @@ const totalDrafts =
 						{now.map((nowPost) => (
 							<li>
 								<a href={`/now-${nowPost.id}`}>{nowPost.data.title}</a>
-								<p>Started: {nowPost.data.startDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
+								<p>
+									Started:{" "}
+									{nowPost.data.startDate.toLocaleDateString("en-GB", {
+										year: "numeric",
+										month: "long",
+										day: "numeric",
+									})}
+								</p>
 							</li>
 						))}
 					</ul>
