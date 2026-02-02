@@ -1,6 +1,6 @@
 # Karl August's Digital Garden
 
-A personal website and digital garden built with Astro, featuring growing notes, essays, research papers, and design patterns focused on machine learning, AI safety, and technology.
+A personal website and digital garden built with Astro, featuring growing notes, essays, research papers, shortfilms and music, focused on machine learning, AI safety, and the creative arts.
 
 **Live at:** [karlaugust.vercel.app](https://karlaugust.vercel.app)
 
