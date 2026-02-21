@@ -18,7 +18,7 @@ This is a first draft, and I will be continually tending to it over time as I le
 
 This is an essay about why I think AI safety is an important endeavour. This is also the first essay in my digital garden, and it is definitely a seedling. I hope you enjoy it.
 
-I will try to highlight many of the best arguments I have heard against the AI safety field, arguments that made me pause and reflect on what I believe. Like a stress test to see if AI safety really is as important as many people in the field believe. This essay is mainly focussed on people with a bit of knowledge about the AI scene, and being unsure if their career should focus on AI safety. But I believe almost anybody regardless of familiarity with the subject, will find some interesting thoughts in here.
+I will try to highlight many of the best arguments I have heard against the AI safety field (and some of my thoughts that kept coming up while writing), arguments that made me pause and reflect on what I believe. Like a stress test to see if AI safety really is as important as many people in the field believe. This essay is mainly focussed on people with a bit of knowledge about the AI scene, and being unsure if their career should focus on AI safety. But I believe almost anybody regardless of familiarity with the subject, will find some interesting thoughts in here.
 
 Before diving in, let me clarify two terms I'll use throughout. Artificial General Intelligence (AGI) refers to AI systems that match human-level performance across most cognitive tasks. Artificial Superintelligence (ASI) refers to systems that substantially exceed human capabilities. These represent different milestones on different timescales, and the distinction matters for thinking about risks. These are quite vague definitions, and there is no clear agrement in the field, but they suffice for these arguments.
 
@@ -30,7 +30,7 @@ Let's start with some philosophy. One of the most morally serious objections to 
 
 I find this argument uncomfortable precisely because it forces a concrete reckoning. It's easy to speak abstractly about existential risk. It's harder to look at current suffering and say that hypothetical future catastrophe takes priority.
 
-My reasoning isn't that present lives matter less. It's that extinction represents a categorically different kind of loss. A 1% chance of human extinction weighs more heavily in my thinking than even billions of deaths within a continuing humanity. This isn't because I'm cavalier about present suffering. It's because extinction forecloses everything: every future generation, every possible recovery, every chance for things to get better.
+My reasoning isn't that present lives matter less, I would actually say the opposite. It's that extinction represents a categorically different kind of loss. A 1% chance of human extinction weighs more heavily in my thinking than even billions of deaths within a continuing humanity. This isn't because I'm cavalier about present suffering. It's because extinction forecloses everything: every future generation, every possible recovery, every chance for things to get better.
 
 We've observed no other intelligent life in the universe. Earth might be the only place where consciousness exists at all. The permanent silencing of that seems to me uniquely tragic in a way that recoverable setbacks, however devastating, are not.
 
@@ -76,7 +76,7 @@ I understand the appeal of this argument. It feels hard-headed and realistic. An
 
 My problem is that if everyone reasons this way, we get a race to the bottom where all actors accelerate development while hoping they'll be the ones to maintain control. This is precisely the scenario that maximizes risk. Treating it as inevitable seems like a self-fulfilling prophecy rather than a description of fixed reality.
 
-I also think, perhaps optimistically, that both the United States and China will ultimately prioritize safe AI systems. The Chinese government has actually demonstrated genuine interest in AI safety at the policy level, even if Chinese AI labs have been slower to implement safety measures than their Western counterparts. This gap between governmental concern and lab practice exists in the West too, suggesting the problem is more about institutional incentives than national ideology.
+I also think, perhaps optimistically, that both the United States and China will ultimately prioritize safe AI systems. The Chinese government has actually demonstrated genuine interest in AI safety at the policy level, even if Chinese AI labs have been slower to implement safety measures than their Western counterparts. This gap between governmental concern and lab practice exists in the US too, though actually more the other way around, but generally AI regulation is something the public wants.
 
 More fundamentally, a sufficiently severe AI-caused catastrophe could create political will for international cooperation that seems impossible today. We have precedents: chemical and biological weapons conventions emerged from shared horror at their effects. The 1925 Geneva Protocol followed the mass casualties of World War I gas attacks. The Biological Weapons Convention of 1972 came after decades of growing awareness about bioweapon dangers. In both cases, nations with adversarial relationships found common ground because the alternative was too terrible. Similar dynamics could apply to AI, especially if early warning signs make the risks concrete rather than theoretical.
 
@@ -100,7 +100,7 @@ There's certainly a chance that geopolitical competition overwhelms cooperation.
 
 Beyond geopolitics, there's a more immediate structural problem: the economic incentives facing AI development today actively discourage safety work.
 
-The disparity between capability research and safety research is staggering. Major AI labs spend billions on training larger, more capable models. Safety teams, where they exist, represent a tiny fraction of overall headcount and budget. Societal investment follows the same pattern. Venture capital floods into companies promising more powerful AI; funding for alignment research and AI governance remains comparatively minuscule.
+The disparity between capability research and safety research is staggering. Major AI labs spend billions on training larger, more capable models. Safety teams, where they exist, represent a tiny fraction of overall headcount and budget (except maybe Anthropic). Societal investment follows the same pattern. Venture capital floods into companies promising more powerful AI; funding for alignment research and AI governance remains comparatively minuscule.
 
 This isn't because lab leaders are malicious. It's because capability improvements are legible and monetizable. A model that codes better, writes better, or reasons better translates directly into products and revenue. Safety improvements are harder to measure, harder to market, and often involve slowing down rather than speeding up.
 
@@ -114,7 +114,7 @@ The argument I find most interesting, and most difficult to fully dismiss, is th
 
 The reasoning goes like this: in almost every engineering field, progress follows an S-curve rather than an exponential. Early gains come quickly, but returns diminish as systems get more complex. We went from the Wright Brothers to the Moon in 66 years. In the 55 years since, we haven't gone much faster or further. Perhaps we've hit an aviation complexity wall. Perhaps intelligence has a similar wall.
 
-There are even signs this might be happening with AI. We may be running out of high-quality training data. Synthetic data, AI training on AI output, can lead to [model collapse](https://en.wikipedia.org/wiki/Model_collapse). Energy costs for marginal capability gains are becoming enormous. If the scaling laws break, the premise of urgent safety work evaporates.
+There are even signs this might be happening with AI. We may be running out of high-quality training data. Synthetic data, AI training on AI output, can lead to [model collapse](https://en.wikipedia.org/wiki/Model_collapse) (though the labs seem to have overcome this). Energy costs for marginal capability gains are becoming enormous. If the scaling laws break, the premise of urgent safety work evaporates.
 
 I take this seriously. It's possible that AGI is much harder than current progress suggests, that we're picking low-hanging fruit and the hard problems remain effectively unsolvable.
 
@@ -122,7 +122,7 @@ But I don't find this argument decisive, for a few reasons.
 
 First, the empirical evidence still points toward continued progress, though the pattern is uneven. Some capabilities do appear to be plateauing. Creative tasks, open-ended writing, and tasks requiring genuine novelty have seen diminishing returns in recent model generations. But other domains show continued rapid improvement. Mathematical reasoning and programming, in particular, have improved dramatically and continue to do so.
 
-This uneven pattern matters because of what it implies for recursive self-improvement. Math and programming are precisely the skills an AI system would need to improve its own capabilities or to assist in building more advanced successors. A system that plateaus at creative writing but excels at formal reasoning and code is arguably more concerning from a safety perspective, not less.
+This uneven pattern matters because of what it implies for recursive self-improvement. Math and programming are precisely the skills an AI system would need to improve its own capabilities or to assist in building more advanced successors. A system that plateaus at creative writing but excels at formal reasoning and code is arguably more concerning from a safety perspective.
 
 The METR Horizons data illustrates the pace of progress in agentic capabilities specifically. Task length at 50% success rate, a measure of how complex and extended an operation AI agents can reliably complete, has been doubling approximately every seven months over the 
 2019-2025 period, with the doubling rate accelerating to roughly three months since 2024.<Footnote idName="metr-horizons-clarification">
@@ -144,7 +144,7 @@ On the ethics of longtermism: I've outlined a position, but the philosophical fo
 
 On timelines: I believe AGI is plausibly near and ASI plausibly achievable within the century. But my confidence here rests substantially on extrapolation from recent trends and general intuitions about technological progress, not on detailed technical arguments about what's possible. The complexity brake argument could be right. The next decade will provide important evidence either way.
 
-On governance: I'm perhaps more optimistic about international cooperation than the evidence strictly warrants. My belief that verification is solvable and that great powers can coordinate rests partly on hope and partly on reading promising technical research. History provides mixed precedents.
+On governance: I'm perhaps more optimistic about international cooperation than the evidence strictly warrants. My belief that verification is solvable and that great powers can coordinate rests partly on hope and partly on reading promising technical research.
 
 ## A Way Forward
 
@@ -156,7 +156,7 @@ Current models already exhibit behaviors that look like instrumental self-preser
 
 If you find these arguments compelling, what can you actually do?
 
-For those considering careers: technical AI safety research needs more people, but so does AI governance, policy work, and even thoughtful journalism about these issues. Organizations like [80,000 Hours](https://80000hours.org/) provide detailed guidance on career paths that help our planet, and [Neel Nanda's blog](https://www.neelnanda.io/) for research advice.
+For those considering careers: technical AI safety research needs more people, but so does AI governance, policy work, and thoughtful journalism about these issues. Organizations like [80,000 Hours](https://80000hours.org/) provide detailed guidance on career paths that help our planet, and [Neel Nanda's blog](https://www.neelnanda.io/) for research advice.
 
 For everyone: staying informed, thinking carefully about these issues, and prioritizing AI risks with your democratic powers. Will help guide our governments towards a better future.
 
