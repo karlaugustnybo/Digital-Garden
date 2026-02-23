@@ -1,6 +1,6 @@
 ---
 const { slug, cover, title, date, topics } = Astro.props;
-import { Image } from "astro:assets";
+import BlurImage from "./BlurImage.astro";
 import { Icon } from "astro-icon/components";
 
 function formattedDate(date: Date) {
@@ -11,21 +11,19 @@ function formattedDate(date: Date) {
 }
 ---
 
-<a href={`/${slug}`}>
-	<div class="project-card">
-		<div class="image-wrapper">
-			<Image src={cover} alt={title} width={300} height={225} />
-		</div>
-		<div class="metadata">
-			<h3>{title}</h3>
-			<div class="metadata-container">
-				<span>{formattedDate(date)}</span>
-				<Icon name="evergreen" width="14" height="14" />
-				<span>{topics}</span>
-			</div>
+<div class="project-card" data-card-link={`/${slug}`}>
+	<div class="image-wrapper">
+		<BlurImage src={cover} alt={title} width={300} height={225} />
+	</div>
+	<div class="metadata">
+		<h3>{title}</h3>
+		<div class="metadata-container">
+			<span>{formattedDate(date)}</span>
+			<Icon name="evergreen" width="14" height="14" />
+			<span>{topics}</span>
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
 	.image-wrapper {
@@ -33,6 +31,11 @@ function formattedDate(date: Date) {
 		place-content: center;
 		max-width: 450px;
 		max-height: 338px;
+	}
+
+	.image-wrapper :global(.blur-image-wrapper) {
+		width: 100%;
+		height: 100%;
 	}
 
 	.metadata {
@@ -80,6 +83,9 @@ function formattedDate(date: Date) {
 		transition: all 0.3s ease-in-out;
 		color: var(--color-gray-800);
 		margin: 0 var(--space-xs) var(--space-xs) 0;
+		cursor: pointer;
+		user-select: text;
+		-webkit-user-select: text;
 	}
 
 	.project-card img,

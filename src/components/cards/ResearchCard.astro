@@ -14,27 +14,25 @@ const statusToGrowthStage = {
 const growthStage = statusToGrowthStage[status] || "seedling";
 ---
 
-<a href={`/research/${slug}`}>
-    <div class="research-card">
-        <h3 transition:name={`title-${slug}`}>{title}</h3>
-        <p class="description">{description}</p>
-        <div class="metadata-container">
-            <span class="type-badge">{type || "Paper"}</span>
-            <GrowthIcon size="15" growthStage={growthStage} />
-            <span>
-                <RelativeDate postDate={date} />
-            </span>
-        </div>
-        {
-            authors && (
-                <div class="authors">
-                    {authors.slice(0, 2).join(", ")}
-                    {authors.length > 2 ? " et al." : ""}
-                </div>
-            )
-        }
+<div class="research-card" data-card-link={`/research/${slug}`}>
+    <h3 transition:name={`title-${slug}`}>{title}</h3>
+    <p class="description">{description}</p>
+    <div class="metadata-container">
+        <span class="type-badge">{type || "Paper"}</span>
+        <GrowthIcon size="15" growthStage={growthStage} />
+        <span>
+            <RelativeDate postDate={date} />
+        </span>
     </div>
-</a>
+    {
+        authors && (
+            <div class="authors">
+                {authors.slice(0, 2).join(", ")}
+                {authors.length > 2 ? " et al." : ""}
+            </div>
+        )
+    }
+</div>
 
 <style>
     .metadata-container {
@@ -94,6 +92,8 @@ const growthStage = statusToGrowthStage[status] || "seedling";
         will-change: transform, box-shadow;
         color: var(--color-gray-800);
         cursor: pointer;
+        user-select: text;
+        -webkit-user-select: text;
     }
 
     .research-card h3 {

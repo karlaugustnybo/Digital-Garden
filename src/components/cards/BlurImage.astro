@@ -1,0 +1,116 @@
+---
+import { Image, getImage } from "astro:assets";
+
+interface Props {
+    src: ImageMetadata;
+    alt: string;
+    width: number;
+    height: number;
+    quality?: number;
+    loading?: "lazy" | "eager";
+    decoding?: "async" | "auto" | "sync";
+    style?: string;
+    class?: string;
+}
+
+const {
+    src,
+    alt,
+    width,
+    height,
+    quality = 80,
+    loading = "lazy",
+    decoding = "async",
+    style,
+    class: className,
+} = Astro.props;
+
+// Generate a tiny placeholder image for the blur-up effect
+const placeholder = await getImage({
+    src,
+    width: 20,
+    quality: 10,
+    format: "webp",
+});
+---
+
+<div class:list={["blur-image-wrapper", className]} data-blur-image>
+    <img
+        class="blur-placeholder"
+        src={placeholder.src}
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        decoding="sync"
+    />
+    <Image
+        class="blur-full"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        quality={quality}
+        loading={loading}
+        decoding={decoding}
+        style={style}
+    />
+</div>
+
+<script>
+    function initBlurImages() {
+        document.querySelectorAll("[data-blur-image]").forEach((wrapper) => {
+            const fullImg = wrapper.querySelector<HTMLImageElement>(".blur-full");
+            if (!fullImg) return;
+
+            const reveal = () => {
+                fullImg.style.opacity = "1";
+                const placeholder = wrapper.querySelector<HTMLImageElement>(".blur-placeholder");
+                if (placeholder) placeholder.style.opacity = "0";
+            };
+
+            if (fullImg.complete && fullImg.naturalWidth > 0) {
+                reveal();
+            } else {
+                fullImg.addEventListener("load", reveal, { once: true });
+            }
+        });
+    }
+
+    // Run on initial load
+    initBlurImages();
+
+    // Re-run after Astro view transitions
+    document.addEventListener("astro:after-swap", initBlurImages);
+    document.addEventListener("astro:page-load", initBlurImages);
+</script>
+
+<style>
+    .blur-image-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blur-placeholder {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: blur(20px);
+        transform: scale(1.1); /* Prevent blur edge artifacts */
+        transition: opacity 0.4s ease-out;
+        z-index: 0;
+    }
+
+    .blur-full {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+        z-index: 1;
+    }
+</style>

@@ -5,22 +5,20 @@ import RelativeDate from "../layouts/RelativeDate.astro";
 const { slug, title, date, preview } = Astro.props;
 ---
 
-<a href={`/${slug}`}>
-	<div class="smidgeon-card">
-		<Icon name="heroicons:paper-clip" size={24} class="content-icon" />
-		<div>
-			<h3>{title}</h3>
-			{preview && <p class="preview">{preview}...</p>}
-			<div class="metadata-container">
-				<span>Smidgeon</span>
-				<svg width="4px" height="4px">
-					<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
-				</svg>
-				<RelativeDate postDate={date} />
-			</div>
+<div class="smidgeon-card" data-card-link={`/${slug}`}>
+	<Icon name="heroicons:paper-clip" size={24} class="content-icon" />
+	<div>
+		<h3>{title}</h3>
+		{preview && <p class="preview">{preview}...</p>}
+		<div class="metadata-container">
+			<span>Smidgeon</span>
+			<svg width="4px" height="4px">
+				<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
+			</svg>
+			<RelativeDate postDate={date} />
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
 	.metadata-container {
@@ -61,6 +59,8 @@ const { slug, title, date, preview } = Astro.props;
 		transition: all 0.3s ease-in-out;
 		will-change: transform, background-color, box-shadow;
 		cursor: pointer;
+		user-select: text;
+		-webkit-user-select: text;
 	}
 
 	.smidgeon-card h3 {

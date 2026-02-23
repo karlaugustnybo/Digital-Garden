@@ -4,22 +4,20 @@ import RelativeDate from "../layouts/RelativeDate.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<a href={`/${slug}`}>
-	<div class="now-card">
-		<Icon name="heroicons:clock" size={24} />
-		<div>
-			<h3>{title}</h3>
-			{preview && <p class="description">{preview}...</p>}
-			<div class="metadata-container">
-				<span>Now Update</span>
-				<svg width="4px" height="10px">
-					<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
-				</svg>
-				<RelativeDate postDate={date} />
-			</div>
+<div class="now-card" data-card-link={`/${slug}`}>
+	<Icon name="heroicons:clock" size={24} />
+	<div>
+		<h3>{title}</h3>
+		{preview && <p class="description">{preview}...</p>}
+		<div class="metadata-container">
+			<span>Now Update</span>
+			<svg width="4px" height="10px">
+				<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
+			</svg>
+			<RelativeDate postDate={date} />
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
 	.metadata-container {
@@ -60,6 +58,8 @@ import { Icon } from "astro-icon/components";
 		transition: all 0.3s ease-in-out;
 		will-change: transform, background-color, box-shadow;
 		cursor: pointer;
+		user-select: text;
+		-webkit-user-select: text;
 	}
 
 	.now-card h3 {

@@ -20,7 +20,7 @@ async function createSmidgeon(): Promise<void> {
   // Get smidgeon type from user
   const { smidgeonType }: SmidgeonPrompt = await inquirer.prompt([
     {
-      type: "list",
+      type: "select",
       name: "smidgeonType",
       message: "What type of smidgeon would you like to create?",
       choices: [

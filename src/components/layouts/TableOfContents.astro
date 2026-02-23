@@ -100,19 +100,40 @@ const { headings } = Astro.props;
 		max-height: 0;
 		opacity: 0;
 		pointer-events: none;
+		transform: translateY(-8px);
 	}
 
 	.toc {
 		max-height: 2000px;
 		opacity: 1;
 		overflow: hidden;
-		transition: all 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+		transform: translateY(0);
+		transition:
+			max-height 0.2s cubic-bezier(0.2, 1, 0.8, 1),
+			opacity 0.15s cubic-bezier(0.2, 1, 0.8, 1),
+			transform 0.2s cubic-bezier(0.2, 1, 0.8, 1);
 	}
 
-	/* When sticky on the left sidebar, apply height constraint and scrolling */
-	.desktop-container.sticky-mode .toc {
+	/* Enable scrolling when the desktop TOC is expanded */
+	.desktop-container:not(.collapsed) .toc {
 		max-height: 80vh;
 		overflow-y: auto;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		-webkit-mask-image: linear-gradient(
+			to bottom,
+			transparent,
+			black 12px,
+			black calc(100% - 12px),
+			transparent
+		);
+		mask-image: linear-gradient(
+			to bottom,
+			transparent,
+			black 12px,
+			black calc(100% - 12px),
+			transparent
+		);
 	}
 
 	.mobile-container {

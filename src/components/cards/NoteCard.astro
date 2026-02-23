@@ -4,22 +4,20 @@ import RelativeDate from "../layouts/RelativeDate.astro";
 import GrowthIcon from "../layouts/GrowthIcon.astro";
 ---
 
-<a href={`/${slug}`}>
-	<div class="note-card">
-		{growthStage && <GrowthIcon size="24" growthStage={growthStage} />}
-		<div>
-			<h3>{title}</h3>
-			<p class="description">{description}</p>
-			<div class="metadata-container">
-				<span>Note</span>
-				<svg width="4px" height="10px">
-					<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
-				</svg>
-				<RelativeDate postDate={date} />
-			</div>
+<div class="note-card" data-card-link={`/${slug}`}>
+	{growthStage && <GrowthIcon size="24" growthStage={growthStage} />}
+	<div>
+		<h3>{title}</h3>
+		<p class="description">{description}</p>
+		<div class="metadata-container">
+			<span>Note</span>
+			<svg width="4px" height="10px">
+				<circle r="2" cx="2" cy="2" fill="var(--color-gray-400)"></circle>
+			</svg>
+			<RelativeDate postDate={date} />
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
 	.metadata-container {
@@ -60,6 +58,8 @@ import GrowthIcon from "../layouts/GrowthIcon.astro";
 		transition: all 0.3s ease-in-out;
 		will-change: transform, background-color, box-shadow;
 		cursor: pointer;
+		user-select: text;
+		-webkit-user-select: text;
 	}
 
 	.note-card h3 {
