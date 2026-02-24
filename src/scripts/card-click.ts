@@ -5,9 +5,10 @@
  * so text selection works normally. Clicking (without selecting text)
  * navigates to the link.
  */
-function initCardClicks() {
-    document.addEventListener("click", (e) => {
-        const card = e.target.closest("[data-card-link]");
+function initCardClicks(): void {
+    document.addEventListener("click", (e: MouseEvent) => {
+        const target = e.target as HTMLElement;
+        const card = target.closest<HTMLElement>("[data-card-link]");
         if (!card) return;
 
         // Don't navigate if user selected text
@@ -15,13 +16,13 @@ function initCardClicks() {
         if (selection && selection.toString().length > 0) return;
 
         // Don't navigate if user clicked an actual link or button inside the card
-        if (e.target.closest("a, button")) return;
+        if (target.closest("a, button")) return;
 
         const href = card.dataset.cardLink;
         if (!href) return;
 
-        const target = card.dataset.cardTarget;
-        if (target === "_blank") {
+        const cardTarget = card.dataset.cardTarget;
+        if (cardTarget === "_blank") {
             window.open(href, "_blank", "noopener,noreferrer");
         } else {
             window.location.href = href;
