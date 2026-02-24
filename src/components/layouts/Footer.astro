@@ -7,12 +7,20 @@ import UnderlineHoverLink from "../mdx/UnderlineHoverLink.astro";
 	<div class="footer-content">
 		<div class="rss-feed">
 			<h3>Want to stay up to date?</h3>
-			<a href="/rss.xml">
-				<button>
-					<Icon name="heroicons:rss-20-solid" size={20} />
-					Subscribe via RSS Feed
-				</button>
-			</a>
+			<div class="feed-buttons">
+				<a href="/rss.xml">
+					<button>
+						<Icon name="heroicons:rss-20-solid" size={20} />
+						RSS Feed
+					</button>
+				</a>
+				<a href="/atom.xml">
+					<button>
+						<Icon name="heroicons:rss-20-solid" size={20} />
+						Atom Feed
+					</button>
+				</a>
+			</div>
 			<div class="social-media-icons">
 				<a rel="me" href="https://bsky.app/profile/karlaugustnybo.bsky.social">
 					<Icon name="bluesky" size={32} />
@@ -85,6 +93,12 @@ import UnderlineHoverLink from "../mdx/UnderlineHoverLink.astro";
 		font-family: var(--font-body);
 		font-weight: 300;
 		margin-bottom: var(--space-xs);
+	}
+
+	.feed-buttons {
+		display: flex;
+		gap: var(--space-2xs);
+		flex-wrap: wrap;
 	}
 
 	.rss-feed button {

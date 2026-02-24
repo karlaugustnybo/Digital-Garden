@@ -67,8 +67,8 @@ const renderedSmidgeons = await Promise.all(
 				Smidgeons Stream
 			</TitleWithCount>
 			<Title2>
-				A stream of interesting links, papers, and tiny thoughts. Roughly what I'm reading and
-				thinking about at the moment.</Title2
+				A stream of interesting links, papers, and tiny thoughts. Roughly what I'm reading
+				and thinking about at the moment.</Title2
 			>
 		</header>
 
@@ -97,16 +97,25 @@ const renderedSmidgeons = await Promise.all(
 											})}
 										</time>
 									</div>
-									{smidgeon.data.topics && <Topics topics={smidgeon.data.topics} />}
+									{smidgeon.data.topics && (
+										<Topics topics={smidgeon.data.topics} />
+									)}
 								</div>
 								<div class="content">
 									{/* External Link Format */}
 									{smidgeon.data.external && (
-										<a href={smidgeon.data.external.url} target="_blank" rel="noopener noreferrer">
+										<a
+											href={smidgeon.data.external.url}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
 											<div class="reference-card">
 												<h1 class="content-header">
 													{smidgeon.data.external.title}
-													<Icon name="heroicons:arrow-top-right-on-square" size={16} />
+													<Icon
+														name="heroicons:arrow-top-right-on-square"
+														size={16}
+													/>
 												</h1>
 												{smidgeon.data.external.author && (
 													<p class="byline">
@@ -120,21 +129,37 @@ const renderedSmidgeons = await Promise.all(
 
 									{/* Academic Paper Format */}
 									{smidgeon.data.citation && (
-										<a href={smidgeon.data.citation.url} target="_blank" rel="noopener noreferrer">
+										<a
+											href={smidgeon.data.citation.url}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
 											<div class="reference-card">
 												<div class="citation-header">
 													<h1 class="content-header">
 														{smidgeon.data.citation.title}{" "}
-														<Icon name="heroicons:arrow-top-right-on-square" size={16} />
+														<Icon
+															name="heroicons:arrow-top-right-on-square"
+															size={16}
+														/>
 													</h1>
 													<div class="citation-metadata">
 														<p class="byline">
-															<Icon name="heroicons:users" size={14} />
-															{smidgeon.data.citation.authors.join(", ")}
+															<Icon
+																name="heroicons:users"
+																size={14}
+															/>
+															{smidgeon.data.citation.authors.join(
+																", ",
+															)}
 														</p>
 														<p class="journal-info byline">
-															<Icon name="heroicons:academic-cap" size={14} />
-															{smidgeon.data.citation.journal} ({smidgeon.data.citation.year})
+															<Icon
+																name="heroicons:academic-cap"
+																size={14}
+															/>
+															{smidgeon.data.citation.journal} (
+															{smidgeon.data.citation.year})
 														</p>
 													</div>
 												</div>
@@ -157,31 +182,53 @@ const renderedSmidgeons = await Promise.all(
 						</>
 					))
 				}
+
+				<div class="smidgeons-footer-section">
+					<div class="recent-smidgeons-card">
+						<div class="recent-header">
+							<Icon
+								name="heroicons:bars-3-bottom-left"
+								size={18}
+								class="recent-icon"
+							/>
+							<h3>Recent Smidgeons</h3>
+						</div>
+						<div class="recent-content">
+							<nav class="recent-nav">
+								<ul>
+									{
+										renderedSmidgeons.slice(0, 8).map((recentSmidgeon) => (
+											<li class="recent-item">
+												<a
+													href={`#smidgeon-${recentSmidgeon.id}`}
+													class="recent-link"
+												>
+													{recentSmidgeon.data.title.length > 40
+														? `${recentSmidgeon.data.title.slice(0, 40)}...`
+														: recentSmidgeon.data.title}
+												</a>
+											</li>
+										))
+									}
+								</ul>
+							</nav>
+						</div>
+
+						<div class="rss-link-container">
+							<div class="rss-link">
+								<a href="/smidgeons.xml" title="RSS Feed for Smidgeons">
+									<Icon name="heroicons:rss" size={14} />
+									<span>RSS Feed</span>
+								</a>
+								<a href="/smidgeons-atom.xml" title="Atom Feed for Smidgeons">
+									<Icon name="heroicons:rss" size={14} />
+									<span>Atom Feed</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<aside class="sidebar">
-				<div class="recent-smidgeons">
-					<h3>Recent Smidgeons</h3>
-					<ul>
-						{
-							renderedSmidgeons.slice(0, 8).map((recentSmidgeon) => (
-								<li>
-									<a href={`#smidgeon-${recentSmidgeon.id}`}>
-										{recentSmidgeon.data.title.length > 40
-											? `${recentSmidgeon.data.title.slice(0, 40)}...`
-											: recentSmidgeon.data.title}
-									</a>
-								</li>
-							))
-						}
-					</ul>
-				</div>
-				<div class="rss-link">
-					<a href="/smidgeons.xml" title="RSS Feed for Smidgeons">
-						<Icon name="heroicons:rss" size={14} />
-						<span>Smidgeons RSS Feed</span>
-					</a>
-				</div>
-			</aside>
 		</div>
 	</PageWrapper>
 </Layout>
@@ -402,56 +449,99 @@ const renderedSmidgeons = await Promise.all(
 		margin-bottom: var(--space-xs);
 	}
 
-	/* Sidebar */
-	.sidebar {
-		position: sticky;
-		top: var(--space-l);
-		height: fit-content;
-		width: 280px;
-		grid-column: 3;
+	/* Recent Smidgeons & Footer Section */
+	.smidgeons-footer-section {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-l);
+		margin-top: var(--space-xl);
+		margin-bottom: var(--space-xl);
+		width: 100%;
+		align-items: center;
 	}
 
-	.recent-smidgeons {
-		padding: 0 var(--space-xs);
+	.recent-smidgeons-card {
+		padding: 1.5rem 2rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--color-gray-300);
+		box-shadow: var(--box-shadow-sm);
+		background-color: var(--color-white);
+		width: 100%;
+		max-width: 600px; /* Optional: limit width of the card for better centering */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 
-	.recent-smidgeons h3 {
-		font-family: var(--font-sans);
-		font-size: var(--font-size-xs);
-		font-weight: 400;
-		color: var(--color-secondary-green);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+	.recent-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding-bottom: var(--space-xs);
+	}
+
+	.recent-icon {
+		color: var(--color-primary-green);
+	}
+
+	.recent-header h3 {
+		display: inline-block;
+		margin: 0;
+		font-size: 1.1rem;
+		color: var(--color-gray-800);
+		font-weight: 600;
+	}
+
+	.recent-content {
+		padding-bottom: 0;
 		margin-top: 0;
-		margin-bottom: var(--space-2xs);
+		margin-bottom: 0;
+		width: 100%;
 	}
 
-	.recent-smidgeons ul {
+	.recent-nav ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
-	.recent-smidgeons li {
-		margin-bottom: 0.5rem;
-		line-height: 1.2;
+	li.recent-item {
+		margin-bottom: 0.15rem !important;
 	}
 
-	.recent-smidgeons a {
+	.recent-link {
+		font-family: var(--font-sans);
+		display: block;
+		line-height: var(--leading-base);
+		font-size: var(--font-size-sm);
 		color: var(--color-gray-600);
 		text-decoration: none;
-		font-family: var(--font-sans);
-		font-size: var(--font-size-sm);
+		transition: color 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+		text-align: center;
 	}
 
-	.recent-smidgeons a:hover {
+	.recent-link:hover {
 		color: var(--color-secondary-green);
 	}
 
-	/* RSS Link */
+	/* Feed Links */
+	.rss-link-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 0;
+	}
+
 	.rss-link {
-		padding: 0 var(--space-xs);
-		margin-top: var(--space-m);
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-s);
+		justify-content: center;
 	}
 
 	.rss-link a {
@@ -474,12 +564,6 @@ const renderedSmidgeons = await Promise.all(
 		border: 1px solid var(--color-accent-brown);
 		box-shadow: var(--box-shadow-sm);
 		cursor: pointer;
-	}
-
-	@media (max-width: 1400px) {
-		.sidebar {
-			display: none;
-		}
 	}
 
 	@media (max-width: 1200px) {
