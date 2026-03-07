@@ -1,4 +1,14 @@
 ---
+interface Props {
+	slug: string;
+	cover?: ImageMetadata;
+	title: string;
+	growthStage?: "seedling" | "budding" | "evergreen";
+	date: Date;
+	description?: string;
+	id: string;
+}
+
 const { slug, cover, title, growthStage, date, description, id } = Astro.props;
 import BlurImage from "./BlurImage.astro";
 import RelativeDate from "../layouts/RelativeDate.astro";
@@ -59,9 +69,6 @@ import GrowthIcon from "../layouts/GrowthIcon.astro";
 	}
 
 	.metadata-container {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
 		display: inline-block;
 		font-family: var(--font-sans);
 		font-size: var(--font-size-xs);

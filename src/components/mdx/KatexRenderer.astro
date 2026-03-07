@@ -12,7 +12,7 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
 
 <div
   id={mathId}
-  class={`katex-math ${display ? 'katex-display' : 'katex-inline'}`}
+  class={`katex-math ${display ? "katex-display" : "katex-inline"}`}
   data-math={math}
   data-display={display}
 >
@@ -20,13 +20,13 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
 </div>
 
 <script is:inline>
-  import 'katex/dist/katex.min.css';
-  import katex from 'katex';
+  import "katex/dist/katex.min.css";
+  import katex from "katex";
 
   // Function to render math elements
   function renderMathElement(element) {
     const math = element.dataset.math;
-    const display = element.dataset.display === 'true';
+    const display = element.dataset.display === "true";
 
     try {
       katex.render(math, element, {
@@ -39,30 +39,30 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
           "\\NN": "\\mathbb{N}",
           "\\ZZ": "\\mathbb{Z}",
           "\\QQ": "\\mathbb{Q}",
-          "\\CC": "\\mathbb{C}"
-        }
+          "\\CC": "\\mathbb{C}",
+        },
       });
     } catch (error) {
-      console.error('KaTeX rendering error:', error);
+      console.error("KaTeX rendering error:", error);
       element.innerHTML = `<span class="katex-error">${math}</span>`;
     }
   }
 
   // Initialize KaTeX rendering
   function initializeKatex() {
-    const mathElements = document.querySelectorAll('.katex-math');
+    const mathElements = document.querySelectorAll(".katex-math");
     mathElements.forEach(renderMathElement);
   }
 
   // Initialize on page load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeKatex);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeKatex);
   } else {
     initializeKatex();
   }
 
   // Re-initialize after Astro page transitions
-  document.addEventListener('astro:page-load', () => {
+  document.addEventListener("astro:page-load", () => {
     // Small delay to ensure DOM is ready
     setTimeout(initializeKatex, 100);
   });
@@ -84,9 +84,9 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   .katex-error {
-    color: var(--color-salmon);
+    color: var(--color-primary-green);
     font-style: italic;
-    background: var(--color-light-salmon);
+    background: var(--color-secondary-green);
     padding: 2px 4px;
     border-radius: 2px;
   }

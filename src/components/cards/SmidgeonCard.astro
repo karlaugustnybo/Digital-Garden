@@ -2,6 +2,13 @@
 import { Icon } from "astro-icon/components";
 import RelativeDate from "../layouts/RelativeDate.astro";
 
+interface Props {
+	slug: string;
+	title: string;
+	date: Date;
+	preview?: string;
+}
+
 const { slug, title, date, preview } = Astro.props;
 ---
 

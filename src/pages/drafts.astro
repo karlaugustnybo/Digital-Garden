@@ -15,8 +15,8 @@ const research = await getCollection("research", ({ data }) => data.draft === tr
 // Temporarily disabled collections:
 // const patterns = await getCollection("patterns", ({ data }) => data.draft === true);
 // const talks = await getCollection("talks", ({ data }) => data.draft === true);
-const patterns: any[] = []; // Empty array since collection is temporarily disabled
-const talks: any[] = []; // Empty array since collection is temporarily disabled
+const patterns: never[] = []; // Empty array since collection is temporarily disabled
+const talks: never[] = []; // Empty array since collection is temporarily disabled
 const smidgeons = await getCollection("smidgeons", ({ data }) => data.draft === true);
 const now = await getCollection("now", ({ data }) => data.draft === true);
 

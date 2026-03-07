@@ -1,4 +1,11 @@
 ---
+interface Props {
+	slug: string;
+	title: string;
+	date: Date;
+	preview?: string;
+}
+
 const { slug, title, date, preview } = Astro.props;
 import RelativeDate from "../layouts/RelativeDate.astro";
 import { Icon } from "astro-icon/components";

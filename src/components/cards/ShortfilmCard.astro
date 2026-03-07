@@ -1,4 +1,15 @@
 ---
+interface Props {
+	slug: string;
+	cover?: ImageMetadata;
+	title: string;
+	growthStage?: "seedling" | "budding" | "evergreen";
+	date: Date;
+	description?: string;
+	id?: string;
+	duration?: string;
+}
+
 const { slug, cover, title, growthStage, date, description, id, duration } = Astro.props;
 import BlurImage from "./BlurImage.astro";
 import RelativeDate from "../layouts/RelativeDate.astro";

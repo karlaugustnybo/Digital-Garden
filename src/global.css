@@ -33,11 +33,6 @@
   --color-light-brown: oklch(44.44% 0.03252 40.859);
   --color-tertiary-green: oklch(0.5 0.05 125);
   --color-purple: oklch(73.54% 0.045 280);
-  --color-salmon: var(--color-primary-green);
-  --color-light-salmon: var(--color-secondary-green);
-  --color-dark-salmon: var(--color-tertiary-green);
-  --color-bright-crimson: var(--color-primary-green);
-  --color-dark-crimson: var(--color-tertiary-green);
 
   /* Opacity variants for colors */
   /* Green variants */
@@ -396,9 +391,9 @@ span.metadata {
 }
 
 button {
-  background-color: var(---color-salmon);
+  background-color: transparent;
   border: none;
-  border-radius: var(---border-radius-sm);
+  border-radius: var(--border-radius-sm);
   padding: var(--space-12) var(--space-24);
 }
 
@@ -412,7 +407,7 @@ textarea:focus:not(:focus-visible) {
 }
 
 mark {
-  background-color: var(--color-light-salmon);
+  background-color: var(--color-secondary-green);
 }
 
 .visually-hidden {

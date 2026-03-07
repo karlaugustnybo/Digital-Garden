@@ -1,4 +1,12 @@
 ---
+interface Props {
+	slug: string;
+	cover: ImageMetadata;
+	title: string;
+	date: Date;
+	topics?: string;
+}
+
 const { slug, cover, title, date, topics } = Astro.props;
 import BlurImage from "./BlurImage.astro";
 import { Icon } from "astro-icon/components";

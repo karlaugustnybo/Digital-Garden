@@ -80,7 +80,7 @@ async function createSmidgeon(): Promise<void> {
 
   // Create frontmatter based on type
   let frontmatter: string = "";
-  
+
   if (smidgeonType === "plain") {
     frontmatter = `---
 title: "${title}"
@@ -127,7 +127,7 @@ draft: true
   const smidgeonsDir: string = path.join(
     __dirname,
     "..",
-    "src",
+    "..",
     "content",
     "smidgeons",
   );
@@ -135,13 +135,5 @@ draft: true
   await fs.writeFile(filePath, frontmatter);
 
   console.log(`Created new ${smidgeonType} smidgeon at: ${filePath}`);
-
-  // Open in VS Code
-  exec(`code ${filePath}`, (error: Error | null): void => {
-    if (error) {
-      console.error("Could not open file in VS Code:", error);
-    }
-  });
-}
 
 createSmidgeon().catch(console.error);

@@ -1,4 +1,13 @@
 ---
+interface Props {
+	slug: string;
+	title: string;
+	growthStage?: "seedling" | "budding" | "evergreen";
+	date: Date;
+	id?: string;
+	description?: string;
+}
+
 const { slug, title, growthStage, date, id, description } = Astro.props;
 import RelativeDate from "../layouts/RelativeDate.astro";
 import GrowthIcon from "../layouts/GrowthIcon.astro";

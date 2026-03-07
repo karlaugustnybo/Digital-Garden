@@ -1,11 +1,5 @@
 ---
-const {
-  variant = "primary",
-  size = "md",
-  children,
-  class: className = "",
-  ...props
-} = Astro.props;
+const { variant = "primary", size = "md", children, class: className = "", ...props } = Astro.props;
 
 const variants = {
   primary: {
@@ -24,9 +18,9 @@ const variants = {
     border: "var(--color-gray-300)",
   },
   salmon: {
-    background: "var(--color-light-salmon)",
-    color: "var(--color-salmon)",
-    border: "var(--color-salmon)",
+    background: "var(--color-secondary-green)",
+    color: "var(--color-primary-green)",
+    border: "var(--color-primary-green)",
   },
 };
 
@@ -46,10 +40,7 @@ const sizes = {
 };
 ---
 
-<span
-  class={`badge badge-${variant} badge-${size} ${className}`}
-  {...props}
->
+<span class={`badge badge-${variant} badge-${size} ${className}`} {...props}>
   {children}
 </span>
 
@@ -99,13 +90,13 @@ const sizes = {
   }
 
   .badge-salmon {
-    background: var(--color-light-salmon);
-    color: var(--color-salmon);
-    border-color: var(--color-salmon);
+    background: var(--color-secondary-green);
+    color: var(--color-primary-green);
+    border-color: var(--color-primary-green);
   }
 
   .badge-salmon:hover {
-    background: var(--color-salmon);
+    background: var(--color-primary-green);
     color: white;
   }
 

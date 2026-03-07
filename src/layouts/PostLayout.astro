@@ -58,27 +58,7 @@ let canonicalDates = {
 if (entry) {
 	// Get all entries of the same collection type to find canonical dates
 	let allEntries: (typeof entry)[] = [];
-	switch (entry.collection) {
-		case "essays":
-			allEntries = (await getCollection("essays")) as (typeof entry)[];
-			break;
-		case "notes":
-			allEntries = (await getCollection("notes")) as (typeof entry)[];
-			break;
-
-		case "shortfilms":
-			allEntries = (await getCollection("shortfilms")) as (typeof entry)[];
-			break;
-		case "music":
-			allEntries = (await getCollection("music")) as (typeof entry)[];
-			break;
-		case "research":
-			allEntries = (await getCollection("research")) as (typeof entry)[];
-			break;
-		case "notebooks":
-			allEntries = (await getCollection("notebooks")) as (typeof entry)[];
-			break;
-	}
+	allEntries = (await getCollection(entry.collection)) as (typeof entry)[];
 	const versionedDates = getCanonicalDates(entry, allEntries);
 	canonicalDates = {
 		startDate: versionedDates.startDate,
@@ -115,26 +95,23 @@ const coverImage =
 		<div class="above-title">
 			<div class="back-link">
 				<a
-					href={entry?.collection === "research"
-						? "/research"
-						: entry?.collection === "music"
-							? "/music"
-							: entry?.collection === "notebooks"
-								? "/notebooks"
-								: `/${frontmatter.type}s`}
+					href={{
+						research: "/research",
+						music: "/music",
+						notebooks: "/notebooks",
+					}[entry?.collection as string] ?? `/${frontmatter.type}s`}
 				>
 					<Icon name="heroicons:arrow-left" size={16} />
 					<span>
 						{
-							entry?.collection === "research"
-								? "Research Lab"
-								: entry?.collection === "music"
-									? "Music"
-									: entry?.collection === "notebooks"
-										? "Notebooks"
-										: frontmatter.type.charAt(0).toUpperCase() +
-											frontmatter.type.slice(1) +
-											"s"
+							{
+								research: "Research Lab",
+								music: "Music",
+								notebooks: "Notebooks",
+							}[entry?.collection as string] ??
+								frontmatter.type.charAt(0).toUpperCase() +
+									frontmatter.type.slice(1) +
+									"s"
 						}
 					</span>
 				</a>

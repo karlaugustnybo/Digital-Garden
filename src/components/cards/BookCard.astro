@@ -1,4 +1,13 @@
 ---
+interface Props {
+	small?: boolean;
+	cover?: ImageMetadata;
+	title: string;
+	subtitle?: string;
+	author: string;
+	link: string;
+}
+
 const { small, cover, title, subtitle, author, link } = Astro.props;
 import { Icon } from "astro-icon/components";
 import BlurImage from "./BlurImage.astro";

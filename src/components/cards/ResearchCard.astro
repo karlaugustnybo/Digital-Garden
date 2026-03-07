@@ -1,17 +1,27 @@
 ---
+interface Props {
+    slug: string;
+    title: string;
+    status?: "published" | "submitted" | "in-review" | "draft";
+    date: Date;
+    description?: string;
+    authors?: string[];
+    type?: string;
+}
+
 const { slug, title, status, date, description, authors, type } = Astro.props;
 import RelativeDate from "../layouts/RelativeDate.astro";
 import GrowthIcon from "../layouts/GrowthIcon.astro";
 
 // Map status to growth stage for icon
-const statusToGrowthStage = {
+const statusToGrowthStage: Record<string, string> = {
     published: "evergreen",
     submitted: "budding",
     "in-review": "budding",
     draft: "seedling",
 };
 
-const growthStage = statusToGrowthStage[status] || "seedling";
+const growthStage = (status && statusToGrowthStage[status]) || "seedling";
 ---
 
 <div class="research-card" data-card-link={`/research/${slug}`}>
@@ -36,9 +46,6 @@ const growthStage = statusToGrowthStage[status] || "seedling";
 
 <style>
     .metadata-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         display: inline-block;
         font-family: var(--font-sans);
         font-size: var(--font-size-xs);
