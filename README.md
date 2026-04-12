@@ -99,6 +99,8 @@ bun run dev
 bun run dev          # Start development server with content processing
 bun run build        # Production build with webmention fetching
 bun run preview      # Preview production build locally
+bun run sync-fonts   # Sync managed local fonts + manifest
+bun run check-fonts  # Validate font files/config drift
 bun run generate-links  # Process wiki-style internal links
 bun run fetch-webmentions  # Update webmentions from API
 bun run smidgeon     # Create new smidgeon entry

@@ -3,12 +3,13 @@ import satori from "satori";
 import sharp from "sharp";
 import type { APIRoute } from "astro";
 import type { ReactNode } from "react";
+import { OG_FONT_SPECS } from "../config/fonts";
 
 // Reusable styles
 const styles = {
   title: {
     fontSize: "88px",
-    fontFamily: "DM Serif Display",
+    fontFamily: "Noto Serif Display",
     fontWeight: "normal",
     width: "100%",
     color: "#353534",
@@ -17,7 +18,7 @@ const styles = {
   },
   description: {
     fontSize: "36px",
-    fontFamily: "DM Sans",
+    fontFamily: "Noto Sans",
     fontWeight: "normal",
     width: "100%",
     color: "#4a4a46",
@@ -26,7 +27,7 @@ const styles = {
   },
   eyebrow: {
     fontSize: "16px",
-    fontFamily: "DM Sans",
+    fontFamily: "Noto Sans",
     textTransform: "uppercase",
     color: "#5a4032",
     letterSpacing: "0.05em",
@@ -66,48 +67,12 @@ export const GET: APIRoute = async function get({ request }) {
     url.searchParams.get("description") ||
     "A digital garden filled with visual essays on programming, design, and anthropology";
 
-  // Create a temporary directory for fonts if it doesn't exist
-  try {
-    await fs.mkdir("./temp-fonts", { recursive: true });
-  } catch (e) {
-    // Directory already exists
-  }
-
-  // Download DM fonts if they don't exist locally
-  const dmSerifPath = "./temp-fonts/DMSerifDisplay.ttf";
-  const dmSansPath = "./temp-fonts/DMSans.ttf";
-
-  try {
-    await fs.access(dmSerifPath);
-  } catch (e) {
-    // Font doesn't exist, download it
-    const dmSerifResponse = await fetch("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap");
-    const cssText = await dmSerifResponse.text();
-    const fontUrl = cssText.match(/url\((https:\/\/fonts\.gstatic\.com\/s\/[^)]+)\)/)?.[1];
-    if (fontUrl) {
-      const fontResponse = await fetch(fontUrl);
-      const fontBuffer = await fontResponse.arrayBuffer();
-      await fs.writeFile(dmSerifPath, Buffer.from(fontBuffer));
-    }
-  }
-
-  try {
-    await fs.access(dmSansPath);
-  } catch (e) {
-    // Font doesn't exist, download it
-    const dmSansResponse = await fetch("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap");
-    const cssText = await dmSansResponse.text();
-    const fontUrl = cssText.match(/url\((https:\/\/fonts\.gstatic\.com\/s\/[^)]+)\)/)?.[1];
-    if (fontUrl) {
-      const fontResponse = await fetch(fontUrl);
-      const fontBuffer = await fontResponse.arrayBuffer();
-      await fs.writeFile(dmSansPath, Buffer.from(fontBuffer));
-    }
-  }
-
-  // Load the fonts
-  const DMSerifDisplay = await fs.readFile(dmSerifPath);
-  const DMSans = await fs.readFile(dmSansPath);
+  const ogFonts = await Promise.all(
+    OG_FONT_SPECS.map(async (fontSpec) => ({
+      ...fontSpec,
+      data: await fs.readFile(fontSpec.filePath),
+    })),
+  );
 
   // Load and process the garden cover image
   const {
@@ -234,7 +199,7 @@ export const GET: APIRoute = async function get({ request }) {
                 type: "p",
                 props: {
                   style: {
-                    fontFamily: "DM Sans",
+                     fontFamily: "Noto Sans",
                     fontSize: "22px",
                     color: "#4a4a46",
                   },
@@ -299,20 +264,7 @@ export const GET: APIRoute = async function get({ request }) {
   const svg = await satori(content as ReactNode, {
     width: 1200,
     height: 630,
-    fonts: [
-      {
-        name: "DM Serif Display",
-        data: DMSerifDisplay,
-        weight: 400,
-        style: "normal",
-      },
-      {
-        name: "DM Sans",
-        data: DMSans,
-        weight: 400,
-        style: "normal",
-      },
-    ],
+    fonts: ogFonts,
   });
 
   const png = await sharp(Buffer.from(svg)).png().toBuffer();

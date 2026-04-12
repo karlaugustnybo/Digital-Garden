@@ -62,7 +62,7 @@ const { idName, isClosed } = Astro.props;
 		content: counter(footnote-counter);
 		padding: 0.15rem;
 		font-family: var(--font-sans);
-		font-size: 1rem;
+		font-size: var(--font-size-base);
 		color: var(--color-primary-green);
 		font-weight: 600;
 		line-height: 0;
@@ -78,7 +78,7 @@ const { idName, isClosed } = Astro.props;
 
 	.footnote::before {
 		content: counter(footnote-counter);
-		font-size: 1rem;
+		font-size: var(--font-size-base);
 		top: -0.1rem;
 		font-weight: 600;
 		padding-right: var(--space-2xs);

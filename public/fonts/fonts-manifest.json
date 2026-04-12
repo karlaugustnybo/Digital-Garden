@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-04-12T14:16:28.575Z",
+  "assets": [
+    {
+      "id": "noto-serif-display-400-normal",
+      "family": "Noto Serif Display",
+      "weight": 400,
+      "style": "normal",
+      "usedBy": [
+        "site",
+        "og"
+      ],
+      "fileName": "NotoSerifDisplay-Regular.ttf",
+      "sourceUrl": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/main/fonts/NotoSerifDisplay/unhinted/ttf/NotoSerifDisplay-Regular.ttf",
+      "size": 471368,
+      "sha256": "df76eaf34df2e47d5abd59e6d8eb328ae590fd0d0675f5d4b32a1227ab1dcee7"
+    },
+    {
+      "id": "noto-sans-400-normal",
+      "family": "Noto Sans",
+      "weight": 400,
+      "style": "normal",
+      "usedBy": [
+        "site",
+        "og"
+      ],
+      "fileName": "NotoSans-Regular.ttf",
+      "sourceUrl": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/main/fonts/NotoSans/unhinted/ttf/NotoSans-Regular.ttf",
+      "size": 431364,
+      "sha256": "f3961a9cde016d41a4879aecda1474d3a36d6bf54fa0e4643de029cc2248b0e8"
+    },
+    {
+      "id": "baskervville-400-normal",
+      "family": "Baskervville",
+      "weight": 400,
+      "style": "normal",
+      "usedBy": [
+        "site"
+      ],
+      "fileName": "Baskervville-Regular.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/baskervville/v20/YA9Br0yU4l_XOrogbkun3kQ6vLFYXmpq8sRsYuDrigS4dA.woff2",
+      "size": 18088,
+      "sha256": "60ee0786854562db477ab5a9d4c363e65121a88c46650aee107d7d5010bd3142"
+    },
+    {
+      "id": "jetbrains-mono-400-normal",
+      "family": "JetBrains Mono",
+      "weight": 400,
+      "style": "normal",
+      "usedBy": [
+        "site"
+      ],
+      "fileName": "JetBrainsMono-Regular.woff2",
+      "sourceUrl": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2",
+      "size": 21168,
+      "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb"
+    }
+  ]
+}

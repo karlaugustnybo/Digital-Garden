@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && astro dev",
-    "build": "bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && bun src/scripts/build/get-webmentions.ts && astro build",
+    "build": "bun run check-fonts && bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && bun src/scripts/build/get-webmentions.ts && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "sync-fonts": "bun src/scripts/build/sync-fonts.ts",
+    "check-fonts": "bun src/scripts/build/check-fonts.ts",
     "generate-links": "bun src/scripts/build/generate-links.ts",
     "fetch-webmentions": "bun src/scripts/build/get-webmentions.ts",
     "smidgeon": "bun src/scripts/utils/create-smidgeon.ts",
