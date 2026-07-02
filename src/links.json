@@ -8,15 +8,5 @@
     "description": "Artificial intelligence affects us all, from the algorithm in Facebook to AI systems that help discover new medicines. Recently, we've all heard about ChatGPT, and many are frightened by this rapid development. But what are the actual problems, and how do we solve them?",
     "outboundLinks": [],
     "inboundLinks": []
-  },
-  {
-    "ids": [
-      "Thoughts on anti-AI-safety arguments"
-    ],
-    "slug": "Arguments-For-AI-Safety-Being-Important",
-    "growthStage": "seedling",
-    "description": "My personal reflections and thinking for why AI safety is important, and my responses to what i think are the best counter-arguments.",
-    "outboundLinks": [],
-    "inboundLinks": []
   }
 ]

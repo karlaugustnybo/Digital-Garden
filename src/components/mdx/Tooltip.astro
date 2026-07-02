@@ -47,23 +47,16 @@ const { maxWidth = 400, placement = "top" } = Astro.props;
 	import tippy, { type Props, type Placement } from "tippy.js";
 	import "tippy.js/dist/tippy.css";
 	import "tippy.js/animations/shift-away.css";
+	import { onPageLifecycle } from "../../utils/viewTransitionLifecycle";
 
-	function initializeTooltips() {
-		// Destroy existing tooltips first
-		const existingTooltips = document.querySelectorAll(".tooltip-trigger");
-		existingTooltips.forEach((element) => {
-			const instance = (element as any)._tippy;
-			if (instance) {
-				instance.destroy();
-			}
-		});
+	onPageLifecycle(() => {
+		const instances: any[] = [];
 
-		// Initialize tooltips
-		const tooltips = document.querySelectorAll(".tooltip-trigger");
+		const tooltips = document.querySelectorAll<HTMLElement>(".tooltip-trigger");
 		tooltips.forEach((element) => {
 			const template = element.querySelector(".tooltip-content") as HTMLTemplateElement;
-			tippy(
-				element as Element,
+			const instance = tippy(
+				element,
 				{
 					content: template.content.cloneNode(true),
 					maxWidth: parseInt(element.getAttribute("data-maxwidth") || "320"),
@@ -86,12 +79,15 @@ const { maxWidth = 400, placement = "top" } = Astro.props;
 					},
 				} as Partial<Props>,
 			);
+			instances.push(instance);
 		});
-	}
 
-	// Initialize on first load
-	initializeTooltips();
-
-	// Re-initialize after view transitions
-	document.addEventListener("astro:page-load", initializeTooltips);
+		return () => {
+			instances.forEach((instance) => {
+				if (instance && typeof instance.destroy === "function") {
+					instance.destroy();
+				}
+			});
+		};
+	});
 </script>

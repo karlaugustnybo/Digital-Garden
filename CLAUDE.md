@@ -32,8 +32,6 @@ A personal website and digital garden built with Astro, featuring growing notes,
 - **Talks** - Conference presentations (moved to `src/content/disabled/`)
 - **Podcasts** - Interviews on various podcasts (moved to `src/content/disabled/`)
 
-*See `REIMPLEMENT_GUIDE.md` for instructions on re-enabling these content types.*
-
 ## Key Features
 
 - **Wiki-style links** - `[[internal links]]` with hover previews
@@ -52,6 +50,7 @@ A personal website and digital garden built with Astro, featuring growing notes,
 - `generate-links.js` - Processes wiki-style internal links
 - `generate-topics.ts` - Creates topic index from content frontmatter  
 - `get-webmentions.js` - Fetches webmentions for posts
+- `scripts/comparison/compare-upstream.sh` - Fetches MaggieAppleton/maggieappleton.com-V3 and writes a content-based comparison report to `scripts/comparison/reports/YYYY-MM-DD/`
 
 ## Custom Components
 

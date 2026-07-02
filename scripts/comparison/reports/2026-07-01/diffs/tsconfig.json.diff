@@ -1,0 +1,19 @@
+--- /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/tsconfig.json	2026-04-12 16:33:46
++++ /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/tsconfig.json	2026-06-19 11:53:45
+@@ -5,15 +5,7 @@
+     "**/*"
+   ],
+   "exclude": [
+-    "dist",
+-    "src/components/unique/AIConversation.astro",
+-    "src/components/unique/GarminData.astro",
+-    "src/components/unique/HackyFormatting.astro",
+-    "src/components/unique/InvisiblesFeature.astro",
+-    "src/components/unique/MediumMaterialsMeat.astro",
+-    "src/components/unique/MultipartIntro.astro",
+-    "src/components/unique/MysteriousVoid.astro",
+-    "src/components/unique/TweenBox.astro"
++    "dist"
+   ],
+   "compilerOptions": {
+     "jsx": "react-jsx",

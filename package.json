@@ -12,6 +12,7 @@
     "generate-links": "bun src/scripts/build/generate-links.ts",
     "fetch-webmentions": "bun src/scripts/build/get-webmentions.ts",
     "smidgeon": "bun src/scripts/utils/create-smidgeon.ts",
+    "instapaper": "bun src/scripts/utils/instapaper-to-smidgeons.ts",
     "date": "bun src/scripts/utils/current-date.ts"
   },
   "dependencies": {

@@ -9,7 +9,7 @@ const { header } = Astro.props;
 ---
 
 <div class="accordion-container">
-	<button class="accordion-button" aria-label="open disclosure">
+	<button class="accordion-button" aria-expanded="false">
 		<div class="header">
 			<Icon name="heroicons:plus-circle" size={22} />
 			<span>{header}</span>
@@ -154,19 +154,13 @@ const { header } = Astro.props;
 
 <script>
 	import { animate } from "motion";
+	import { onPageLifecycle } from "../../utils/viewTransitionLifecycle";
 
-	function initializeAccordions() {
-		const buttons = document.querySelectorAll(".accordion-button");
+	onPageLifecycle(() => {
+		const buttons = document.querySelectorAll<HTMLButtonElement>(".accordion-button");
 
-		// Clean up existing listeners
-		buttons.forEach((button) => {
-			const existingHandler = (button as any)._accordionHandler;
-			if (existingHandler) {
-				button.removeEventListener("click", existingHandler);
-			}
-		});
+		const clickHandlers = new Map<HTMLButtonElement, () => void>();
 
-		// Add new listeners
 		buttons.forEach((button) => {
 			const clickHandler = () => {
 				const panel = button.nextElementSibling;
@@ -176,10 +170,12 @@ const { header } = Astro.props;
 				button.classList.toggle("open");
 
 				if (button.classList.contains("open")) {
+					button.setAttribute("aria-expanded", "true");
 					// Opening animation
 					if (panel instanceof HTMLElement) {
-						panel.style.display = "block"; // Ensure panel is visible for animation
-						animate(
+						panel.style.display = "block";
+						panel.classList.add("open");
+						(animate as any)(
 							panel,
 							{
 								height: ["0px", `${panel.scrollHeight}px`],
@@ -201,10 +197,11 @@ const { header } = Astro.props;
 						chevronIcon.setAttribute("name", "heroicons:chevron-up");
 					}
 				} else {
+					button.setAttribute("aria-expanded", "false");
 					// Closing animation
 					if (panel instanceof HTMLElement) {
-						panel.style.height = `${panel.scrollHeight}px`; // Set current height before animating
-						animate(
+						panel.style.height = `${panel.scrollHeight}px`;
+						(animate as any)(
 							panel,
 							{
 								height: [`${panel.scrollHeight}px`, "0px"],
@@ -216,6 +213,7 @@ const { header } = Astro.props;
 							},
 						).then(() => {
 							panel.style.display = "none";
+							panel.classList.remove("open");
 						});
 
 						if (moreText instanceof HTMLElement) {
@@ -228,15 +226,14 @@ const { header } = Astro.props;
 				}
 			};
 
-			// Store handler for cleanup
-			(button as any)._accordionHandler = clickHandler;
+			clickHandlers.set(button, clickHandler);
 			button.addEventListener("click", clickHandler);
 		});
-	}
 
-	// Initialize on page load
-	initializeAccordions();
-
-	// Re-initialize after view transitions
-	document.addEventListener("astro:page-load", initializeAccordions);
+		return () => {
+			clickHandlers.forEach((handler, button) => {
+				button.removeEventListener("click", handler);
+			});
+		};
+	});
 </script>

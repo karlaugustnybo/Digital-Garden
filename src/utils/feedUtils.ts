@@ -3,6 +3,15 @@ import MarkdownIt from "markdown-it";
 
 const parser = new MarkdownIt();
 
+/** Shared sanitize-html options that allow img tags with src and alt attributes. */
+export const SANITIZE_OPTIONS: sanitizeHtml.IOptions = {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+    allowedAttributes: {
+        ...sanitizeHtml.defaults.allowedAttributes,
+        img: ["src", "alt"],
+    },
+};
+
 /** Strip markdown formatting to produce plain text for descriptions */
 export function stripMarkdown(text: string): string {
     return text
@@ -68,23 +77,30 @@ export function stripImports(body: string): string {
         .join("\n");
 }
 
+/**
+ * Strips import statements from a post body and renders it to HTML,
+ * converting MDX component tags to plain HTML equivalents.
+ * Returns both the import-filtered raw text (for first-line extraction)
+ * and the final rendered HTML string.
+ */
+export function prepareBodyContent(body: string, siteUrl: string): {
+    bodyWithoutImports: string;
+    renderedHtml: string;
+} {
+    const bodyWithoutImports = stripImports(body);
+    const renderedHtml = parser.render(stripMDXComponents(bodyWithoutImports, siteUrl));
+    return { bodyWithoutImports, renderedHtml };
+}
+
 /** Full content processing pipeline: imports → MDX → markdown → images → sanitize */
 export function processContentForFeed(
     body: string | undefined,
     siteUrl: string,
 ): string {
     if (!body) return "";
-    const withoutImports = stripImports(body);
-    const withoutMDX = stripMDXComponents(withoutImports, siteUrl);
-    const rendered = parser.render(withoutMDX);
-    const absoluteImages = fixImagePaths(rendered, siteUrl);
-    return sanitizeHtml(absoluteImages, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
-        allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            img: ["src", "alt"],
-        },
-    });
+    const { renderedHtml } = prepareBodyContent(body, siteUrl);
+    const absoluteImages = fixImagePaths(renderedHtml, siteUrl);
+    return sanitizeHtml(absoluteImages, SANITIZE_OPTIONS);
 }
 
 /** Build the description string for a smidgeon post */

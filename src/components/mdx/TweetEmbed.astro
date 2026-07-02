@@ -9,38 +9,37 @@ const { tweetId } = Astro.props;
 </div>
 
 <script>
+	import { onPageLifecycle } from "../../utils/viewTransitionLifecycle";
+
 	declare global {
 		interface Window {
 			twttr: any;
 		}
 	}
 
-	function loadTwitterWidget() {
-		// Remove any existing Twitter script to prevent duplicates
-		const existingScript = document.querySelector(
-			'script[src="https://platform.twitter.com/widgets.js"]',
-		);
+	onPageLifecycle(() => {
+		const TWITTER_SCRIPT_SRC = "https://platform.twitter.com/widgets.js";
+		const existingScript = document.querySelector(`script[src="${TWITTER_SCRIPT_SRC}"]`);
 		if (existingScript) {
 			existingScript.remove();
 		}
 
-		// Create and append new Twitter script
 		const script = document.createElement("script");
-		script.src = "https://platform.twitter.com/widgets.js";
+		script.src = TWITTER_SCRIPT_SRC;
 		script.async = true;
 		document.body.appendChild(script);
 
-		// Force widget load if window.twttr exists
 		if (window.twttr) {
 			window.twttr.widgets.load();
 		}
-	}
 
-	// Initialize on first load
-	loadTwitterWidget();
-
-	// Re-initialize after view transitions
-	document.addEventListener("astro:page-load", loadTwitterWidget);
+		return () => {
+			const existing = document.querySelector(`script[src="${TWITTER_SCRIPT_SRC}"]`);
+			if (existing) {
+				existing.remove();
+			}
+		};
+	});
 </script>
 
 <style>

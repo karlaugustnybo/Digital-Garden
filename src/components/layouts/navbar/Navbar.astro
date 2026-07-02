@@ -80,18 +80,16 @@ import { Icon } from "astro-icon/components";
 </style>
 
 <script>
-	function initializeMobileMenu() {
-		const menuToggle = document.getElementById("mobile-menu-toggle");
-		const mobileMenu = document.getElementById("mobile-menu");
+	import { onPageLifecycle } from "../../../utils/viewTransitionLifecycle";
+
+	onPageLifecycle(() => {
+		const menuToggle = document.getElementById("mobile-menu-toggle") as HTMLButtonElement | null;
+		const mobileMenu = document.getElementById("mobile-menu") as HTMLElement | null;
 
 		if (!menuToggle || !mobileMenu) return;
 
-		// Remove existing event listeners
-		const newMenuToggle = menuToggle.cloneNode(true) as HTMLButtonElement;
-		menuToggle.parentNode?.replaceChild(newMenuToggle, menuToggle);
-
 		function openMenu() {
-			newMenuToggle.classList.add("open");
+			menuToggle.classList.add("open");
 			mobileMenu!.classList.add("open");
 			document.body.style.overflow = "hidden";
 
@@ -103,31 +101,32 @@ import { Icon } from "astro-icon/components";
 		}
 
 		function closeMenu() {
-			newMenuToggle.classList.remove("open");
+			menuToggle.classList.remove("open");
 			mobileMenu!.classList.remove("open");
 			document.body.style.overflow = "auto";
 		}
 
-		newMenuToggle.addEventListener("click", () => {
+		const toggleClickHandler = () => {
 			if (mobileMenu!.classList.contains("open")) {
 				closeMenu();
 			} else {
 				openMenu();
 			}
-		});
+		};
 
-		// Escape key closes the menu
-		document.addEventListener("keydown", (e) => {
+		const escapeHandler = (e: KeyboardEvent) => {
 			if (e.key === "Escape" && mobileMenu!.classList.contains("open")) {
 				closeMenu();
-				newMenuToggle.focus();
+				menuToggle.focus();
 			}
-		});
-	}
+		};
 
-	// Initialize on page load
-	initializeMobileMenu();
+		menuToggle.addEventListener("click", toggleClickHandler);
+		document.addEventListener("keydown", escapeHandler);
 
-	// Re-initialize after each navigation
-	document.addEventListener("astro:page-load", initializeMobileMenu);
+		return () => {
+			menuToggle.removeEventListener("click", toggleClickHandler);
+			document.removeEventListener("keydown", escapeHandler);
+		};
+	});
 </script>

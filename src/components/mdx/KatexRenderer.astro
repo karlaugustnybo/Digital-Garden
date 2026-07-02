@@ -19,14 +19,16 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
   {math}
 </div>
 
-<script is:inline>
+<script>
   import "katex/dist/katex.min.css";
   import katex from "katex";
+  import { onPageLifecycle } from "../../utils/viewTransitionLifecycle";
 
-  // Function to render math elements
-  function renderMathElement(element) {
+  function renderMathElement(element: HTMLElement) {
     const math = element.dataset.math;
     const display = element.dataset.display === "true";
+
+    if (!math) return;
 
     try {
       katex.render(math, element, {
@@ -48,23 +50,9 @@ const mathId = `math-${Math.random().toString(36).substr(2, 9)}`;
     }
   }
 
-  // Initialize KaTeX rendering
-  function initializeKatex() {
-    const mathElements = document.querySelectorAll(".katex-math");
+  onPageLifecycle(() => {
+    const mathElements = document.querySelectorAll<HTMLElement>(".katex-math");
     mathElements.forEach(renderMathElement);
-  }
-
-  // Initialize on page load
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializeKatex);
-  } else {
-    initializeKatex();
-  }
-
-  // Re-initialize after Astro page transitions
-  document.addEventListener("astro:page-load", () => {
-    // Small delay to ensure DOM is ready
-    setTimeout(initializeKatex, 100);
   });
 </script>
 

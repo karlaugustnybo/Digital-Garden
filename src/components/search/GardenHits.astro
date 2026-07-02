@@ -214,49 +214,44 @@ const sortedPosts = processedPosts.sort((a: Post, b: Post) => {
 </style>
 
 <script>
-	// Function to filter grid items
-	function filterGridItems(topic: string, growthStage: string, type: string) {
-		console.time("filter-operation");
+	import { onPageLifecycle } from "../../utils/viewTransitionLifecycle";
+
+	function filterGridItems(topic: string, growthStage: string, types: string[]) {
 		const items = document.querySelectorAll<HTMLElement>(".grid-item");
 
 		items.forEach((htmlItem) => {
 			const itemTopics = htmlItem.dataset.topics?.split(",") || [];
-			const itemType = htmlItem.dataset.type;
+			const itemType = htmlItem.dataset.type || "";
 			const itemGrowthStage = htmlItem.dataset.growthStage;
 
 			const matchesTopic = !topic || itemTopics.includes(topic);
 			const matchesGrowthStage = !growthStage || itemGrowthStage === growthStage;
-			const matchesType =
-				!type || itemType === type || (type === "podcast" && itemType === undefined);
+			const matchesType = types.length === 0 || types.includes(itemType);
 
 			const isVisible = matchesTopic && matchesGrowthStage && matchesType;
 			htmlItem.classList.toggle("filtered-out", !isVisible);
 		});
-
-		console.timeEnd("filter-operation");
 	}
 
-	// Listen for filter changes with debounce
 	let filterTimeout: number;
 
 	function handleFilterChange(event: Event) {
 		const customEvent = event as CustomEvent;
 		clearTimeout(filterTimeout);
 		filterTimeout = setTimeout(() => {
-			const { topic, growthStage, type } = customEvent.detail;
-			filterGridItems(topic, growthStage, type);
+			const { topic, growthStage, types } = customEvent.detail as {
+				topic: string;
+				growthStage: string;
+				types: string[];
+			};
+			filterGridItems(topic || "", growthStage || "", Array.isArray(types) ? types : []);
 		}, 50) as unknown as number;
 	}
 
-	function init() {
-		// Remove existing listener to prevent duplicates
-		document.removeEventListener("filter-change", handleFilterChange);
+	onPageLifecycle(() => {
 		document.addEventListener("filter-change", handleFilterChange);
-	}
-
-	// Initialize on first load
-	init();
-
-	// Re-initialize after page navigation
-	document.addEventListener("astro:page-load", init);
+		return () => {
+			document.removeEventListener("filter-change", handleFilterChange);
+		};
+	});
 </script>

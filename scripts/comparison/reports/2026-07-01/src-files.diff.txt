@@ -1,0 +1,505 @@
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src: assets
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/animated-icons/Logo.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/animated-icons/Logo.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards: BlurImage.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/BookCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/BookCard.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/EssayCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/EssayCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards: MusicCard.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/NoteCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/NoteCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards: NotebookCard.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/NowCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/NowCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards: PatternCard.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards: PodcastCard.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/ProjectCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/ProjectCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards: ResearchCard.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards: ShortfilmCard.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/cards/SmidgeonCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards/SmidgeonCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/cards: TalkCard.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components: icons
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/Backlinks.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/Backlinks.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/Footer.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/Footer.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/GrowthStage.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/GrowthStage.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/PageWrapper.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/PageWrapper.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/ProseWrapper.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/ProseWrapper.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/TableOfContents.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/TableOfContents.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/TitleWithCount.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/TitleWithCount.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/VersionDropdown.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/VersionDropdown.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/VersionWarning.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/VersionWarning.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/WebMentions.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/WebMentions.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/navbar/MainNavLinks.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/navbar/MainNavLinks.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/navbar/MobileMenu.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/navbar/MobileMenu.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/layouts/navbar/Navbar.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/layouts/navbar/Navbar.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/AcademicReference.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/AcademicReference.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Accordion.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Accordion.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Alert.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Alert.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/AssumedAudience.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/AssumedAudience.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/BackHoverLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/BackHoverLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/BackToTop.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/BackToTop.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx: Badge.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/BasicImage.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/BasicImage.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/ButtonLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/ButtonLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/ComingSoon.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/ComingSoon.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Disclaimer.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Disclaimer.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Draft.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Draft.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Footnote.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Footnote.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/FullWidthBackground.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/FullWidthBackground.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/GridColumns.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/GridColumns.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/ImageLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/ImageLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/InternalTooltipLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/InternalTooltipLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/IntroParagraph.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/IntroParagraph.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx: KatexRenderer.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/LinkCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/LinkCard.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/LinkWithIcon.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/LinkWithIcon.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx: Math.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Podcastiframe.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Podcastiframe.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/QuoteCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/QuoteCard.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx: QuoteSource.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/ReferencesLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/ReferencesLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/RemoteImage.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/RemoteImage.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/ResourceBook.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/ResourceBook.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx: ScrollyTalkSection.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/SimpleCard.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/SimpleCard.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/TalkSlide.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/TalkSlide.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Tooltip.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Tooltip.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/TooltipLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/TooltipLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/TweetEmbed.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/TweetEmbed.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/UnderlineHoverLink.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/UnderlineHoverLink.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/Video.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/Video.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/YearsAgo.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/YearsAgo.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/typography/Highlight.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/typography/Highlight.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/mdx/typography/Title1.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/mdx/typography/Title1.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components: notebooks
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/search/GardenFilters.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/search/GardenFilters.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/search/GardenHits.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/search/GardenHits.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/AIConversation.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/AIConversation.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: ChatHistoryTabs.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/ExpandedText.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/ExpandedText.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: GarminData.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: HackyFormatting.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: InvisiblesFeature.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: MediumMaterialsMeat.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/MultipartIntro.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/MultipartIntro.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: MysteriousVoid.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/ScrollingImages.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/ScrollingImages.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/StepFlow.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/StepFlow.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/components/unique/TweenBox.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique/TweenBox.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: Tweet.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: XTimeline.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: apps
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: birth-probability
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: blocks
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: css-position
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: gastown
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: gsap-basics
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: programmatic-notes
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/components/unique: speakularity
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src: config
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/antibooks.json and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/antibooks.json differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/books.json and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/books.json differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/config.ts and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/config.ts differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/data/webmentions.json and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/data/webmentions.json differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content: disabled
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/essays: Arguments-For-AI-Safety-Being-Important-1.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/essays: Arguments-For-AI-Safety-Being-Important.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/essays: Artificial-Intelligence-Impact-on-the-Individual-and-Legislation.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: ai-dark-forest.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: ai-enlightenment.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: api.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: artisan-data.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: bidirectionals.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: block-party.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: databases.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: digital-anthropology.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/essays: draft-example-human-ai-collaboration.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: drawinginvisibles1.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: epistemic-ducks.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: garden-history.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: growing-a-human.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: lodestone.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: meat-planet.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: metaphors-web.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: nontechnical-gardening.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: paleolithic-nostalgia.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: speakularity.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: still-cant-draw.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: tools-for-thought.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: transcopyright-dreams.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/essays: xanadu-patterns.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content: music
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content: notebooks
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: advancedjs.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: aesthetic-commands.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: ai-aesthetics.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: ai-empty-pointer.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: ai-profilepics.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: ai-rent.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: alien-ai.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: amnesia-agents.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: apps.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: babel.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: basb.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: birth-probability.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: building-gatsby-themes.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: compilers.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: contentful-gatsby.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: cozy-web.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: cried-eup.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: cscl.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: css-position.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: culinary-drift.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: customhooks.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: cyborg-history.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: cypress.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: data-unions.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: deep-research.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: design-engineers.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: digital-anth-books.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: dirt.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/notes: draft-reinforcement-learning-notes.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: echo-narcissus.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: eponymous-laws.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: es2019.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: evergreens.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: faq.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: foc-london.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: fruit-comparison.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: gastown.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: gathering-structures.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: generative-forgery.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: gift-economy.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: git-mistakes.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: glitter-devs.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: graphql.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: greensock-essentials.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: greensock-react.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: illustrated-gatsby.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: illustration-resources.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: immer.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: interoperable-libraries.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: joining-ought.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: jsx.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: keyboard-fetishism.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: keyboard-maestro.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: knowledge-hydrant.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: learnable-programming.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: leaving-elicit.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: lm-sketchbook.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: maintainers.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: metaphor-books.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: metatour.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: narrative-essays.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: natureculture.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: neologisms.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: newharvest-podcast.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: note-oppression.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: openings.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: paintingroam.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: pattern-languages.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: post-pull-request.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: problematic-proteins.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: react-vdom.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: react360.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: reactsuspense.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: reverse-outline.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: roam-garden.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: running.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: silentsessions.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: speculative-events.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: spinning.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: spread.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: start-gardening.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: summon.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: synecdoche.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: tana-zotero.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: teenage-desktop.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: tracking-humanity.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: visual-aws.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: vuerouter.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: vuesocket.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: websecurity.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: wtf-rust.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: xstate.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/notes: youre-wrong.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2020-09.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2021-08.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2021-10.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2022-07.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2022-11.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2023-06.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2023-09.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2023-12.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/now: 2024-01.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2024-07.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2024-12.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2025-03.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2025-05.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2026-01.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/now: 2026-06.mdx
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/pages/hire-me.mdx and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/pages/hire-me.mdx differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content: patterns
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content: podcasts.json
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content: research
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content: shortfilms
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/smidgeons: 2024-01-example-smidgeon.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-01-common-misconceptions.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-01-deepseek.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-01-smidgeons.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-01-unbaited.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-01-undetected.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-02-last-exam.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-03-chat-gpt-policy.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-06-cogitive-debt.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-08-persona-vectors.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content/smidgeons: 2025-08-vibe-legacy-code.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/content/smidgeons: 2026-02-claude-opus-4-6-system-card-part-2-frontier-alignment.mdx
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/content: talks
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/global.css and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/global.css differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src: icons
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/books/addiction.webp and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books/addiction.webp differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ambition.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: amusing.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: animator.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: annals.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: anthro.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: atlas.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: atlasai.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: bach.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: bazaar.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: beingyou.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: blockchainchicken.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: civilising.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: codingfreedom.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: comics.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: comingofage.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: consciousness.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: creativeillo.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: cue.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: cyborg.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dancing-skeletons.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dancing.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dawn.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dealers.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: death-weeping.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: debt.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: descarteserror.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: designthings.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: diviningdigital.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dontsleep.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: drawnlife.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: dynamic.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: economiescultures.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: emissary.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: empathy.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: empireofpain.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: encoding.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: essence.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ethnography9.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: eve.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: everything.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: expecting.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: finitegames.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: fish.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: flesh.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: force.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: framedink.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: funpencil.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: gathering.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: geometry.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: get-together.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: gift.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: godsupperair.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: goodmother.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: governing.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: graphicstory.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: historywork.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: howtodraw.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: humanmachine.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: hyperobjects.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ifthen.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: imagined.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: innovators.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: interpretcultures.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: intuition.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: intuitionpumps.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: invention.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: iother.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: latthinking.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: lifecode.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: making.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: making.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: mat.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: matter.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: meat.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: metahistory.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: metaphorpractical.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: mindmotion.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ministry.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: modern.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: mushroom.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: mwlb.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: naturalcyborgs.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: newbreed.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: newdarkage.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: newmedia.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: nobody.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: onkings.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: onwriting.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: orality.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: otherlands.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: otherminds.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ourbabies.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: participantobs.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: patterns.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: peoplehistory.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: perception.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: progbrain.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: pumps.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: purity.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: radicalmarkets.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: rapidviz.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: ritualprocess.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: robertson.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: sandtalk.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: seeingstate.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: seeingvoices.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: sketching.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: smallprog.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: social.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: soldiers.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: speculative.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: staying.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: stoneage.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: style.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: subprime.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: supersize.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: surfaces.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: sweetnesspower.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: tftwaddington.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: theatre.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: theoryvalue.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: thinkertoy.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: timeless.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: toolsthought.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: turing.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: twobits.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: utopia.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: visualexp.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: warmth.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: waywethink.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: weirdest.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: whattechwants.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: wheretheactionis.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: womenfire.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: wonder.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/books: workinginpublic.webp
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: NH_ProjectThumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: UXL2019_Titles-1.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: ai-enlightenment@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: ai-forest@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: api-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: artisan-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: basb-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: bidilinks-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: databases-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: di-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: digianthro@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: dirt-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: egh-thumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: fbshirt-thumb.png
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/covers/garden-cover@2x.png and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers/garden-cover@2x.png differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: gatsbythemethumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: googlethumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: growing@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: ipad_cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: jjs-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: keyboard@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: meatplanet-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: nontech-garden@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: paleo@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: problemproteins-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: purereactthumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: puyl-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: rubberduck@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-blocks@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-cyborgs@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-forest@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-homecooked@2.jpeg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-invisible@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-picture@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-react@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-sms@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-tft@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: talk-za@2x.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: testjsthumb.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: tft@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: transclusion-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: webmetaphors-cover@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/covers: xanadu@2x.png
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images: drawing-invisibles
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images: egghead-covers
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images: essays
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general: Brown_1000.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general: Scarf_1000.jpg
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general: Stripe2_1000.jpg
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/general/talks_1.webp and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general/talks_1.webp differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/general/talks_2.webp and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general/talks_2.webp differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/general/talks_3.webp and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general/talks_3.webp differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/images/general/talks_5.webp and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images/general/talks_5.webp differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images: podcasts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images: posts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/images: smidgeons
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/layouts/Layout.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/layouts/Layout.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/layouts/PostLayout.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/layouts/PostLayout.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/layouts/SmidgeonLayout.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/layouts/SmidgeonLayout.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/links.json and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/links.json differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/[...slug].astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/[...slug].astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/about.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/about.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/antilibrary.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/antilibrary.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: atom.xml.ts
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/colophon/colophon-content.mdx and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/colophon/colophon-content.mdx differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/colophon/index.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/colophon/index.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: design-system.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: diagram-preview.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/drafts.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/drafts.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/essays.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/essays.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/garden.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/garden.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/hire-me.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/hire-me.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/index.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/index.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/library.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/library.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: music.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: notebooks.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/notes.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/notes.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/now-[slug].astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/now-[slug].astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/now.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/now.astro differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/og/[...slug].png.ts and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/og/[...slug].png.ts differ
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/og.png.ts and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/og.png.ts differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: patterns.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: podcasts.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: research
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: rss.xml.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: rss.xml.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: shortfilms.astro
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: smidgeons-atom.xml.ts
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/smidgeons.astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/smidgeons.astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: smidgeons.xml.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages: smidgeons.xml.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages: talks.astro
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/pages/topics/[topic].astro and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/pages/topics/[topic].astro differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/plugins: remark-wiki-link.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/plugins: remark-wiki-link.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/scripts: build
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/scripts: card-click.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/scripts: create-smidgeon.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/scripts: generate-links.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/scripts: generate-topics.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/scripts: get-webmentions.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/scripts: links.json
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/scripts: post-links.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/scripts: utils
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils: analyzeTokenUsage.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/utils: feedUtils.ts
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/utils/getTopics.ts and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils/getTopics.ts differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils: parseDesignTokens.ts
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils: slugifyTopic.js
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/utils: slugifyTopic.ts
+Files /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/src/utils/versionUtils.ts and /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils/versionUtils.ts differ
+Only in /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/src/utils: viewTransitionLifecycle.ts

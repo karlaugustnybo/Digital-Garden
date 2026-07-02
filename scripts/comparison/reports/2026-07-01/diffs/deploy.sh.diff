@@ -1,0 +1,11 @@
+--- /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/my-garden/my-garden/deploy.sh	2026-04-12 16:33:46
++++ /var/folders/vq/zz5zmfk13pg6hzq4y94xjdtr0000gn/T/tmp.YEIT44Zkss/maggie-upstream/maggie-upstream/deploy.sh	2026-06-19 11:53:45
+@@ -10,7 +10,7 @@
+ 
+ # Step 2: Build the site locally
+ echo "Building the site locally from committed changes..."
+-bun run build
++npm run build
+ echo "Site built successfully."
+ 
+ # Step 3: Deploy to Vercel
