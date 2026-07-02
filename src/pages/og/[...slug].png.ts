@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import satori from "satori";
-import sharp from "sharp";
+import { Resvg } from "@resvg/resvg-js";
+import imageSize from "image-size";
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import type { ReactNode } from "react";
@@ -88,7 +89,8 @@ async function getImageData(imagePath: string) {
 
     // Read and process the image
     const imageBuffer = await fs.readFile(imagePath);
-    const { width, height, format } = await sharp(imageBuffer).metadata();
+    const { width, height, type } = imageSize(imageBuffer);
+    const format = type === "jpg" ? "jpeg" : type;
 
     // Convert to base64
     const base64 = `data:image/${format};base64,${imageBuffer.toString("base64")}`;
@@ -430,7 +432,7 @@ export const GET: APIRoute = async function get({ props, request }) {
     fonts: ogFonts,
   });
 
-  const png = await sharp(Buffer.from(svg)).png().toBuffer();
+  const png = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
 
   return new Response(png as any, {
     headers: {

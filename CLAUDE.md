@@ -7,14 +7,15 @@ A personal website and digital garden built with Astro, featuring growing notes,
 - **Astro** - Static site generator with MDX support, most components are Astro components
 - **React** - Only used when necessary
 - **JavaScript** - Primary language, minimal TypeScript usage
+- **Bun** - Runtime, package manager, and script runner (replaces Node)
 - **D3** - Data visualizations (used only when needed)
 - **Tippy.js** - Tooltip hover previews 
 
 ## Development
 
 ```bash
-- `bun run dev`: Start development server
-- `bun run build`: Production build
+- `bun run dev`: Start development server (runs Astro under Bun via `bunx --bun`)
+- `bun run build`: Production build (runs Astro under Bun via `bunx --bun`)
 - `bun run preview`: Preview production build
 ./deploy.sh          # Deploy to Vercel
 ```
@@ -39,7 +40,7 @@ A personal website and digital garden built with Astro, featuring growing notes,
 - **Growth stages** - Content maturity indicators (seedling → budding → evergreen) applied to most content types
 - **Topics** - Auto-generated from frontmatter
 - **Content versioning** - Folder-based versioning with automatic canonical URLs
-- **OG image generation** - Dynamic Open Graph images using Satori and Sharp
+- **OG image generation** - Dynamic Open Graph images using Satori and Resvg (Bun-native, no Node deps)
 - **Webmentions** - Social interactions via webmention.io API with brid.gy to fetch from multiple sites
 - **Masonry grids** - CSS-only responsive layouts
 - **Draft system** - Content can be marked as drafts to hide from production
@@ -49,7 +50,7 @@ A personal website and digital garden built with Astro, featuring growing notes,
 
 - `generate-links.js` - Processes wiki-style internal links
 - `generate-topics.ts` - Creates topic index from content frontmatter  
-- `get-webmentions.js` - Fetches webmentions for posts
+- `get-webmentions.ts` - Fetches webmentions for posts (uses native `fetch`, no `node-fetch`)
 - `scripts/comparison/compare-upstream.sh` - Fetches MaggieAppleton/maggieappleton.com-V3 and writes a content-based comparison report to `scripts/comparison/reports/YYYY-MM-DD/`
 
 ## Custom Components

@@ -3,10 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && astro dev",
-    "build": "bun run check-fonts && bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && bun src/scripts/build/get-webmentions.ts && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "dev": "bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && bunx --bun astro dev",
+    "build": "bun run check-fonts && bun src/scripts/build/generate-links.ts && bun src/scripts/build/generate-topics.ts && bun src/scripts/build/get-webmentions.ts && bunx --bun astro build",
+    "preview": "bunx --bun astro preview",
+    "astro": "bunx --bun astro",
     "sync-fonts": "bun src/scripts/build/sync-fonts.ts",
     "check-fonts": "bun src/scripts/build/check-fonts.ts",
     "generate-links": "bun src/scripts/build/generate-links.ts",
@@ -23,6 +23,7 @@
     "@astrojs/rss": "^4.0.19",
     "@iconify-json/heroicons": "^1.2.3",
     "@iconify-json/lucide": "^1.2.115",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "astro": "^7.0.5",
@@ -39,13 +40,13 @@
     "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
     "feed": "^5.2.1",
+    "image-size": "^2.0.2",
     "inquirer": "^14.0.2",
     "katex": "^0.17.0",
     "lodash": "^4.18.1",
     "markdown-it": "^14.3.0",
     "masonry-layout": "^4.2.2",
     "motion": "^12.42.2",
-    "node-fetch": "^3.3.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "rehype-katex": "^7.0.1",
@@ -53,7 +54,6 @@
     "sanitize-html": "^2.17.5",
     "satori": "^0.26.0",
     "scrollama": "^3.2.0",
-    "sharp": "^0.35.3",
     "tippy.js": "^6.3.7"
   },
   "devDependencies": {
@@ -70,7 +70,6 @@
     "@types/sanitize-html": "^2.16.1",
     "globby": "^16.2.0",
     "gray-matter": "^4.0.3",
-    "tsx": "^4.22.4",
     "unist-util-visit": "^5.1.0"
   }
 }

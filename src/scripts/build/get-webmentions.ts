@@ -1,5 +1,4 @@
 import * as fs from "fs";
-import fetch from "node-fetch";
 import lodash from "lodash";
 import * as dotenv from "dotenv";
 dotenv.config();

@@ -17,21 +17,22 @@ A comprehensive guide to Karl August Nybo's digital garden built with Astro. Thi
 
 ## Tech Stack
 
-- **Astro 5** - Static site generator with MDX support
-- **React 18** - Used sparingly for interactive components
+- **Astro 7** - Static site generator with MDX support
+- **React 19** - Used sparingly for interactive components
 - **JavaScript/TypeScript** - Primary language (minimal TypeScript usage)
+- **Bun** - Runtime, package manager, and script runner
 - **D3.js** - Data visualizations (when needed)
 - **Tippy.js** - Tooltip hover previews
-- **Sharp & Satori** - Dynamic OG image generation
+- **Satori & Resvg** - Dynamic OG image generation
 - **Motion** - Animation library
 
 ### Dependencies
 
 - **Content Management**: `@astrojs/mdx`, `gray-matter`, `globby`
 - **Styling**: Custom CSS with CSS variables
-- **Images**: `sharp`, `astro-embed`
-- **External APIs**: `node-fetch` (webmentions), `sanitize-html`
-- **Development**: `tsx`, `inquirer`, `dotenv`
+- **Images**: `@resvg/resvg-js`, `image-size`, `astro-embed`
+- **External APIs**: native `fetch` (webmentions), `sanitize-html`
+- **Development**: `inquirer`, `dotenv`
 
 ## Project Structure
 
@@ -275,7 +276,7 @@ The following content types have been disabled but can be re-enabled using the `
 
 ### 6. Dynamic OG Images
 
-- **Satori + Sharp**: Generate images on the fly
+- **Satori + Resvg**: Generate images on the fly
 - **Per-content**: Unique images for each piece of content
 - **Template-based**: Consistent design with content metadata
 - **SEO optimized**: Proper meta tags for social sharing
@@ -621,7 +622,8 @@ Every piece of content gets a custom social sharing image:
 
 **Implementation**:
 - Satori for SVG generation
-- Sharp for image processing
+- Resvg for SVG→PNG rasterization
+- image-size for cover image metadata
 - Template-based design system
 - Cached for performance
 
