@@ -1,4 +1,5 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 import { file } from "astro/loaders";
 
@@ -41,9 +42,6 @@ const essaysCollection = defineCollection({
       versionSummary: z.string().optional(),
     }),
 });
-
-
-
 
 
 
@@ -248,4 +246,3 @@ export const collections = {
   research: researchCollection,
   notebooks: notebooksCollection,
 };
-

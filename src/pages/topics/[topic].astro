@@ -24,11 +24,17 @@ type Post =
 
 export async function getStaticPaths() {
 	const topics = await getAllTopics();
-
-	return topics.map((topic) => ({
-		params: { topic: topic.slug },
-		props: { topicName: topic.name },
-	}));
+	const seen = new Set<string>();
+	return topics
+		.filter((topic) => {
+			if (seen.has(topic.slug)) return false;
+			seen.add(topic.slug);
+			return true;
+		})
+		.map((topic) => ({
+			params: { topic: topic.slug },
+			props: { topicName: topic.name },
+		}));
 }
 
 const { topic } = Astro.params;

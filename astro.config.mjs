@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import icon from "astro-icon";
 import partytown from "@astrojs/partytown";
+import { unified } from "@astrojs/markdown-remark";
 import { remarkWikiLink } from "./src/plugins/remark-wiki-link";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -14,11 +15,16 @@ export default defineConfig({
   image: {
     domains: ["res.cloudinary.com"],
   },
+  compressHTML: true,
   prefetch: true,
-  integrations: [
-    mdx({
+  markdown: {
+    processor: unified({
       remarkPlugins: [remarkMath, remarkWikiLink],
       rehypePlugins: [rehypeKatex],
+    }),
+  },
+  integrations: [
+    mdx({
       shikiConfig: {
         theme: "night-owl",
         wrap: true,
